@@ -1,0 +1,40 @@
+#!/opt/softs/anaconda3/bin/python
+import epygram
+epygram.init_env()
+
+
+
+def rms(fielda,fieldb):
+   return sum(sum((fieldb.data-fielda.data)**2))
+
+
+def extract(file,field):
+  a=epygram.formats.resource(file,'r')
+  fielda=a.readfield(field)
+  fielda.sp2gp()
+  return fielda
+
+
+
+#a=epygram.formats.resource('ICMSHFCST+0001_hydro','r')
+#b=epygram.formats.resource('ICMSHFCST+0001_nh','r')
+#field='S060TEMPERATURE'
+#fielda=a.readfield(field)
+#fielda.sp2gp()
+#fieldb=b.readfield(field)
+#fieldb.sp2gp()
+field='S060TEMPERATURE'
+fielda=extract('ICMSHFCST+0001_hydro',field)
+fieldat1=extract('ICMSHFCST+0002_hydro',field)
+fieldb=extract('ICMSHFCST+0001_nh',field)
+fieldbt1=extract('ICMSHFCST+0002_nh',field)
+fieldini=extract('ICMSHFCSTINIT',field)
+print(rms(fieldini,fielda))
+rms(fieldini,fieldb)
+rms(fielda,fieldb)
+rms(fieldat1,fieldbt1)
+rms(fielda,fieldat1)
+rms(fieldb,fieldbt1)
+
+
+

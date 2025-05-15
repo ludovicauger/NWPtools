@@ -1,0 +1,105 @@
+/SLURM/job65708483/slurm_script: line 31: cd: /home/gmap/mrpa/auger/exp/AROMEpdgorderplus: No such file or directory
+Version         : d5a7ed8ff763eca2aff8abaf4ec5f53a1efa29bc
+Arch            : ARCH::Linux
+Scheduler       : Scheduler::SLURM
+MPI             : MPI::IntelMPI::Slurm
+Binary          : ./AROME.EX
+Args            : -eFCST -c001 -maladin -vmeteo -asli -t50 -ft216
+Config          : 
+      - /opt/softs/mpiauto-2.1/mpiauto.conf
+      - /opt/softs/mpiauto-2.1/mpiauto.mf-bull2.conf
+      - /opt/softs/mpiauto-2.1/mpiauto.mf-bull2.Slurm.conf
+      - /opt/softs/mpiauto-2.1/mpiauto.mf-bull2.IntelMPI::Slurm.conf
+Options         : 
+      --nn                           : 1
+      --np                           : 1
+      --nnp                          : 1
+      --openmp                       : 1
+      --distribution                 : block
+      --proc                         : BroadWell-2x20x2
+      --mpi-allow-odd-dist           : false
+      --serial                       : false
+      --serial-mpi                   : false
+      --dryrun                       : false
+      --help                         : false
+      --verbose                      : true
+      --prefix-command               : []
+      --prefix-mpirun                : []
+      --mpirun-name                  : {}
+      --mpi-special-opts             : {'IntelMPI::Slurm' => '--export=ALL','Slurm' => '--export=ALL'}
+      --mpi-special-env              : {'IntelMPI::Slurm' => 'I_MPI_EXTRA_FILESYSTEM=on,I_MPI_EXTRA_FILESYSTEM_LIST=lustre,I_MPI_FABRICS=shm:dapl,I_MPI_FALLBACK=disable,I_MPI_SLURM_EXT=1,I_MPI_LARGE_SCALE_THRESHOLD=8192,I_MPI_DYNAMIC_CONNECTION=1,I_MPI_CHECK_DAPL_PROVIDER_COMPATIBILITY=0,I_MPI_FALLBACK_DEVICE=disable,I_MPI_DAPL_PROVIDER=ofa-v2-mlx5_0-1u,I_MPI_FAST_COLLECTIVES=1,DAPL_ACK_RETRY=7,DAPL_ACK_TIMER=20,DAPL_UCM_REP_TIME=8000,DAPL_UCM_RTU_TIME=8000,DAPL_UCM_CQ_SIZE=2000,DAPL_UCM_QP_SIZE=2000,DAPL_UCM_DREQ_RETRY=4,DAPL_UCM_WAIT_TIME=10000'}
+      --use-mpi-machinefile          : false
+      --mpi-stdin-null               : false
+      --use-session                  : false
+      --init-timeout                 : 90
+      --init-timeout-restart         : 1
+      --init-timeout-control         : false
+      --mpi-alloc                    : 
+      --debug                        : false
+      --debugger-x11-proxy           : true
+      --debug-try-gmkpack            : true
+      --debugger-path                : /opt/softs/allinea/tools/4.1.32462/bin/ddt
+      --debugger-break               : 0
+      --debugger-options             : 
+      --x11-display                  : 
+      --x11-direct                   : false
+      --x11-proxy                    : false
+      --x11-f-proxy                  : []
+      --x11-b-proxy                  : []
+      --config                       : 
+      --site                         : mf-bull2
+      --wrap                         : true
+      --wrap-stdeo                   : true
+      --wrap-stdeo-pack              : true
+      --wrap-stdeo-silent            : false
+      --wrap-verbose                 : false
+      --wrap-output-format           : $STDEO.$MPIRANK
+      --wrap-directory               : .
+      --wrap-env                     : {}
+      --use-slurm-mpi                : true
+      --fix-slurm-env                : true
+      --setup-grib_api-env           : true
+      --use-slurm-bind               : false
+      --use-arch-bind                : true
+      --arch-bind-verbose            : false
+      --use-openmpi-bind             : false
+      --use-intelmpi-bind            : false
+      --umpi-mpi-label               : 
+      --umpi-verbose                 : false
+Grib_api prefix : /opt/softs/libraries/ICC13.1.4.183/grib_api-1.10.4
+Remark          : MPI environment was modified
+      DAPL_ACK_RETRY                 : '7'
+      DAPL_ACK_TIMER                 : '20'
+      DAPL_UCM_CQ_SIZE               : '2000'
+      DAPL_UCM_DREQ_RETRY            : '4'
+      DAPL_UCM_QP_SIZE               : '2000'
+      DAPL_UCM_REP_TIME              : '8000'
+      DAPL_UCM_RTU_TIME              : '8000'
+      DAPL_UCM_WAIT_TIME             : '10000'
+      I_MPI_CHECK_DAPL_PROVIDER_COMPATIBILITY : '0'
+      I_MPI_DAPL_PROVIDER            : 'ofa-v2-mlx5_0-1u'
+      I_MPI_DYNAMIC_CONNECTION       : '1'
+      I_MPI_EXTRA_FILESYSTEM         : 'on'
+      I_MPI_EXTRA_FILESYSTEM_LIST    : 'lustre'
+      I_MPI_FABRICS                  : 'shm:dapl'
+      I_MPI_FALLBACK                 : 'disable'
+      I_MPI_FALLBACK_DEVICE          : 'disable'
+      I_MPI_FAST_COLLECTIVES         : '1'
+      I_MPI_LARGE_SCALE_THRESHOLD    : '8192'
+      I_MPI_SLURM_EXT                : '1'
+MPI command     : /usr/bin/srun --ntasks 1 --ntasks-per-node 1 --kill-on-bad-exit=1 --export=ALL /opt/softs/mpiauto-2.1/mpiautowrap --stdeo -- ./AROME.EX -eFCST -c001 -maladin -vmeteo -asli -t50 -ft216
+Warning         : Slurm environment was modified
+      SLURM_NTASKS          = undef     -> 1        
+
+      SLURM_NPROCS          = undef     -> 1        
+
+      SLURM_TASKS_PER_NODE  = 80        -> 1(x1)    
+
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+srun: got SIGCONT
+slurmstepd: *** STEP 65708483.0 ON beaufix2 CANCELLED AT 2019-04-12T08:14:04 ***
+slurmstepd: *** JOB 65708483 ON beaufix2 CANCELLED AT 2019-04-12T08:14:04 ***
+srun: forcing job termination
+slurmstepd: task_p_post_term: rmdir(/dev/cpuset/slurm65708483/slurm65708483.4294967294_0) failed Device or resource busy
+srun: error: beaufix2: task 0: Exited with exit code 1
+srun: Terminating job step 65708483.0

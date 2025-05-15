@@ -1,0 +1,188 @@
+ DEBUG MASTER          66
+ DEBUG MASTER          77
+ DEBUG MASTER          93
+ DEBUG MASTER          99
+MPIAUTOTIMEOUT is set to 90 seconds
+MPI_Init took 0 seconds
+ DEBUG MASTER         119
+ DEBUG MASTER         123
+ DEBUG MASTER         138
+ MAIN: IREQUIRED, MPI_THREAD_MULTIPLE, MPI_THREAD_SINGLE, IPROVIDED, LTHSAFEMPI, LLMPI1 = 3 3 0 3 T F
+ DEBUG MASTER         148
+ DEBUG MASTER         163
+ DEBUG MASTER         171
+ DEBUG MASTER         176
+ DEBUG MASTER         195
+ DEBUG MASTER         200
+ DEBUG MASTER         222
+ DEBUG MASTER         239
+ DEBUG MASTER         248
+ DEBUG MASTER         259
+ DEBUG MASTER         264
+ DEBUG MASTER         270
+ DEBUG MASTER         276
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /scratch/work/auger/DEODEIAL1/build/bin/MASTERODB -- wall-time :      0.090s
+## EC_MEMINFO Running on 1 nodes (4-numa) with 1 compute + 0 I/O-tasks and 1+0 threads at 20:13:30.900 on 09-May-2025
+## EC_MEMINFO The Job Name is _fp@G5SH and the Job ID is 54122697
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------    -------------    -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 | Numa region  2 | Numa region  3 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 belenos340                 0      69       0     17346   11296    15756   15026    10923   20530    11840   19642    249612     778      0.0   0.0         0      0  Sm/p:master:computation
+ DEBUG MASTER         280
+ DEBUG MASTER         287
+ DEBUG MASTER         296
+ DEBUG CNT0         150
+ DEBUG CNT0         153
+ DEBUG CNT0         163
+ DEBUG CNT0         172
+ DEBUG IFS_INIT          84
+ DEBUG SUMPINI         120
+ DEBUG SUMPINI         123
+ DEBUG SUMPINI         133
+ DEBUG SUMPINI         146
+ DEBUG SUMPINI         172
+ DEBUG SUMPINI         210
+ DEBUG SUMPINI         213
+ DEBUG SUMPINI         216
+ DEBUG SUMPINI         219
+ DEBUG SUMPINI         222
+ DEBUG SUMPINI         276
+ DEBUG SUMPINI         291
+ DEBUG SUMPINI         294
+[EC_DRHOOK:hostname:myproc:omptid:pid:unixtid] [YYYYMMDD:HHMMSS:epoch:walltime] [function@file:lineno] -- Max OpenMP threads = 1
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.072] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2492] fp = 0x2b62d710a1c0
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.072] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2499] DR_HOOK_ALLOW_COREDUMP=-1
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.073] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2505] Hardlimit for core file is now 18446744073709551615 (0xffffffffffffffff)
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.073] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2523] DR_HOOK_PROFILE_PROC=-1
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.073] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2529] DR_HOOK_PROFILE_LIMIT=-10.000
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.073] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2617] DR_HOOK_RANDOM_MEMSTAT=0  (RAND_MAX=2147483647)
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.073] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2628] DR_HOOK_HASHBITS=16
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.073] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2636] DR_HOOK_NCALLSTACK=0
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.073] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2644] DR_HOOK_HARAKIRI_TIMEOUT=500
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.073] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2651] DR_HOOK_USE_LOCKFILE=1
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2658] DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2665] DR_HOOK_TRAPFPE_INVALID=1
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2672] DR_HOOK_TRAPFPE_DIVBYZERO=1
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [process_options@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:2679] DR_HOOK_TRAPFPE_OVERFLOW=1
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1481] DR_HOOK_IGNORE_SIGNALS=-1
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#1 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#2 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#3 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#4 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#5 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#6 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#7 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#8 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#9 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#10 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#11 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#12 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#13 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#14 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#15 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#16 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#17 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#18 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#19 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#20 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#21 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#22 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#23 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#24 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#25 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#26 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#27 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#28 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#29 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#30 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#31 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#32 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.080] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#33 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#34 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#35 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#36 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#37 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#38 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#39 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#40 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#41 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#42 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#43 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#44 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#45 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#46 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#47 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#48 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#49 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#50 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#51 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#52 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#53 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#54 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#55 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#56 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#57 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#58 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#59 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#60 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#61 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#62 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#63 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#64 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.081] [ignore_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1509] DR_HOOK ignores signal#65 altogether
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.082] [restore_default_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1432] DR_HOOK_RESTORE_DEFAULT_SIGNALS=<undef>
+[EC_DRHOOK:belenos340:1:1:-1:107410] [20250509:201341:1746821621:11.090] [catch_signals@/scratch/work/auger/DEODEIAL1/IAL/ifsaux/support/drhook.c:1344] DR_HOOK_CATCH_SIGNALS=<undef>
+ DEBUG SUMPINI         304
+ DEBUG SUMPINI         323
+ DEBUG SUMPINI         365
+ DEBUG SUMPINI           1           1         370
+ DEBUG MPL_GROUPS          53
+ DEBUG MPL_GROUPS          61
+ DEBUG MPL_GROUPS          63 -2080374783
+ DEBUG MPL_GROUPS          65           1           1 F F F
+ DEBUG MPL_GROUPS          67           0
+ DEBUG MPL_GROUPS          71           0
+ DEBUG MPL_GROUPS          73           0
+ DEBUG MPL_GROUPS          80
+ DEBUG SUMPINI         377
+ DEBUG SUMPINI         394
+ DEBUG SUMPINI         407
+ DEBUG SUMPINI         418
+ DEBUG SUMPINI         426
+ DEBUG SUMPINI         440
+MPL_BUFFER_METHOD:  2  2048000000
+ DEBUG SUMPINI         450
+ DEBUG SUMPINI         457
+ DEBUG SUMPINI         460
+ DEBUG SUMPINI         463
+ DEBUG SUMPINI         469
+ DEBUG IFS_INIT          87
+ DEBUG IFS_INIT          91
+ DEBUG IFS_INIT          94
+ DEBUG IFS_INIT         109
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /scratch/work/auger/DEODEIAL1/build/bin/MASTERODB -- wall-time :     11.231s
+## EC_MEMINFO Running on 1 nodes (4-numa) with 1 compute + 0 I/O-tasks and 1+0 threads at 20:13:42.041 on 09-May-2025
+## EC_MEMINFO The Job Name is _fp@G5SH and the Job ID is 54122697
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------    -------------    -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 | Numa region  2 | Numa region  3 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 belenos340              1958      81       0     17195   11296    15756   15026    10921   20532    11838   19644    249462     922      0.0   0.0         0      0  Sm/p:oops:ifs_init
+ DEBUG IFS_INIT         119
+ DEBUG IFS_INIT         123
+forrtl: severe (19): invalid reference to variable in NAMELIST input, unit 4, file /scratch/work/auger/NWPtools/arometoy/cy49_arome/fort.4, line 323, position 9
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B62D4E73622  for__io_return        Unknown  Unknown
+libifcoremt.so.5   00002B62D4EBC1EF  for_read_seq_nml      Unknown  Unknown
+MASTERODB          0000000006B8CF05  sudyna_                   253  sudyna.F90
+MASTERODB          00000000069F5652  ifs_init_                 179  ifs_init.F90
+MASTERODB          000000000682B2C7  cnt0_                     176  cnt0.F90
+MASTERODB          0000000000417EED  MAIN__                    298  master.F90
+MASTERODB          000000000041707E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B62D6D64555  __libc_start_main     Unknown  Unknown
+MASTERODB          0000000000416F79  Unknown               Unknown  Unknown

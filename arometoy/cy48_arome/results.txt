@@ -1,0 +1,92 @@
+o4 nosave
+7 35 
+ 0.301400770346
+-0.21186197233
+0.047380247371
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080TEMPERATURE
+0.306806797085
+-0.3073483201
+0.0275937335193
+
+o4 save
+6 31 /7 32
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080WIND.U.PHYS
+0.301398982058
+-0.211864093028
+0.0473803190994
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080TEMPERATURE
+0.306810548477
+-0.307346599354
+0.0275939052541
+
+
+
+sans smotth :
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080WIND.U.PHYS
+0.0336703418693
+0.101061059834
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080TEMPERATURE
+0.00969797503191
+0.0207250784552
+avec smooth
+0.0336703418693
+0.101061059834
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080TEMPERATURE
+0.00969797503191
+0.0207250784552
+c'est pareil et pas plus stable à mais j'ai un buf dans mon smootho
+
+
+avec les derivée ordre 6 de thomas la difference est bien plus petite...
+pb de periodicigé ? pb de conditions aux limites mal gerees ?
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080WIND.U.PHYS
+0.00053611825968
+0.00211355677351
+comparaison to ICMSHFCST+0015_spec2trans
+
+
+
+
+i0.0336711888722
+0.101060801845
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080TEMPERATURE
+0.00969867282176
+0.0207295263632
+i
+
+0.0336716803516
+0.101060957024
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080TEMPERATURE
+0.00969863034459
+0.0207288255996
+
+
+
+
+o6 save
+7/34 7 36
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080WIND.U.PHYS
+0.303521419444
+-0.212020999332
+0.0482354328488
+comparaison to ICMSHFCST+0015_spec2trans
+max min difference S080TEMPERATURE
+0.308597079599
+-0.312097541109
+0.0276437544631
+
+o6 nosave
+8/39 mais ca plante ou bout de 4 pas de temps
+
+
+

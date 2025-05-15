@@ -1,0 +1,3552 @@
+MPIAUTOTIMEOUT is set to 90 seconds
+MPI_Init took 0 seconds
+## EC_MEMINFO 
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program ./getf -- wall-time :      3.518s
+## EC_MEMINFO Running on 1 nodes (2-numa) with 1 compute + 0 I/O-tasks and 1 threads at 08:02:25.494 on 25-Jul-2019
+## EC_MEMINFO The Job Name is  and the Job ID is 
+## EC_MEMINFO 
+## EC_MEMINFO                   | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------  INCLUDING CACHED |  %USED %HUGE  | Energy  Power
+## EC_MEMINFO                   | Malloc| Inc Heap        | Numa region  0 | Numa region  1 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name         | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                   | (sum) | Small    Huge   |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    1 beaufixlogin       0      41       0      8285       4     8235       2     17038   13173      0.1   0.0         0      0  s/p:master:computation
+[EC_DRHOOK:hostname:myproc:omptid:pid:unixtid] [YYYYMMDD:HHMMSS:epoch:walltime] [function@file:lineno] -- Max OpenMP threads = 1
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2135] fp = 0x30f618f120
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2142] DR_HOOK_ALLOW_COREDUMP=-1
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2148] Hardlimit for core file is now 18446744073709551615 (0xffffffffffffffff)
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2166] DR_HOOK_PROFILE_PROC=-1
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2172] DR_HOOK_PROFILE_LIMIT=-10.000
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2260] DR_HOOK_RANDOM_MEMSTAT=0  (RAND_MAX=2147483647)
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2271] DR_HOOK_HASHBITS=16
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2279] DR_HOOK_NCALLSTACK=0
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2287] DR_HOOK_HARAKIRI_TIMEOUT=500
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2294] DR_HOOK_USE_LOCKFILE=1
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.760] [process_options@drhook.c:2301] DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1248] DR_HOOK_IGNORE_SIGNALS=-1
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#1 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#2 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#3 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#4 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#5 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#6 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#7 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#8 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#9 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#10 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#11 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#12 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#13 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#14 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#15 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#16 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#17 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#18 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#19 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#20 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#21 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#22 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#23 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#24 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#25 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#26 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#27 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#28 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#29 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#30 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#31 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#32 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#33 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#34 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#35 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#36 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#37 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#38 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#39 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#40 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#41 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#42 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#43 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#44 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#45 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.761] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#46 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#47 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#48 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#49 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#50 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#51 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#52 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#53 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#54 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#55 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#56 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#57 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#58 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#59 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#60 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#61 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#62 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#63 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#64 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [ignore_signals@drhook.c:1276] DR_HOOK ignores signal#65 altogether
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [restore_default_signals@drhook.c:1199] DR_HOOK_RESTORE_DEFAULT_SIGNALS=<undef>
+[EC_DRHOOK:beaufixlogin2:1:1:-1:16628] [20190725:080229:1564041749:3.762] [catch_signals@drhook.c:1132] DR_HOOK_CATCH_SIGNALS=<undef>
+MPL_BUFFER_METHOD:  2  2048000000
+ DEBUG SUELAP           2           0           1 -1.754596468117597E-009
+ DEBUG SUELAP           3           0           2 -7.018384984291970E-009
+ DEBUG SUELAP           4           0           3 -1.579136732487996E-008
+ DEBUG SUELAP           5           0           4 -2.807354171352472E-008
+ DEBUG SUELAP           6           0           5 -4.386490859431547E-008
+ DEBUG SUELAP           7           0           6 -6.316546796725220E-008
+ DEBUG SUELAP           8           0           7 -8.597522072051333E-008
+ DEBUG SUELAP           9           0           8 -1.122941655218312E-007
+ DEBUG SUELAP          10           0           9 -1.421223028152951E-007
+ DEBUG SUELAP          11           0          10 -1.754596339331727E-007
+ DEBUG SUELAP          12           0          11 -2.123061570991069E-007
+ DEBUG SUELAP          13           0          12 -2.526618727571872E-007
+ DEBUG SUELAP          14           0          13 -2.965267809074135E-007
+ DEBUG SUELAP          15           0          14 -3.439008819938749E-007
+ DEBUG SUELAP          16           0          15 -3.947841760165716E-007
+ DEBUG SUELAP          17           0          16 -4.491766620873250E-007
+ DEBUG SUELAP          18           0          17 -5.070783415384028E-007
+ DEBUG SUELAP          19           0          18 -5.684892134816266E-007
+ DEBUG SUELAP          20           0          19 -6.334092779169964E-007
+ DEBUG SUELAP          21           0          20 -7.018385352886014E-007
+ DEBUG SUELAP          22           0          21 -7.737769851523524E-007
+ DEBUG SUELAP          23           0          22 -8.492246275082493E-007
+ DEBUG SUELAP          24           0          23 -9.281814623562923E-007
+ DEBUG SUELAP          25           0          24 -1.010647491028749E-006
+ DEBUG SUELAP          26           0          25 -1.096622711305173E-006
+ DEBUG SUELAP          27           0          26 -1.186107124073743E-006
+ DEBUG SUELAP          28           0          27 -1.279100729778548E-006
+ DEBUG SUELAP          29           0          28 -1.375603529307767E-006
+ DEBUG SUELAP          30           0          29 -1.475615519552775E-006
+ DEBUG SUELAP          32           1           1 -3.509192936235195E-009
+ DEBUG SUELAP          33           1           2 -8.772981452409567E-009
+ DEBUG SUELAP          34           1           3 -1.754596379299755E-008
+ DEBUG SUELAP          35           1           4 -2.982813818164232E-008
+ DEBUG SUELAP          36           1           5 -4.561950506243306E-008
+ DEBUG SUELAP          37           1           6 -6.492006443536980E-008
+ DEBUG SUELAP          38           1           7 -8.772981718863093E-008
+ DEBUG SUELAP          39           1           8 -1.140487619899488E-007
+ DEBUG SUELAP          40           1           9 -1.438768992834127E-007
+ DEBUG SUELAP          41           1          10 -1.772142304012903E-007
+ DEBUG SUELAP          42           1          11 -2.140607535672245E-007
+ DEBUG SUELAP          43           1          12 -2.544164692253048E-007
+ DEBUG SUELAP          44           1          13 -2.982813773755311E-007
+ DEBUG SUELAP          45           1          14 -3.456554784619925E-007
+ DEBUG SUELAP          46           1          15 -3.965387724846892E-007
+ DEBUG SUELAP          47           1          16 -4.509312585554426E-007
+ DEBUG SUELAP          48           1          17 -5.088329380065204E-007
+ DEBUG SUELAP          49           1          18 -5.702438099497442E-007
+ DEBUG SUELAP          50           1          19 -6.351638743851140E-007
+ DEBUG SUELAP          51           1          20 -7.035931317567190E-007
+ DEBUG SUELAP          52           1          21 -7.755315816204700E-007
+ DEBUG SUELAP          53           1          22 -8.509792239763669E-007
+ DEBUG SUELAP          54           1          23 -9.299360588244099E-007
+ DEBUG SUELAP          55           1          24 -1.012402087496866E-006
+ DEBUG SUELAP          56           1          25 -1.098377307773291E-006
+ DEBUG SUELAP          57           1          26 -1.187861720541861E-006
+ DEBUG SUELAP          58           1          27 -1.280855326246666E-006
+ DEBUG SUELAP          59           1          28 -1.377358125775885E-006
+ DEBUG SUELAP          61           2           1 -8.772981452409567E-009
+ DEBUG SUELAP          62           2           2 -1.403676996858394E-008
+ DEBUG SUELAP          63           2           3 -2.280975230917193E-008
+ DEBUG SUELAP          64           2           4 -3.509192669781669E-008
+ DEBUG SUELAP          65           2           5 -5.088329357860744E-008
+ DEBUG SUELAP          66           2           6 -7.018385295154417E-008
+ DEBUG SUELAP          67           2           7 -9.299360570480530E-008
+ DEBUG SUELAP          68           2           8 -1.193125505061232E-007
+ DEBUG SUELAP          69           2           9 -1.491406877995871E-007
+ DEBUG SUELAP          70           2          10 -1.824780189174646E-007
+ DEBUG SUELAP          71           2          11 -2.193245420833989E-007
+ DEBUG SUELAP          72           2          12 -2.596802577414792E-007
+ DEBUG SUELAP          73           2          13 -3.035451658917054E-007
+ DEBUG SUELAP          74           2          14 -3.509192669781669E-007
+ DEBUG SUELAP          75           2          15 -4.018025610008635E-007
+ DEBUG SUELAP          76           2          16 -4.561950470716170E-007
+ DEBUG SUELAP          77           2          17 -5.140967265226948E-007
+ DEBUG SUELAP          78           2          18 -5.755075984659186E-007
+ DEBUG SUELAP          79           2          19 -6.404276629012884E-007
+ DEBUG SUELAP          80           2          20 -7.088569202728934E-007
+ DEBUG SUELAP          81           2          21 -7.807953701366444E-007
+ DEBUG SUELAP          82           2          22 -8.562430124925413E-007
+ DEBUG SUELAP          83           2          23 -9.351998473405843E-007
+ DEBUG SUELAP          84           2          24 -1.017665876013041E-006
+ DEBUG SUELAP          85           2          25 -1.103641096289465E-006
+ DEBUG SUELAP          86           2          26 -1.193125509058035E-006
+ DEBUG SUELAP          87           2          27 -1.286119114762840E-006
+ DEBUG SUELAP          88           2          28 -1.382621914292059E-006
+ DEBUG SUELAP          90           3           1 -1.754596379299755E-008
+ DEBUG SUELAP          91           3           2 -2.280975230917193E-008
+ DEBUG SUELAP          92           3           3 -3.158273464975991E-008
+ DEBUG SUELAP          93           3           4 -4.386490903840468E-008
+ DEBUG SUELAP          94           3           5 -5.965627591919542E-008
+ DEBUG SUELAP          95           3           6 -7.895683529213215E-008
+ DEBUG SUELAP          96           3           7 -1.017665880453933E-007
+ DEBUG SUELAP          97           3           8 -1.280855328467112E-007
+ DEBUG SUELAP          98           3           9 -1.579136701401751E-007
+ DEBUG SUELAP          99           3          10 -1.912510012580526E-007
+ DEBUG SUELAP         100           3          11 -2.280975244239869E-007
+ DEBUG SUELAP         101           3          12 -2.684532400820672E-007
+ DEBUG SUELAP         102           3          13 -3.123181482322934E-007
+ DEBUG SUELAP         103           3          14 -3.596922493187549E-007
+ DEBUG SUELAP         104           3          15 -4.105755433414515E-007
+ DEBUG SUELAP         105           3          16 -4.649680294122049E-007
+ DEBUG SUELAP         106           3          17 -5.228697088632828E-007
+ DEBUG SUELAP         107           3          18 -5.842805808065066E-007
+ DEBUG SUELAP         108           3          19 -6.492006452418764E-007
+ DEBUG SUELAP         109           3          20 -7.176299026134814E-007
+ DEBUG SUELAP         110           3          21 -7.895683524772323E-007
+ DEBUG SUELAP         111           3          22 -8.650159948331293E-007
+ DEBUG SUELAP         112           3          23 -9.439728296811722E-007
+ DEBUG SUELAP         113           3          24 -1.026438858353629E-006
+ DEBUG SUELAP         114           3          25 -1.112414078630053E-006
+ DEBUG SUELAP         115           3          26 -1.201898491398623E-006
+ DEBUG SUELAP         116           3          27 -1.294892097103428E-006
+ DEBUG SUELAP         117           3          28 -1.391394896632647E-006
+ DEBUG SUELAP         119           4           1 -2.982813818164232E-008
+ DEBUG SUELAP         120           4           2 -3.509192669781669E-008
+ DEBUG SUELAP         121           4           3 -4.386490903840468E-008
+ DEBUG SUELAP         122           4           4 -5.614708342704944E-008
+ DEBUG SUELAP         123           4           5 -7.193845030784018E-008
+ DEBUG SUELAP         124           4           6 -9.123900968077692E-008
+ DEBUG SUELAP         125           4           7 -1.140487624340381E-007
+ DEBUG SUELAP         126           4           8 -1.403677072353560E-007
+ DEBUG SUELAP         127           4           9 -1.701958445288199E-007
+ DEBUG SUELAP         128           4          10 -2.035331756466974E-007
+ DEBUG SUELAP         129           4          11 -2.403796988126317E-007
+ DEBUG SUELAP         130           4          12 -2.807354144707119E-007
+ DEBUG SUELAP         131           4          13 -3.246003226209382E-007
+ DEBUG SUELAP         132           4          14 -3.719744237073996E-007
+ DEBUG SUELAP         133           4          15 -4.228577177300963E-007
+ DEBUG SUELAP         134           4          16 -4.772502038008497E-007
+ DEBUG SUELAP         135           4          17 -5.351518832519275E-007
+ DEBUG SUELAP         136           4          18 -5.965627551951513E-007
+ DEBUG SUELAP         137           4          19 -6.614828196305211E-007
+ DEBUG SUELAP         138           4          20 -7.299120770021261E-007
+ DEBUG SUELAP         139           4          21 -8.018505268658771E-007
+ DEBUG SUELAP         140           4          22 -8.772981692217741E-007
+ DEBUG SUELAP         141           4          23 -9.562550040698170E-007
+ DEBUG SUELAP         142           4          24 -1.038721032742274E-006
+ DEBUG SUELAP         143           4          25 -1.124696253018698E-006
+ DEBUG SUELAP         144           4          26 -1.214180665787268E-006
+ DEBUG SUELAP         145           4          27 -1.307174271492073E-006
+ DEBUG SUELAP         146           4          28 -1.403677071021292E-006
+ DEBUG SUELAP         148           5           1 -4.561950506243306E-008
+ DEBUG SUELAP         149           5           2 -5.088329402269665E-008
+ DEBUG SUELAP         150           5           3 -5.965627547510621E-008
+ DEBUG SUELAP         151           5           4 -7.193845030784018E-008
+ DEBUG SUELAP         152           5           5 -8.772981718863093E-008
+ DEBUG SUELAP         153           5           6 -1.070303765615677E-007
+ DEBUG SUELAP         154           5           7 -1.298401293148288E-007
+ DEBUG SUELAP         155           5           8 -1.561590741161467E-007
+ DEBUG SUELAP         156           5           9 -1.859872114096106E-007
+ DEBUG SUELAP         157           5          10 -2.193245425274881E-007
+ DEBUG SUELAP         158           5          11 -2.561710656934224E-007
+ DEBUG SUELAP         159           5          12 -2.965267813515027E-007
+ DEBUG SUELAP         160           5          13 -3.403916895017289E-007
+ DEBUG SUELAP         161           5          14 -3.877657905881904E-007
+ DEBUG SUELAP         162           5          15 -4.386490846108870E-007
+ DEBUG SUELAP         163           5          16 -4.930415702375512E-007
+ DEBUG SUELAP         164           5          17 -5.509432501327183E-007
+ DEBUG SUELAP         165           5          18 -6.123541220759421E-007
+ DEBUG SUELAP         166           5          19 -6.772741865113119E-007
+ DEBUG SUELAP         167           5          20 -7.457034438829169E-007
+ DEBUG SUELAP         168           5          21 -8.176418937466678E-007
+ DEBUG SUELAP         169           5          22 -8.930895365466540E-007
+ DEBUG SUELAP         170           5          23 -9.720463713946970E-007
+ DEBUG SUELAP         171           5          24 -1.054512399623064E-006
+ DEBUG SUELAP         172           5          25 -1.140487619899488E-006
+ DEBUG SUELAP         173           5          26 -1.229972032668059E-006
+ DEBUG SUELAP         174           5          27 -1.322965638372864E-006
+ DEBUG SUELAP         175           5          28 -1.419468437902083E-006
+ DEBUG SUELAP         177           6           1 -6.492006443536980E-008
+ DEBUG SUELAP         178           6           2 -7.018385339563338E-008
+ DEBUG SUELAP         179           6           3 -7.895683484804294E-008
+ DEBUG SUELAP         180           6           4 -9.123900968077692E-008
+ DEBUG SUELAP         181           6           5 -1.070303765615677E-007
+ DEBUG SUELAP         182           6           6 -1.263309359345044E-007
+ DEBUG SUELAP         183           6           7 -1.491406886877655E-007
+ DEBUG SUELAP         184           6           8 -1.754596334890834E-007
+ DEBUG SUELAP         185           6           9 -2.052877707825473E-007
+ DEBUG SUELAP         186           6          10 -2.386251019004249E-007
+ DEBUG SUELAP         187           6          11 -2.754716250663591E-007
+ DEBUG SUELAP         188           6          12 -3.158273407244394E-007
+ DEBUG SUELAP         189           6          13 -3.596922488746657E-007
+ DEBUG SUELAP         190           6          14 -4.070663499611271E-007
+ DEBUG SUELAP         191           6          15 -4.579496439838238E-007
+ DEBUG SUELAP         192           6          16 -5.123421296104880E-007
+ DEBUG SUELAP         193           6          17 -5.702438095056550E-007
+ DEBUG SUELAP         194           6          18 -6.316546814488788E-007
+ DEBUG SUELAP         195           6          19 -6.965747458842486E-007
+ DEBUG SUELAP         196           6          20 -7.650040032558536E-007
+ DEBUG SUELAP         197           6          21 -8.369424531196046E-007
+ DEBUG SUELAP         198           6          22 -9.123900959195907E-007
+ DEBUG SUELAP         199           6          23 -9.913469307676337E-007
+ DEBUG SUELAP         200           6          24 -1.073812958996001E-006
+ DEBUG SUELAP         201           6          25 -1.159788179272425E-006
+ DEBUG SUELAP         202           6          26 -1.249272592040995E-006
+ DEBUG SUELAP         203           6          27 -1.342266197745801E-006
+ DEBUG SUELAP         204           6          28 -1.438768997275020E-006
+ DEBUG SUELAP         206           7           1 -8.772981718863093E-008
+ DEBUG SUELAP         207           7           2 -9.299360570480530E-008
+ DEBUG SUELAP         208           7           3 -1.017665880453933E-007
+ DEBUG SUELAP         209           7           4 -1.140487624340381E-007
+ DEBUG SUELAP         210           7           5 -1.298401293148288E-007
+ DEBUG SUELAP         211           7           6 -1.491406886877655E-007
+ DEBUG SUELAP         212           7           7 -1.719504414410267E-007
+ DEBUG SUELAP         213           7           8 -1.982693862423446E-007
+ DEBUG SUELAP         214           7           9 -2.280975235358085E-007
+ DEBUG SUELAP         215           7          10 -2.614348546536860E-007
+ DEBUG SUELAP         216           7          11 -2.982813778196203E-007
+ DEBUG SUELAP         217           7          12 -3.386370934777005E-007
+ DEBUG SUELAP         218           7          13 -3.825020016279268E-007
+ DEBUG SUELAP         219           7          14 -4.298761027143883E-007
+ DEBUG SUELAP         220           7          15 -4.807593967370849E-007
+ DEBUG SUELAP         221           7          16 -5.351518828078383E-007
+ DEBUG SUELAP         222           7          17 -5.930535622589161E-007
+ DEBUG SUELAP         223           7          18 -6.544644342021400E-007
+ DEBUG SUELAP         224           7          19 -7.193844986375098E-007
+ DEBUG SUELAP         225           7          20 -7.878137560091147E-007
+ DEBUG SUELAP         226           7          21 -8.597522058728657E-007
+ DEBUG SUELAP         227           7          22 -9.351998482287627E-007
+ DEBUG SUELAP         228           7          23 -1.014156683076806E-006
+ DEBUG SUELAP         229           7          24 -1.096622711749262E-006
+ DEBUG SUELAP         230           7          25 -1.182597932025686E-006
+ DEBUG SUELAP         231           7          26 -1.272082344794256E-006
+ DEBUG SUELAP         232           7          27 -1.365075950499062E-006
+ DEBUG SUELAP         233           7          28 -1.461578750028281E-006
+ DEBUG SUELAP         235           8           1 -1.140487619899488E-007
+ DEBUG SUELAP         236           8           2 -1.193125509502124E-007
+ DEBUG SUELAP         237           8           3 -1.280855324026220E-007
+ DEBUG SUELAP         238           8           4 -1.403677072353560E-007
+ DEBUG SUELAP         239           8           5 -1.561590741161467E-007
+ DEBUG SUELAP         240           8           6 -1.754596334890834E-007
+ DEBUG SUELAP         241           8           7 -1.982693862423446E-007
+ DEBUG SUELAP         242           8           8 -2.245883310436625E-007
+ DEBUG SUELAP         243           8           9 -2.544164683371264E-007
+ DEBUG SUELAP         244           8          10 -2.877537994550039E-007
+ DEBUG SUELAP         245           8          11 -3.246003226209382E-007
+ DEBUG SUELAP         246           8          12 -3.649560382790185E-007
+ DEBUG SUELAP         247           8          13 -4.088209464292447E-007
+ DEBUG SUELAP         248           8          14 -4.561950475157062E-007
+ DEBUG SUELAP         249           8          15 -5.070783415384028E-007
+ DEBUG SUELAP         250           8          16 -5.614708271650670E-007
+ DEBUG SUELAP         251           8          17 -6.193725070602341E-007
+ DEBUG SUELAP         252           8          18 -6.807833790034579E-007
+ DEBUG SUELAP         253           8          19 -7.457034434388277E-007
+ DEBUG SUELAP         254           8          20 -8.141327008104327E-007
+ DEBUG SUELAP         255           8          21 -8.860711506741836E-007
+ DEBUG SUELAP         256           8          22 -9.615187934741698E-007
+ DEBUG SUELAP         257           8          23 -1.040475628322213E-006
+ DEBUG SUELAP         258           8          24 -1.122941656550580E-006
+ DEBUG SUELAP         259           8          25 -1.208916876827004E-006
+ DEBUG SUELAP         260           8          26 -1.298401289595574E-006
+ DEBUG SUELAP         261           8          27 -1.391394895300380E-006
+ DEBUG SUELAP         263           9           1 -1.438768992834127E-007
+ DEBUG SUELAP         264           9           2 -1.491406882436763E-007
+ DEBUG SUELAP         265           9           3 -1.579136696960859E-007
+ DEBUG SUELAP         266           9           4 -1.701958445288199E-007
+ DEBUG SUELAP         267           9           5 -1.859872114096106E-007
+ DEBUG SUELAP         268           9           6 -2.052877707825473E-007
+ DEBUG SUELAP         269           9           7 -2.280975235358085E-007
+ DEBUG SUELAP         270           9           8 -2.544164683371264E-007
+ DEBUG SUELAP         271           9           9 -2.842446056305903E-007
+ DEBUG SUELAP         272           9          10 -3.175819367484678E-007
+ DEBUG SUELAP         273           9          11 -3.544284599144021E-007
+ DEBUG SUELAP         274           9          12 -3.947841755724824E-007
+ DEBUG SUELAP         275           9          13 -4.386490837227086E-007
+ DEBUG SUELAP         276           9          14 -4.860231848091701E-007
+ DEBUG SUELAP         277           9          15 -5.369064788318667E-007
+ DEBUG SUELAP         278           9          16 -5.912989644585309E-007
+ DEBUG SUELAP         279           9          17 -6.492006443536980E-007
+ DEBUG SUELAP         280           9          18 -7.106115162969218E-007
+ DEBUG SUELAP         281           9          19 -7.755315807322916E-007
+ DEBUG SUELAP         282           9          20 -8.439608381038965E-007
+ DEBUG SUELAP         283           9          21 -9.158992879676475E-007
+ DEBUG SUELAP         284           9          22 -9.913469307676337E-007
+ DEBUG SUELAP         285           9          23 -1.070303765615677E-006
+ DEBUG SUELAP         286           9          24 -1.152769793844044E-006
+ DEBUG SUELAP         287           9          25 -1.238745014120468E-006
+ DEBUG SUELAP         288           9          26 -1.328229426889038E-006
+ DEBUG SUELAP         289           9          27 -1.421223032593844E-006
+ DEBUG SUELAP         291          10           1 -1.772142304012903E-007
+ DEBUG SUELAP         292          10           2 -1.824780193615538E-007
+ DEBUG SUELAP         293          10           3 -1.912510008139634E-007
+ DEBUG SUELAP         294          10           4 -2.035331756466974E-007
+ DEBUG SUELAP         295          10           5 -2.193245425274881E-007
+ DEBUG SUELAP         296          10           6 -2.386251019004249E-007
+ DEBUG SUELAP         297          10           7 -2.614348546536860E-007
+ DEBUG SUELAP         298          10           8 -2.877537994550039E-007
+ DEBUG SUELAP         299          10           9 -3.175819367484678E-007
+ DEBUG SUELAP         300          10          10 -3.509192678663453E-007
+ DEBUG SUELAP         301          10          11 -3.877657910322796E-007
+ DEBUG SUELAP         302          10          12 -4.281215066903599E-007
+ DEBUG SUELAP         303          10          13 -4.719864148405861E-007
+ DEBUG SUELAP         304          10          14 -5.193605159270476E-007
+ DEBUG SUELAP         305          10          15 -5.702438099497442E-007
+ DEBUG SUELAP         306          10          16 -6.246362955764084E-007
+ DEBUG SUELAP         307          10          17 -6.825379754715755E-007
+ DEBUG SUELAP         308          10          18 -7.439488474147993E-007
+ DEBUG SUELAP         309          10          19 -8.088689118501691E-007
+ DEBUG SUELAP         310          10          20 -8.772981692217741E-007
+ DEBUG SUELAP         311          10          21 -9.492366190855250E-007
+ DEBUG SUELAP         312          10          22 -1.024684261885511E-006
+ DEBUG SUELAP         313          10          23 -1.103641096733554E-006
+ DEBUG SUELAP         314          10          24 -1.186107124961921E-006
+ DEBUG SUELAP         315          10          25 -1.272082345238346E-006
+ DEBUG SUELAP         316          10          26 -1.361566758006916E-006
+ DEBUG SUELAP         317          10          27 -1.454560363711721E-006
+ DEBUG SUELAP         319          11           1 -2.140607535672245E-007
+ DEBUG SUELAP         320          11           2 -2.193245425274881E-007
+ DEBUG SUELAP         321          11           3 -2.280975239798977E-007
+ DEBUG SUELAP         322          11           4 -2.403796988126317E-007
+ DEBUG SUELAP         323          11           5 -2.561710656934224E-007
+ DEBUG SUELAP         324          11           6 -2.754716250663591E-007
+ DEBUG SUELAP         325          11           7 -2.982813778196203E-007
+ DEBUG SUELAP         326          11           8 -3.246003226209382E-007
+ DEBUG SUELAP         327          11           9 -3.544284599144021E-007
+ DEBUG SUELAP         328          11          10 -3.877657910322796E-007
+ DEBUG SUELAP         329          11          11 -4.246123141982139E-007
+ DEBUG SUELAP         330          11          12 -4.649680298562942E-007
+ DEBUG SUELAP         331          11          13 -5.088329380065204E-007
+ DEBUG SUELAP         332          11          14 -5.562070390929819E-007
+ DEBUG SUELAP         333          11          15 -6.070903331156785E-007
+ DEBUG SUELAP         334          11          16 -6.614828187423427E-007
+ DEBUG SUELAP         335          11          17 -7.193844986375098E-007
+ DEBUG SUELAP         336          11          18 -7.807953705807336E-007
+ DEBUG SUELAP         337          11          19 -8.457154350161034E-007
+ DEBUG SUELAP         338          11          20 -9.141446923877083E-007
+ DEBUG SUELAP         339          11          21 -9.860831422514593E-007
+ DEBUG SUELAP         340          11          22 -1.061530785051445E-006
+ DEBUG SUELAP         341          11          23 -1.140487619899488E-006
+ DEBUG SUELAP         342          11          24 -1.222953648127856E-006
+ DEBUG SUELAP         343          11          25 -1.308928868404280E-006
+ DEBUG SUELAP         344          11          26 -1.398413281172850E-006
+ DEBUG SUELAP         346          12           1 -2.544164692253048E-007
+ DEBUG SUELAP         347          12           2 -2.596802577414792E-007
+ DEBUG SUELAP         348          12           3 -2.684532400820672E-007
+ DEBUG SUELAP         349          12           4 -2.807354144707119E-007
+ DEBUG SUELAP         350          12           5 -2.965267813515027E-007
+ DEBUG SUELAP         351          12           6 -3.158273407244394E-007
+ DEBUG SUELAP         352          12           7 -3.386370934777005E-007
+ DEBUG SUELAP         353          12           8 -3.649560382790185E-007
+ DEBUG SUELAP         354          12           9 -3.947841755724824E-007
+ DEBUG SUELAP         355          12          10 -4.281215066903599E-007
+ DEBUG SUELAP         356          12          11 -4.649680298562942E-007
+ DEBUG SUELAP         357          12          12 -5.053237455143744E-007
+ DEBUG SUELAP         358          12          13 -5.491886536646007E-007
+ DEBUG SUELAP         359          12          14 -5.965627547510621E-007
+ DEBUG SUELAP         360          12          15 -6.474460487737588E-007
+ DEBUG SUELAP         361          12          16 -7.018385348445122E-007
+ DEBUG SUELAP         362          12          17 -7.597402142955900E-007
+ DEBUG SUELAP         363          12          18 -8.211510862388138E-007
+ DEBUG SUELAP         364          12          19 -8.860711506741836E-007
+ DEBUG SUELAP         365          12          20 -9.545004080457886E-007
+ DEBUG SUELAP         366          12          21 -1.026438857909540E-006
+ DEBUG SUELAP         367          12          22 -1.101886500265437E-006
+ DEBUG SUELAP         368          12          23 -1.180843335113479E-006
+ DEBUG SUELAP         369          12          24 -1.263309363785936E-006
+ DEBUG SUELAP         370          12          25 -1.349284584062360E-006
+ DEBUG SUELAP         371          12          26 -1.438768996830930E-006
+ DEBUG SUELAP         373          13           1 -2.982813773755311E-007
+ DEBUG SUELAP         374          13           2 -3.035451658917054E-007
+ DEBUG SUELAP         375          13           3 -3.123181482322934E-007
+ DEBUG SUELAP         376          13           4 -3.246003226209382E-007
+ DEBUG SUELAP         377          13           5 -3.403916895017289E-007
+ DEBUG SUELAP         378          13           6 -3.596922488746657E-007
+ DEBUG SUELAP         379          13           7 -3.825020016279268E-007
+ DEBUG SUELAP         380          13           8 -4.088209464292447E-007
+ DEBUG SUELAP         381          13           9 -4.386490837227086E-007
+ DEBUG SUELAP         382          13          10 -4.719864148405861E-007
+ DEBUG SUELAP         383          13          11 -5.088329380065204E-007
+ DEBUG SUELAP         384          13          12 -5.491886536646007E-007
+ DEBUG SUELAP         385          13          13 -5.930535618148269E-007
+ DEBUG SUELAP         386          13          14 -6.404276629012884E-007
+ DEBUG SUELAP         387          13          15 -6.913109569239850E-007
+ DEBUG SUELAP         388          13          16 -7.457034429947385E-007
+ DEBUG SUELAP         389          13          17 -8.036051224458163E-007
+ DEBUG SUELAP         390          13          18 -8.650159943890401E-007
+ DEBUG SUELAP         391          13          19 -9.299360588244099E-007
+ DEBUG SUELAP         392          13          20 -9.983653161960149E-007
+ DEBUG SUELAP         393          13          21 -1.070303766059766E-006
+ DEBUG SUELAP         394          13          22 -1.145751408415663E-006
+ DEBUG SUELAP         395          13          23 -1.224708243263706E-006
+ DEBUG SUELAP         396          13          24 -1.307174271936162E-006
+ DEBUG SUELAP         397          13          25 -1.393149492212586E-006
+ DEBUG SUELAP         399          14           1 -3.456554784619925E-007
+ DEBUG SUELAP         400          14           2 -3.509192669781669E-007
+ DEBUG SUELAP         401          14           3 -3.596922493187549E-007
+ DEBUG SUELAP         402          14           4 -3.719744237073996E-007
+ DEBUG SUELAP         403          14           5 -3.877657905881904E-007
+ DEBUG SUELAP         404          14           6 -4.070663499611271E-007
+ DEBUG SUELAP         405          14           7 -4.298761027143883E-007
+ DEBUG SUELAP         406          14           8 -4.561950475157062E-007
+ DEBUG SUELAP         407          14           9 -4.860231848091701E-007
+ DEBUG SUELAP         408          14          10 -5.193605159270476E-007
+ DEBUG SUELAP         409          14          11 -5.562070390929819E-007
+ DEBUG SUELAP         410          14          12 -5.965627547510621E-007
+ DEBUG SUELAP         411          14          13 -6.404276629012884E-007
+ DEBUG SUELAP         412          14          14 -6.878017639877498E-007
+ DEBUG SUELAP         413          14          15 -7.386850580104465E-007
+ DEBUG SUELAP         414          14          16 -7.930775440811999E-007
+ DEBUG SUELAP         415          14          17 -8.509792235322777E-007
+ DEBUG SUELAP         416          14          18 -9.123900954755015E-007
+ DEBUG SUELAP         417          14          19 -9.773101599108713E-007
+ DEBUG SUELAP         418          14          20 -1.045739417282476E-006
+ DEBUG SUELAP         419          14          21 -1.117677867146227E-006
+ DEBUG SUELAP         420          14          22 -1.193125509502124E-006
+ DEBUG SUELAP         421          14          23 -1.272082344350167E-006
+ DEBUG SUELAP         422          14          24 -1.354548373022624E-006
+ DEBUG SUELAP         423          14          25 -1.440523593299048E-006
+ DEBUG SUELAP         425          15           1 -3.965387724846892E-007
+ DEBUG SUELAP         426          15           2 -4.018025610008635E-007
+ DEBUG SUELAP         427          15           3 -4.105755433414515E-007
+ DEBUG SUELAP         428          15           4 -4.228577177300963E-007
+ DEBUG SUELAP         429          15           5 -4.386490846108870E-007
+ DEBUG SUELAP         430          15           6 -4.579496439838238E-007
+ DEBUG SUELAP         431          15           7 -4.807593967370849E-007
+ DEBUG SUELAP         432          15           8 -5.070783415384028E-007
+ DEBUG SUELAP         433          15           9 -5.369064788318667E-007
+ DEBUG SUELAP         434          15          10 -5.702438099497442E-007
+ DEBUG SUELAP         435          15          11 -6.070903331156785E-007
+ DEBUG SUELAP         436          15          12 -6.474460487737588E-007
+ DEBUG SUELAP         437          15          13 -6.913109569239850E-007
+ DEBUG SUELAP         438          15          14 -7.386850580104465E-007
+ DEBUG SUELAP         439          15          15 -7.895683520331431E-007
+ DEBUG SUELAP         440          15          16 -8.439608381038965E-007
+ DEBUG SUELAP         441          15          17 -9.018625175549744E-007
+ DEBUG SUELAP         442          15          18 -9.632733894981982E-007
+ DEBUG SUELAP         443          15          19 -1.028193453933568E-006
+ DEBUG SUELAP         444          15          20 -1.096622711305173E-006
+ DEBUG SUELAP         445          15          21 -1.168561161168924E-006
+ DEBUG SUELAP         446          15          22 -1.244008803524821E-006
+ DEBUG SUELAP         447          15          23 -1.322965638372864E-006
+ DEBUG SUELAP         448          15          24 -1.405431667045320E-006
+ DEBUG SUELAP         450          16           1 -4.509312585554426E-007
+ DEBUG SUELAP         451          16           2 -4.561950470716170E-007
+ DEBUG SUELAP         452          16           3 -4.649680294122049E-007
+ DEBUG SUELAP         453          16           4 -4.772502038008497E-007
+ DEBUG SUELAP         454          16           5 -4.930415706816405E-007
+ DEBUG SUELAP         455          16           6 -5.123421300545772E-007
+ DEBUG SUELAP         456          16           7 -5.351518828078383E-007
+ DEBUG SUELAP         457          16           8 -5.614708276091562E-007
+ DEBUG SUELAP         458          16           9 -5.912989649026201E-007
+ DEBUG SUELAP         459          16          10 -6.246362960204976E-007
+ DEBUG SUELAP         460          16          11 -6.614828191864319E-007
+ DEBUG SUELAP         461          16          12 -7.018385348445122E-007
+ DEBUG SUELAP         462          16          13 -7.457034429947385E-007
+ DEBUG SUELAP         463          16          14 -7.930775440811999E-007
+ DEBUG SUELAP         464          16          15 -8.439608381038965E-007
+ DEBUG SUELAP         465          16          16 -8.983533241746500E-007
+ DEBUG SUELAP         466          16          17 -9.562550036257278E-007
+ DEBUG SUELAP         467          16          18 -1.017665875568952E-006
+ DEBUG SUELAP         468          16          19 -1.082585940004321E-006
+ DEBUG SUELAP         469          16          20 -1.151015197375926E-006
+ DEBUG SUELAP         470          16          21 -1.222953647239677E-006
+ DEBUG SUELAP         471          16          22 -1.298401289595574E-006
+ DEBUG SUELAP         472          16          23 -1.377358124443617E-006
+ DEBUG SUELAP         473          16          24 -1.459824153116074E-006
+ DEBUG SUELAP         475          17           1 -5.088329380065204E-007
+ DEBUG SUELAP         476          17           2 -5.140967269667840E-007
+ DEBUG SUELAP         477          17           3 -5.228697084191936E-007
+ DEBUG SUELAP         478          17           4 -5.351518832519275E-007
+ DEBUG SUELAP         479          17           5 -5.509432501327183E-007
+ DEBUG SUELAP         480          17           6 -5.702438095056550E-007
+ DEBUG SUELAP         481          17           7 -5.930535622589161E-007
+ DEBUG SUELAP         482          17           8 -6.193725070602341E-007
+ DEBUG SUELAP         483          17           9 -6.492006443536980E-007
+ DEBUG SUELAP         484          17          10 -6.825379754715755E-007
+ DEBUG SUELAP         485          17          11 -7.193844986375098E-007
+ DEBUG SUELAP         486          17          12 -7.597402142955900E-007
+ DEBUG SUELAP         487          17          13 -8.036051224458163E-007
+ DEBUG SUELAP         488          17          14 -8.509792235322777E-007
+ DEBUG SUELAP         489          17          15 -9.018625175549744E-007
+ DEBUG SUELAP         490          17          16 -9.562550031816386E-007
+ DEBUG SUELAP         491          17          17 -1.014156683076806E-006
+ DEBUG SUELAP         492          17          18 -1.075567555020029E-006
+ DEBUG SUELAP         493          17          19 -1.140487619455399E-006
+ DEBUG SUELAP         494          17          20 -1.208916876827004E-006
+ DEBUG SUELAP         495          17          21 -1.280855326690755E-006
+ DEBUG SUELAP         496          17          22 -1.356302969490741E-006
+ DEBUG SUELAP         497          17          23 -1.435259804338784E-006
+ DEBUG SUELAP         499          18           1 -5.702438099497442E-007
+ DEBUG SUELAP         500          18           2 -5.755075989100078E-007
+ DEBUG SUELAP         501          18           3 -5.842805803624174E-007
+ DEBUG SUELAP         502          18           4 -5.965627551951513E-007
+ DEBUG SUELAP         503          18           5 -6.123541220759421E-007
+ DEBUG SUELAP         504          18           6 -6.316546814488788E-007
+ DEBUG SUELAP         505          18           7 -6.544644342021400E-007
+ DEBUG SUELAP         506          18           8 -6.807833790034579E-007
+ DEBUG SUELAP         507          18           9 -7.106115162969218E-007
+ DEBUG SUELAP         508          18          10 -7.439488474147993E-007
+ DEBUG SUELAP         509          18          11 -7.807953705807336E-007
+ DEBUG SUELAP         510          18          12 -8.211510862388138E-007
+ DEBUG SUELAP         511          18          13 -8.650159943890401E-007
+ DEBUG SUELAP         512          18          14 -9.123900954755015E-007
+ DEBUG SUELAP         513          18          15 -9.632733894981982E-007
+ DEBUG SUELAP         514          18          16 -1.017665875124862E-006
+ DEBUG SUELAP         515          18          17 -1.075567555020029E-006
+ DEBUG SUELAP         516          18          18 -1.136978426963253E-006
+ DEBUG SUELAP         517          18          19 -1.201898491398623E-006
+ DEBUG SUELAP         518          18          20 -1.270327748770228E-006
+ DEBUG SUELAP         519          18          21 -1.342266198633979E-006
+ DEBUG SUELAP         520          18          22 -1.417713841433965E-006
+ DEBUG SUELAP         522          19           1 -6.351638743851140E-007
+ DEBUG SUELAP         523          19           2 -6.404276629012884E-007
+ DEBUG SUELAP         524          19           3 -6.492006452418764E-007
+ DEBUG SUELAP         525          19           4 -6.614828196305211E-007
+ DEBUG SUELAP         526          19           5 -6.772741865113119E-007
+ DEBUG SUELAP         527          19           6 -6.965747458842486E-007
+ DEBUG SUELAP         528          19           7 -7.193844986375098E-007
+ DEBUG SUELAP         529          19           8 -7.457034434388277E-007
+ DEBUG SUELAP         530          19           9 -7.755315807322916E-007
+ DEBUG SUELAP         531          19          10 -8.088689118501691E-007
+ DEBUG SUELAP         532          19          11 -8.457154350161034E-007
+ DEBUG SUELAP         533          19          12 -8.860711506741836E-007
+ DEBUG SUELAP         534          19          13 -9.299360588244099E-007
+ DEBUG SUELAP         535          19          14 -9.773101599108713E-007
+ DEBUG SUELAP         536          19          15 -1.028193453933568E-006
+ DEBUG SUELAP         537          19          16 -1.082585940004321E-006
+ DEBUG SUELAP         538          19          17 -1.140487619455399E-006
+ DEBUG SUELAP         539          19          18 -1.201898491398623E-006
+ DEBUG SUELAP         540          19          19 -1.266818555833993E-006
+ DEBUG SUELAP         541          19          20 -1.335247813205598E-006
+ DEBUG SUELAP         542          19          21 -1.407186263069349E-006
+ DEBUG SUELAP         544          20           1 -7.035931317567190E-007
+ DEBUG SUELAP         545          20           2 -7.088569207169826E-007
+ DEBUG SUELAP         546          20           3 -7.176299021693922E-007
+ DEBUG SUELAP         547          20           4 -7.299120770021261E-007
+ DEBUG SUELAP         548          20           5 -7.457034438829169E-007
+ DEBUG SUELAP         549          20           6 -7.650040032558536E-007
+ DEBUG SUELAP         550          20           7 -7.878137560091147E-007
+ DEBUG SUELAP         551          20           8 -8.141327008104327E-007
+ DEBUG SUELAP         552          20           9 -8.439608381038965E-007
+ DEBUG SUELAP         553          20          10 -8.772981692217741E-007
+ DEBUG SUELAP         554          20          11 -9.141446923877083E-007
+ DEBUG SUELAP         555          20          12 -9.545004080457886E-007
+ DEBUG SUELAP         556          20          13 -9.983653161960149E-007
+ DEBUG SUELAP         557          20          14 -1.045739417282476E-006
+ DEBUG SUELAP         558          20          15 -1.096622711305173E-006
+ DEBUG SUELAP         559          20          16 -1.151015196931837E-006
+ DEBUG SUELAP         560          20          17 -1.208916876827004E-006
+ DEBUG SUELAP         561          20          18 -1.270327748770228E-006
+ DEBUG SUELAP         562          20          19 -1.335247813205598E-006
+ DEBUG SUELAP         563          20          20 -1.403677070577203E-006
+ DEBUG SUELAP         564          20          21 -1.475615520440954E-006
+ DEBUG SUELAP         566          21           1 -7.755315816204700E-007
+ DEBUG SUELAP         567          21           2 -7.807953705807336E-007
+ DEBUG SUELAP         568          21           3 -7.895683520331431E-007
+ DEBUG SUELAP         569          21           4 -8.018505268658771E-007
+ DEBUG SUELAP         570          21           5 -8.176418937466678E-007
+ DEBUG SUELAP         571          21           6 -8.369424531196046E-007
+ DEBUG SUELAP         572          21           7 -8.597522058728657E-007
+ DEBUG SUELAP         573          21           8 -8.860711506741836E-007
+ DEBUG SUELAP         574          21           9 -9.158992879676475E-007
+ DEBUG SUELAP         575          21          10 -9.492366190855250E-007
+ DEBUG SUELAP         576          21          11 -9.860831422514593E-007
+ DEBUG SUELAP         577          21          12 -1.026438857909540E-006
+ DEBUG SUELAP         578          21          13 -1.070303766059766E-006
+ DEBUG SUELAP         579          21          14 -1.117677867146227E-006
+ DEBUG SUELAP         580          21          15 -1.168561161168924E-006
+ DEBUG SUELAP         581          21          16 -1.222953646795588E-006
+ DEBUG SUELAP         582          21          17 -1.280855326690755E-006
+ DEBUG SUELAP         583          21          18 -1.342266198633979E-006
+ DEBUG SUELAP         584          21          19 -1.407186263069349E-006
+ DEBUG SUELAP         585          21          20 -1.475615520440954E-006
+ DEBUG SUELAP         587          22           1 -8.509792239763669E-007
+ DEBUG SUELAP         588          22           2 -8.562430124925413E-007
+ DEBUG SUELAP         589          22           3 -8.650159948331293E-007
+ DEBUG SUELAP         590          22           4 -8.772981692217741E-007
+ DEBUG SUELAP         591          22           5 -8.930895361025648E-007
+ DEBUG SUELAP         592          22           6 -9.123900954755015E-007
+ DEBUG SUELAP         593          22           7 -9.351998482287627E-007
+ DEBUG SUELAP         594          22           8 -9.615187930300806E-007
+ DEBUG SUELAP         595          22           9 -9.913469303235445E-007
+ DEBUG SUELAP         596          22          10 -1.024684261441422E-006
+ DEBUG SUELAP         597          22          11 -1.061530784607356E-006
+ DEBUG SUELAP         598          22          12 -1.101886500265437E-006
+ DEBUG SUELAP         599          22          13 -1.145751408415663E-006
+ DEBUG SUELAP         600          22          14 -1.193125509502124E-006
+ DEBUG SUELAP         601          22          15 -1.244008803524821E-006
+ DEBUG SUELAP         602          22          16 -1.298401289595574E-006
+ DEBUG SUELAP         603          22          17 -1.356302969046652E-006
+ DEBUG SUELAP         604          22          18 -1.417713840989876E-006
+ DEBUG SUELAP         606          23           1 -9.299360588244099E-007
+ DEBUG SUELAP         607          23           2 -9.351998473405843E-007
+ DEBUG SUELAP         608          23           3 -9.439728296811722E-007
+ DEBUG SUELAP         609          23           4 -9.562550040698170E-007
+ DEBUG SUELAP         610          23           5 -9.720463709506078E-007
+ DEBUG SUELAP         611          23           6 -9.913469303235445E-007
+ DEBUG SUELAP         612          23           7 -1.014156683076806E-006
+ DEBUG SUELAP         613          23           8 -1.040475627878124E-006
+ DEBUG SUELAP         614          23           9 -1.070303765171587E-006
+ DEBUG SUELAP         615          23          10 -1.103641096289465E-006
+ DEBUG SUELAP         616          23          11 -1.140487619455399E-006
+ DEBUG SUELAP         617          23          12 -1.180843335113479E-006
+ DEBUG SUELAP         618          23          13 -1.224708243263706E-006
+ DEBUG SUELAP         619          23          14 -1.272082344350167E-006
+ DEBUG SUELAP         620          23          15 -1.322965638372864E-006
+ DEBUG SUELAP         621          23          16 -1.377358124443617E-006
+ DEBUG SUELAP         622          23          17 -1.435259803894695E-006
+ DEBUG SUELAP         624          24           1 -1.012402087496866E-006
+ DEBUG SUELAP         625          24           2 -1.017665876013041E-006
+ DEBUG SUELAP         626          24           3 -1.026438858353629E-006
+ DEBUG SUELAP         627          24           4 -1.038721032742274E-006
+ DEBUG SUELAP         628          24           5 -1.054512399623064E-006
+ DEBUG SUELAP         629          24           6 -1.073812958996001E-006
+ DEBUG SUELAP         630          24           7 -1.096622711749262E-006
+ DEBUG SUELAP         631          24           8 -1.122941656550580E-006
+ DEBUG SUELAP         632          24           9 -1.152769793844044E-006
+ DEBUG SUELAP         633          24          10 -1.186107124961921E-006
+ DEBUG SUELAP         634          24          11 -1.222953648127856E-006
+ DEBUG SUELAP         635          24          12 -1.263309363785936E-006
+ DEBUG SUELAP         636          24          13 -1.307174271936162E-006
+ DEBUG SUELAP         637          24          14 -1.354548373022624E-006
+ DEBUG SUELAP         638          24          15 -1.405431667045320E-006
+ DEBUG SUELAP         639          24          16 -1.459824153116074E-006
+ DEBUG SUELAP         641          25           1 -1.098377307773291E-006
+ DEBUG SUELAP         642          25           2 -1.103641096733554E-006
+ DEBUG SUELAP         643          25           3 -1.112414078185964E-006
+ DEBUG SUELAP         644          25           4 -1.124696253018698E-006
+ DEBUG SUELAP         645          25           5 -1.140487619899488E-006
+ DEBUG SUELAP         646          25           6 -1.159788179272425E-006
+ DEBUG SUELAP         647          25           7 -1.182597932025686E-006
+ DEBUG SUELAP         648          25           8 -1.208916876827004E-006
+ DEBUG SUELAP         649          25           9 -1.238745014120468E-006
+ DEBUG SUELAP         650          25          10 -1.272082345238346E-006
+ DEBUG SUELAP         651          25          11 -1.308928868404280E-006
+ DEBUG SUELAP         652          25          12 -1.349284584062360E-006
+ DEBUG SUELAP         653          25          13 -1.393149492212586E-006
+ DEBUG SUELAP         654          25          14 -1.440523593299048E-006
+ DEBUG SUELAP         656          26           1 -1.187861720541861E-006
+ DEBUG SUELAP         657          26           2 -1.193125509502124E-006
+ DEBUG SUELAP         658          26           3 -1.201898490954534E-006
+ DEBUG SUELAP         659          26           4 -1.214180665787268E-006
+ DEBUG SUELAP         660          26           5 -1.229972032668059E-006
+ DEBUG SUELAP         661          26           6 -1.249272592040995E-006
+ DEBUG SUELAP         662          26           7 -1.272082344794256E-006
+ DEBUG SUELAP         663          26           8 -1.298401289595574E-006
+ DEBUG SUELAP         664          26           9 -1.328229426889038E-006
+ DEBUG SUELAP         665          26          10 -1.361566758006916E-006
+ DEBUG SUELAP         666          26          11 -1.398413281172850E-006
+ DEBUG SUELAP         667          26          12 -1.438768996830930E-006
+ DEBUG SUELAP         669          27           1 -1.280855326246666E-006
+ DEBUG SUELAP         670          27           2 -1.286119115206930E-006
+ DEBUG SUELAP         671          27           3 -1.294892096659339E-006
+ DEBUG SUELAP         672          27           4 -1.307174271492073E-006
+ DEBUG SUELAP         673          27           5 -1.322965638372864E-006
+ DEBUG SUELAP         674          27           6 -1.342266197745801E-006
+ DEBUG SUELAP         675          27           7 -1.365075950499062E-006
+ DEBUG SUELAP         676          27           8 -1.391394895300380E-006
+ DEBUG SUELAP         677          27           9 -1.421223032593844E-006
+ DEBUG SUELAP         678          27          10 -1.454560363711721E-006
+ DEBUG SUELAP         680          28           1 -1.377358125775885E-006
+ DEBUG SUELAP         681          28           2 -1.382621914736148E-006
+ DEBUG SUELAP         682          28           3 -1.391394896188558E-006
+ DEBUG SUELAP         683          28           4 -1.403677071021292E-006
+ DEBUG SUELAP         684          28           5 -1.419468437902083E-006
+ DEBUG SUELAP         685          28           6 -1.438768997275020E-006
+ DEBUG SUELAP         686          28           7 -1.461578750028281E-006
+ DEBUG SUELAP          31           1  -569931615.713806     
+ DEBUG SUELAP          60           2  -142482921.959700     
+ DEBUG SUELAP          89           3  -63325738.6410396     
+ DEBUG SUELAP         118           4  -35620728.2360187     
+ DEBUG SUELAP         147           5  -22797266.2441520     
+ DEBUG SUELAP         176           6  -15831434.9941719     
+ DEBUG SUELAP         205           7  -11631258.3046548     
+ DEBUG SUELAP         234           8  -8905182.16465653     
+ DEBUG SUELAP         262           9  -7036193.33623956     
+ DEBUG SUELAP         290          10  -5699316.57546299     
+ DEBUG SUELAP         318          11  -4710178.98709922     
+ DEBUG SUELAP         345          12  -3957858.73462997     
+ DEBUG SUELAP         372          13  -3372376.67687168     
+ DEBUG SUELAP         398          14  -2907814.58367359     
+ DEBUG SUELAP         424          15  -2533029.59123170     
+ DEBUG SUELAP         449          16  -2226295.54116413     
+ DEBUG SUELAP         474          17  -1972081.86207706     
+ DEBUG SUELAP         498          18  -1759048.32718927     
+ DEBUG SUELAP         521          19  -1578758.05559489     
+ DEBUG SUELAP         543          20  -1424829.14476731     
+ DEBUG SUELAP         565          21  -1292362.03607569     
+ DEBUG SUELAP         586          22  -1177544.74800636     
+ DEBUG SUELAP         605          23  -1077375.53544906     
+ DEBUG SUELAP         623          24  -989464.683657493     
+ DEBUG SUELAP         640          25  -911890.652720319     
+ DEBUG SUELAP         655          26  -843094.168902258     
+ DEBUG SUELAP         668          27  -781799.256867855     
+ DEBUG SUELAP         679          28  -726953.645214345     
+ DEBUG SUELAP         687          29  -677683.303509221     
+ KSTA =           1
+ KEND =        2748
+ DEBUG           1  0.000000000000000E+000
+ DEBUG           2  0.000000000000000E+000
+ DEBUG           3  0.000000000000000E+000
+ DEBUG           4  0.000000000000000E+000
+ DEBUG           5 -1.754596468117597E-009
+ DEBUG           6 -1.754596468117597E-009
+ DEBUG           7 -1.754596468117597E-009
+ DEBUG           8 -1.754596468117597E-009
+ DEBUG           9 -7.018384984291970E-009
+ DEBUG          10 -7.018384984291970E-009
+ DEBUG          11 -7.018384984291970E-009
+ DEBUG          12 -7.018384984291970E-009
+ DEBUG          13 -1.579136732487996E-008
+ DEBUG          14 -1.579136732487996E-008
+ DEBUG          15 -1.579136732487996E-008
+ DEBUG          16 -1.579136732487996E-008
+ DEBUG          17 -2.807354171352472E-008
+ DEBUG          18 -2.807354171352472E-008
+ DEBUG          19 -2.807354171352472E-008
+ DEBUG          20 -2.807354171352472E-008
+ DEBUG          21 -4.386490859431547E-008
+ DEBUG          22 -4.386490859431547E-008
+ DEBUG          23 -4.386490859431547E-008
+ DEBUG          24 -4.386490859431547E-008
+ DEBUG          25 -6.316546796725220E-008
+ DEBUG          26 -6.316546796725220E-008
+ DEBUG          27 -6.316546796725220E-008
+ DEBUG          28 -6.316546796725220E-008
+ DEBUG          29 -8.597522072051333E-008
+ DEBUG          30 -8.597522072051333E-008
+ DEBUG          31 -8.597522072051333E-008
+ DEBUG          32 -8.597522072051333E-008
+ DEBUG          33 -1.122941655218312E-007
+ DEBUG          34 -1.122941655218312E-007
+ DEBUG          35 -1.122941655218312E-007
+ DEBUG          36 -1.122941655218312E-007
+ DEBUG          37 -1.421223028152951E-007
+ DEBUG          38 -1.421223028152951E-007
+ DEBUG          39 -1.421223028152951E-007
+ DEBUG          40 -1.421223028152951E-007
+ DEBUG          41 -1.754596339331727E-007
+ DEBUG          42 -1.754596339331727E-007
+ DEBUG          43 -1.754596339331727E-007
+ DEBUG          44 -1.754596339331727E-007
+ DEBUG          45 -2.123061570991069E-007
+ DEBUG          46 -2.123061570991069E-007
+ DEBUG          47 -2.123061570991069E-007
+ DEBUG          48 -2.123061570991069E-007
+ DEBUG          49 -2.526618727571872E-007
+ DEBUG          50 -2.526618727571872E-007
+ DEBUG          51 -2.526618727571872E-007
+ DEBUG          52 -2.526618727571872E-007
+ DEBUG          53 -2.965267809074135E-007
+ DEBUG          54 -2.965267809074135E-007
+ DEBUG          55 -2.965267809074135E-007
+ DEBUG          56 -2.965267809074135E-007
+ DEBUG          57 -3.439008819938749E-007
+ DEBUG          58 -3.439008819938749E-007
+ DEBUG          59 -3.439008819938749E-007
+ DEBUG          60 -3.439008819938749E-007
+ DEBUG          61 -3.947841760165716E-007
+ DEBUG          62 -3.947841760165716E-007
+ DEBUG          63 -3.947841760165716E-007
+ DEBUG          64 -3.947841760165716E-007
+ DEBUG          65 -4.491766620873250E-007
+ DEBUG          66 -4.491766620873250E-007
+ DEBUG          67 -4.491766620873250E-007
+ DEBUG          68 -4.491766620873250E-007
+ DEBUG          69 -5.070783415384028E-007
+ DEBUG          70 -5.070783415384028E-007
+ DEBUG          71 -5.070783415384028E-007
+ DEBUG          72 -5.070783415384028E-007
+ DEBUG          73 -5.684892134816266E-007
+ DEBUG          74 -5.684892134816266E-007
+ DEBUG          75 -5.684892134816266E-007
+ DEBUG          76 -5.684892134816266E-007
+ DEBUG          77 -6.334092779169964E-007
+ DEBUG          78 -6.334092779169964E-007
+ DEBUG          79 -6.334092779169964E-007
+ DEBUG          80 -6.334092779169964E-007
+ DEBUG          81 -7.018385352886014E-007
+ DEBUG          82 -7.018385352886014E-007
+ DEBUG          83 -7.018385352886014E-007
+ DEBUG          84 -7.018385352886014E-007
+ DEBUG          85 -7.737769851523524E-007
+ DEBUG          86 -7.737769851523524E-007
+ DEBUG          87 -7.737769851523524E-007
+ DEBUG          88 -7.737769851523524E-007
+ DEBUG          89 -8.492246275082493E-007
+ DEBUG          90 -8.492246275082493E-007
+ DEBUG          91 -8.492246275082493E-007
+ DEBUG          92 -8.492246275082493E-007
+ DEBUG          93 -9.281814623562923E-007
+ DEBUG          94 -9.281814623562923E-007
+ DEBUG          95 -9.281814623562923E-007
+ DEBUG          96 -9.281814623562923E-007
+ DEBUG          97 -1.010647491028749E-006
+ DEBUG          98 -1.010647491028749E-006
+ DEBUG          99 -1.010647491028749E-006
+ DEBUG         100 -1.010647491028749E-006
+ DEBUG         101 -1.096622711305173E-006
+ DEBUG         102 -1.096622711305173E-006
+ DEBUG         103 -1.096622711305173E-006
+ DEBUG         104 -1.096622711305173E-006
+ DEBUG         105 -1.186107124073743E-006
+ DEBUG         106 -1.186107124073743E-006
+ DEBUG         107 -1.186107124073743E-006
+ DEBUG         108 -1.186107124073743E-006
+ DEBUG         109 -1.279100729778548E-006
+ DEBUG         110 -1.279100729778548E-006
+ DEBUG         111 -1.279100729778548E-006
+ DEBUG         112 -1.279100729778548E-006
+ DEBUG         113 -1.375603529307767E-006
+ DEBUG         114 -1.375603529307767E-006
+ DEBUG         115 -1.375603529307767E-006
+ DEBUG         116 -1.375603529307767E-006
+ DEBUG         117 -1.475615519552775E-006
+ DEBUG         118 -1.475615519552775E-006
+ DEBUG         119 -1.475615519552775E-006
+ DEBUG         120 -1.475615519552775E-006
+ DEBUG         121 -1.754596468117597E-009
+ DEBUG         122 -1.754596468117597E-009
+ DEBUG         123 -1.754596468117597E-009
+ DEBUG         124 -1.754596468117597E-009
+ DEBUG         125 -3.509192936235195E-009
+ DEBUG         126 -3.509192936235195E-009
+ DEBUG         127 -3.509192936235195E-009
+ DEBUG         128 -3.509192936235195E-009
+ DEBUG         129 -8.772981452409567E-009
+ DEBUG         130 -8.772981452409567E-009
+ DEBUG         131 -8.772981452409567E-009
+ DEBUG         132 -8.772981452409567E-009
+ DEBUG         133 -1.754596379299755E-008
+ DEBUG         134 -1.754596379299755E-008
+ DEBUG         135 -1.754596379299755E-008
+ DEBUG         136 -1.754596379299755E-008
+ DEBUG         137 -2.982813818164232E-008
+ DEBUG         138 -2.982813818164232E-008
+ DEBUG         139 -2.982813818164232E-008
+ DEBUG         140 -2.982813818164232E-008
+ DEBUG         141 -4.561950506243306E-008
+ DEBUG         142 -4.561950506243306E-008
+ DEBUG         143 -4.561950506243306E-008
+ DEBUG         144 -4.561950506243306E-008
+ DEBUG         145 -6.492006443536980E-008
+ DEBUG         146 -6.492006443536980E-008
+ DEBUG         147 -6.492006443536980E-008
+ DEBUG         148 -6.492006443536980E-008
+ DEBUG         149 -8.772981718863093E-008
+ DEBUG         150 -8.772981718863093E-008
+ DEBUG         151 -8.772981718863093E-008
+ DEBUG         152 -8.772981718863093E-008
+ DEBUG         153 -1.140487619899488E-007
+ DEBUG         154 -1.140487619899488E-007
+ DEBUG         155 -1.140487619899488E-007
+ DEBUG         156 -1.140487619899488E-007
+ DEBUG         157 -1.438768992834127E-007
+ DEBUG         158 -1.438768992834127E-007
+ DEBUG         159 -1.438768992834127E-007
+ DEBUG         160 -1.438768992834127E-007
+ DEBUG         161 -1.772142304012903E-007
+ DEBUG         162 -1.772142304012903E-007
+ DEBUG         163 -1.772142304012903E-007
+ DEBUG         164 -1.772142304012903E-007
+ DEBUG         165 -2.140607535672245E-007
+ DEBUG         166 -2.140607535672245E-007
+ DEBUG         167 -2.140607535672245E-007
+ DEBUG         168 -2.140607535672245E-007
+ DEBUG         169 -2.544164692253048E-007
+ DEBUG         170 -2.544164692253048E-007
+ DEBUG         171 -2.544164692253048E-007
+ DEBUG         172 -2.544164692253048E-007
+ DEBUG         173 -2.982813773755311E-007
+ DEBUG         174 -2.982813773755311E-007
+ DEBUG         175 -2.982813773755311E-007
+ DEBUG         176 -2.982813773755311E-007
+ DEBUG         177 -3.456554784619925E-007
+ DEBUG         178 -3.456554784619925E-007
+ DEBUG         179 -3.456554784619925E-007
+ DEBUG         180 -3.456554784619925E-007
+ DEBUG         181 -3.965387724846892E-007
+ DEBUG         182 -3.965387724846892E-007
+ DEBUG         183 -3.965387724846892E-007
+ DEBUG         184 -3.965387724846892E-007
+ DEBUG         185 -4.509312585554426E-007
+ DEBUG         186 -4.509312585554426E-007
+ DEBUG         187 -4.509312585554426E-007
+ DEBUG         188 -4.509312585554426E-007
+ DEBUG         189 -5.088329380065204E-007
+ DEBUG         190 -5.088329380065204E-007
+ DEBUG         191 -5.088329380065204E-007
+ DEBUG         192 -5.088329380065204E-007
+ DEBUG         193 -5.702438099497442E-007
+ DEBUG         194 -5.702438099497442E-007
+ DEBUG         195 -5.702438099497442E-007
+ DEBUG         196 -5.702438099497442E-007
+ DEBUG         197 -6.351638743851140E-007
+ DEBUG         198 -6.351638743851140E-007
+ DEBUG         199 -6.351638743851140E-007
+ DEBUG         200 -6.351638743851140E-007
+ DEBUG         201 -7.035931317567190E-007
+ DEBUG         202 -7.035931317567190E-007
+ DEBUG         203 -7.035931317567190E-007
+ DEBUG         204 -7.035931317567190E-007
+ DEBUG         205 -7.755315816204700E-007
+ DEBUG         206 -7.755315816204700E-007
+ DEBUG         207 -7.755315816204700E-007
+ DEBUG         208 -7.755315816204700E-007
+ DEBUG         209 -8.509792239763669E-007
+ DEBUG         210 -8.509792239763669E-007
+ DEBUG         211 -8.509792239763669E-007
+ DEBUG         212 -8.509792239763669E-007
+ DEBUG         213 -9.299360588244099E-007
+ DEBUG         214 -9.299360588244099E-007
+ DEBUG         215 -9.299360588244099E-007
+ DEBUG         216 -9.299360588244099E-007
+ DEBUG         217 -1.012402087496866E-006
+ DEBUG         218 -1.012402087496866E-006
+ DEBUG         219 -1.012402087496866E-006
+ DEBUG         220 -1.012402087496866E-006
+ DEBUG         221 -1.098377307773291E-006
+ DEBUG         222 -1.098377307773291E-006
+ DEBUG         223 -1.098377307773291E-006
+ DEBUG         224 -1.098377307773291E-006
+ DEBUG         225 -1.187861720541861E-006
+ DEBUG         226 -1.187861720541861E-006
+ DEBUG         227 -1.187861720541861E-006
+ DEBUG         228 -1.187861720541861E-006
+ DEBUG         229 -1.280855326246666E-006
+ DEBUG         230 -1.280855326246666E-006
+ DEBUG         231 -1.280855326246666E-006
+ DEBUG         232 -1.280855326246666E-006
+ DEBUG         233 -1.377358125775885E-006
+ DEBUG         234 -1.377358125775885E-006
+ DEBUG         235 -1.377358125775885E-006
+ DEBUG         236 -1.377358125775885E-006
+ DEBUG         237 -7.018384984291970E-009
+ DEBUG         238 -7.018384984291970E-009
+ DEBUG         239 -7.018384984291970E-009
+ DEBUG         240 -7.018384984291970E-009
+ DEBUG         241 -8.772981452409567E-009
+ DEBUG         242 -8.772981452409567E-009
+ DEBUG         243 -8.772981452409567E-009
+ DEBUG         244 -8.772981452409567E-009
+ DEBUG         245 -1.403676996858394E-008
+ DEBUG         246 -1.403676996858394E-008
+ DEBUG         247 -1.403676996858394E-008
+ DEBUG         248 -1.403676996858394E-008
+ DEBUG         249 -2.280975230917193E-008
+ DEBUG         250 -2.280975230917193E-008
+ DEBUG         251 -2.280975230917193E-008
+ DEBUG         252 -2.280975230917193E-008
+ DEBUG         253 -3.509192669781669E-008
+ DEBUG         254 -3.509192669781669E-008
+ DEBUG         255 -3.509192669781669E-008
+ DEBUG         256 -3.509192669781669E-008
+ DEBUG         257 -5.088329357860744E-008
+ DEBUG         258 -5.088329357860744E-008
+ DEBUG         259 -5.088329357860744E-008
+ DEBUG         260 -5.088329357860744E-008
+ DEBUG         261 -7.018385295154417E-008
+ DEBUG         262 -7.018385295154417E-008
+ DEBUG         263 -7.018385295154417E-008
+ DEBUG         264 -7.018385295154417E-008
+ DEBUG         265 -9.299360570480530E-008
+ DEBUG         266 -9.299360570480530E-008
+ DEBUG         267 -9.299360570480530E-008
+ DEBUG         268 -9.299360570480530E-008
+ DEBUG         269 -1.193125505061232E-007
+ DEBUG         270 -1.193125505061232E-007
+ DEBUG         271 -1.193125505061232E-007
+ DEBUG         272 -1.193125505061232E-007
+ DEBUG         273 -1.491406877995871E-007
+ DEBUG         274 -1.491406877995871E-007
+ DEBUG         275 -1.491406877995871E-007
+ DEBUG         276 -1.491406877995871E-007
+ DEBUG         277 -1.824780189174646E-007
+ DEBUG         278 -1.824780189174646E-007
+ DEBUG         279 -1.824780189174646E-007
+ DEBUG         280 -1.824780189174646E-007
+ DEBUG         281 -2.193245420833989E-007
+ DEBUG         282 -2.193245420833989E-007
+ DEBUG         283 -2.193245420833989E-007
+ DEBUG         284 -2.193245420833989E-007
+ DEBUG         285 -2.596802577414792E-007
+ DEBUG         286 -2.596802577414792E-007
+ DEBUG         287 -2.596802577414792E-007
+ DEBUG         288 -2.596802577414792E-007
+ DEBUG         289 -3.035451658917054E-007
+ DEBUG         290 -3.035451658917054E-007
+ DEBUG         291 -3.035451658917054E-007
+ DEBUG         292 -3.035451658917054E-007
+ DEBUG         293 -3.509192669781669E-007
+ DEBUG         294 -3.509192669781669E-007
+ DEBUG         295 -3.509192669781669E-007
+ DEBUG         296 -3.509192669781669E-007
+ DEBUG         297 -4.018025610008635E-007
+ DEBUG         298 -4.018025610008635E-007
+ DEBUG         299 -4.018025610008635E-007
+ DEBUG         300 -4.018025610008635E-007
+ DEBUG         301 -4.561950470716170E-007
+ DEBUG         302 -4.561950470716170E-007
+ DEBUG         303 -4.561950470716170E-007
+ DEBUG         304 -4.561950470716170E-007
+ DEBUG         305 -5.140967265226948E-007
+ DEBUG         306 -5.140967265226948E-007
+ DEBUG         307 -5.140967265226948E-007
+ DEBUG         308 -5.140967265226948E-007
+ DEBUG         309 -5.755075984659186E-007
+ DEBUG         310 -5.755075984659186E-007
+ DEBUG         311 -5.755075984659186E-007
+ DEBUG         312 -5.755075984659186E-007
+ DEBUG         313 -6.404276629012884E-007
+ DEBUG         314 -6.404276629012884E-007
+ DEBUG         315 -6.404276629012884E-007
+ DEBUG         316 -6.404276629012884E-007
+ DEBUG         317 -7.088569202728934E-007
+ DEBUG         318 -7.088569202728934E-007
+ DEBUG         319 -7.088569202728934E-007
+ DEBUG         320 -7.088569202728934E-007
+ DEBUG         321 -7.807953701366444E-007
+ DEBUG         322 -7.807953701366444E-007
+ DEBUG         323 -7.807953701366444E-007
+ DEBUG         324 -7.807953701366444E-007
+ DEBUG         325 -8.562430124925413E-007
+ DEBUG         326 -8.562430124925413E-007
+ DEBUG         327 -8.562430124925413E-007
+ DEBUG         328 -8.562430124925413E-007
+ DEBUG         329 -9.351998473405843E-007
+ DEBUG         330 -9.351998473405843E-007
+ DEBUG         331 -9.351998473405843E-007
+ DEBUG         332 -9.351998473405843E-007
+ DEBUG         333 -1.017665876013041E-006
+ DEBUG         334 -1.017665876013041E-006
+ DEBUG         335 -1.017665876013041E-006
+ DEBUG         336 -1.017665876013041E-006
+ DEBUG         337 -1.103641096289465E-006
+ DEBUG         338 -1.103641096289465E-006
+ DEBUG         339 -1.103641096289465E-006
+ DEBUG         340 -1.103641096289465E-006
+ DEBUG         341 -1.193125509058035E-006
+ DEBUG         342 -1.193125509058035E-006
+ DEBUG         343 -1.193125509058035E-006
+ DEBUG         344 -1.193125509058035E-006
+ DEBUG         345 -1.286119114762840E-006
+ DEBUG         346 -1.286119114762840E-006
+ DEBUG         347 -1.286119114762840E-006
+ DEBUG         348 -1.286119114762840E-006
+ DEBUG         349 -1.382621914292059E-006
+ DEBUG         350 -1.382621914292059E-006
+ DEBUG         351 -1.382621914292059E-006
+ DEBUG         352 -1.382621914292059E-006
+ DEBUG         353 -1.579136732487996E-008
+ DEBUG         354 -1.579136732487996E-008
+ DEBUG         355 -1.579136732487996E-008
+ DEBUG         356 -1.579136732487996E-008
+ DEBUG         357 -1.754596379299755E-008
+ DEBUG         358 -1.754596379299755E-008
+ DEBUG         359 -1.754596379299755E-008
+ DEBUG         360 -1.754596379299755E-008
+ DEBUG         361 -2.280975230917193E-008
+ DEBUG         362 -2.280975230917193E-008
+ DEBUG         363 -2.280975230917193E-008
+ DEBUG         364 -2.280975230917193E-008
+ DEBUG         365 -3.158273464975991E-008
+ DEBUG         366 -3.158273464975991E-008
+ DEBUG         367 -3.158273464975991E-008
+ DEBUG         368 -3.158273464975991E-008
+ DEBUG         369 -4.386490903840468E-008
+ DEBUG         370 -4.386490903840468E-008
+ DEBUG         371 -4.386490903840468E-008
+ DEBUG         372 -4.386490903840468E-008
+ DEBUG         373 -5.965627591919542E-008
+ DEBUG         374 -5.965627591919542E-008
+ DEBUG         375 -5.965627591919542E-008
+ DEBUG         376 -5.965627591919542E-008
+ DEBUG         377 -7.895683529213215E-008
+ DEBUG         378 -7.895683529213215E-008
+ DEBUG         379 -7.895683529213215E-008
+ DEBUG         380 -7.895683529213215E-008
+ DEBUG         381 -1.017665880453933E-007
+ DEBUG         382 -1.017665880453933E-007
+ DEBUG         383 -1.017665880453933E-007
+ DEBUG         384 -1.017665880453933E-007
+ DEBUG         385 -1.280855328467112E-007
+ DEBUG         386 -1.280855328467112E-007
+ DEBUG         387 -1.280855328467112E-007
+ DEBUG         388 -1.280855328467112E-007
+ DEBUG         389 -1.579136701401751E-007
+ DEBUG         390 -1.579136701401751E-007
+ DEBUG         391 -1.579136701401751E-007
+ DEBUG         392 -1.579136701401751E-007
+ DEBUG         393 -1.912510012580526E-007
+ DEBUG         394 -1.912510012580526E-007
+ DEBUG         395 -1.912510012580526E-007
+ DEBUG         396 -1.912510012580526E-007
+ DEBUG         397 -2.280975244239869E-007
+ DEBUG         398 -2.280975244239869E-007
+ DEBUG         399 -2.280975244239869E-007
+ DEBUG         400 -2.280975244239869E-007
+ DEBUG         401 -2.684532400820672E-007
+ DEBUG         402 -2.684532400820672E-007
+ DEBUG         403 -2.684532400820672E-007
+ DEBUG         404 -2.684532400820672E-007
+ DEBUG         405 -3.123181482322934E-007
+ DEBUG         406 -3.123181482322934E-007
+ DEBUG         407 -3.123181482322934E-007
+ DEBUG         408 -3.123181482322934E-007
+ DEBUG         409 -3.596922493187549E-007
+ DEBUG         410 -3.596922493187549E-007
+ DEBUG         411 -3.596922493187549E-007
+ DEBUG         412 -3.596922493187549E-007
+ DEBUG         413 -4.105755433414515E-007
+ DEBUG         414 -4.105755433414515E-007
+ DEBUG         415 -4.105755433414515E-007
+ DEBUG         416 -4.105755433414515E-007
+ DEBUG         417 -4.649680294122049E-007
+ DEBUG         418 -4.649680294122049E-007
+ DEBUG         419 -4.649680294122049E-007
+ DEBUG         420 -4.649680294122049E-007
+ DEBUG         421 -5.228697088632828E-007
+ DEBUG         422 -5.228697088632828E-007
+ DEBUG         423 -5.228697088632828E-007
+ DEBUG         424 -5.228697088632828E-007
+ DEBUG         425 -5.842805808065066E-007
+ DEBUG         426 -5.842805808065066E-007
+ DEBUG         427 -5.842805808065066E-007
+ DEBUG         428 -5.842805808065066E-007
+ DEBUG         429 -6.492006452418764E-007
+ DEBUG         430 -6.492006452418764E-007
+ DEBUG         431 -6.492006452418764E-007
+ DEBUG         432 -6.492006452418764E-007
+ DEBUG         433 -7.176299026134814E-007
+ DEBUG         434 -7.176299026134814E-007
+ DEBUG         435 -7.176299026134814E-007
+ DEBUG         436 -7.176299026134814E-007
+ DEBUG         437 -7.895683524772323E-007
+ DEBUG         438 -7.895683524772323E-007
+ DEBUG         439 -7.895683524772323E-007
+ DEBUG         440 -7.895683524772323E-007
+ DEBUG         441 -8.650159948331293E-007
+ DEBUG         442 -8.650159948331293E-007
+ DEBUG         443 -8.650159948331293E-007
+ DEBUG         444 -8.650159948331293E-007
+ DEBUG         445 -9.439728296811722E-007
+ DEBUG         446 -9.439728296811722E-007
+ DEBUG         447 -9.439728296811722E-007
+ DEBUG         448 -9.439728296811722E-007
+ DEBUG         449 -1.026438858353629E-006
+ DEBUG         450 -1.026438858353629E-006
+ DEBUG         451 -1.026438858353629E-006
+ DEBUG         452 -1.026438858353629E-006
+ DEBUG         453 -1.112414078630053E-006
+ DEBUG         454 -1.112414078630053E-006
+ DEBUG         455 -1.112414078630053E-006
+ DEBUG         456 -1.112414078630053E-006
+ DEBUG         457 -1.201898491398623E-006
+ DEBUG         458 -1.201898491398623E-006
+ DEBUG         459 -1.201898491398623E-006
+ DEBUG         460 -1.201898491398623E-006
+ DEBUG         461 -1.294892097103428E-006
+ DEBUG         462 -1.294892097103428E-006
+ DEBUG         463 -1.294892097103428E-006
+ DEBUG         464 -1.294892097103428E-006
+ DEBUG         465 -1.391394896632647E-006
+ DEBUG         466 -1.391394896632647E-006
+ DEBUG         467 -1.391394896632647E-006
+ DEBUG         468 -1.391394896632647E-006
+ DEBUG         469 -2.807354171352472E-008
+ DEBUG         470 -2.807354171352472E-008
+ DEBUG         471 -2.807354171352472E-008
+ DEBUG         472 -2.807354171352472E-008
+ DEBUG         473 -2.982813818164232E-008
+ DEBUG         474 -2.982813818164232E-008
+ DEBUG         475 -2.982813818164232E-008
+ DEBUG         476 -2.982813818164232E-008
+ DEBUG         477 -3.509192669781669E-008
+ DEBUG         478 -3.509192669781669E-008
+ DEBUG         479 -3.509192669781669E-008
+ DEBUG         480 -3.509192669781669E-008
+ DEBUG         481 -4.386490903840468E-008
+ DEBUG         482 -4.386490903840468E-008
+ DEBUG         483 -4.386490903840468E-008
+ DEBUG         484 -4.386490903840468E-008
+ DEBUG         485 -5.614708342704944E-008
+ DEBUG         486 -5.614708342704944E-008
+ DEBUG         487 -5.614708342704944E-008
+ DEBUG         488 -5.614708342704944E-008
+ DEBUG         489 -7.193845030784018E-008
+ DEBUG         490 -7.193845030784018E-008
+ DEBUG         491 -7.193845030784018E-008
+ DEBUG         492 -7.193845030784018E-008
+ DEBUG         493 -9.123900968077692E-008
+ DEBUG         494 -9.123900968077692E-008
+ DEBUG         495 -9.123900968077692E-008
+ DEBUG         496 -9.123900968077692E-008
+ DEBUG         497 -1.140487624340381E-007
+ DEBUG         498 -1.140487624340381E-007
+ DEBUG         499 -1.140487624340381E-007
+ DEBUG         500 -1.140487624340381E-007
+ DEBUG         501 -1.403677072353560E-007
+ DEBUG         502 -1.403677072353560E-007
+ DEBUG         503 -1.403677072353560E-007
+ DEBUG         504 -1.403677072353560E-007
+ DEBUG         505 -1.701958445288199E-007
+ DEBUG         506 -1.701958445288199E-007
+ DEBUG         507 -1.701958445288199E-007
+ DEBUG         508 -1.701958445288199E-007
+ DEBUG         509 -2.035331756466974E-007
+ DEBUG         510 -2.035331756466974E-007
+ DEBUG         511 -2.035331756466974E-007
+ DEBUG         512 -2.035331756466974E-007
+ DEBUG         513 -2.403796988126317E-007
+ DEBUG         514 -2.403796988126317E-007
+ DEBUG         515 -2.403796988126317E-007
+ DEBUG         516 -2.403796988126317E-007
+ DEBUG         517 -2.807354144707119E-007
+ DEBUG         518 -2.807354144707119E-007
+ DEBUG         519 -2.807354144707119E-007
+ DEBUG         520 -2.807354144707119E-007
+ DEBUG         521 -3.246003226209382E-007
+ DEBUG         522 -3.246003226209382E-007
+ DEBUG         523 -3.246003226209382E-007
+ DEBUG         524 -3.246003226209382E-007
+ DEBUG         525 -3.719744237073996E-007
+ DEBUG         526 -3.719744237073996E-007
+ DEBUG         527 -3.719744237073996E-007
+ DEBUG         528 -3.719744237073996E-007
+ DEBUG         529 -4.228577177300963E-007
+ DEBUG         530 -4.228577177300963E-007
+ DEBUG         531 -4.228577177300963E-007
+ DEBUG         532 -4.228577177300963E-007
+ DEBUG         533 -4.772502038008497E-007
+ DEBUG         534 -4.772502038008497E-007
+ DEBUG         535 -4.772502038008497E-007
+ DEBUG         536 -4.772502038008497E-007
+ DEBUG         537 -5.351518832519275E-007
+ DEBUG         538 -5.351518832519275E-007
+ DEBUG         539 -5.351518832519275E-007
+ DEBUG         540 -5.351518832519275E-007
+ DEBUG         541 -5.965627551951513E-007
+ DEBUG         542 -5.965627551951513E-007
+ DEBUG         543 -5.965627551951513E-007
+ DEBUG         544 -5.965627551951513E-007
+ DEBUG         545 -6.614828196305211E-007
+ DEBUG         546 -6.614828196305211E-007
+ DEBUG         547 -6.614828196305211E-007
+ DEBUG         548 -6.614828196305211E-007
+ DEBUG         549 -7.299120770021261E-007
+ DEBUG         550 -7.299120770021261E-007
+ DEBUG         551 -7.299120770021261E-007
+ DEBUG         552 -7.299120770021261E-007
+ DEBUG         553 -8.018505268658771E-007
+ DEBUG         554 -8.018505268658771E-007
+ DEBUG         555 -8.018505268658771E-007
+ DEBUG         556 -8.018505268658771E-007
+ DEBUG         557 -8.772981692217741E-007
+ DEBUG         558 -8.772981692217741E-007
+ DEBUG         559 -8.772981692217741E-007
+ DEBUG         560 -8.772981692217741E-007
+ DEBUG         561 -9.562550040698170E-007
+ DEBUG         562 -9.562550040698170E-007
+ DEBUG         563 -9.562550040698170E-007
+ DEBUG         564 -9.562550040698170E-007
+ DEBUG         565 -1.038721032742274E-006
+ DEBUG         566 -1.038721032742274E-006
+ DEBUG         567 -1.038721032742274E-006
+ DEBUG         568 -1.038721032742274E-006
+ DEBUG         569 -1.124696253018698E-006
+ DEBUG         570 -1.124696253018698E-006
+ DEBUG         571 -1.124696253018698E-006
+ DEBUG         572 -1.124696253018698E-006
+ DEBUG         573 -1.214180665787268E-006
+ DEBUG         574 -1.214180665787268E-006
+ DEBUG         575 -1.214180665787268E-006
+ DEBUG         576 -1.214180665787268E-006
+ DEBUG         577 -1.307174271492073E-006
+ DEBUG         578 -1.307174271492073E-006
+ DEBUG         579 -1.307174271492073E-006
+ DEBUG         580 -1.307174271492073E-006
+ DEBUG         581 -1.403677071021292E-006
+ DEBUG         582 -1.403677071021292E-006
+ DEBUG         583 -1.403677071021292E-006
+ DEBUG         584 -1.403677071021292E-006
+ DEBUG         585 -4.386490859431547E-008
+ DEBUG         586 -4.386490859431547E-008
+ DEBUG         587 -4.386490859431547E-008
+ DEBUG         588 -4.386490859431547E-008
+ DEBUG         589 -4.561950506243306E-008
+ DEBUG         590 -4.561950506243306E-008
+ DEBUG         591 -4.561950506243306E-008
+ DEBUG         592 -4.561950506243306E-008
+ DEBUG         593 -5.088329402269665E-008
+ DEBUG         594 -5.088329402269665E-008
+ DEBUG         595 -5.088329402269665E-008
+ DEBUG         596 -5.088329402269665E-008
+ DEBUG         597 -5.965627547510621E-008
+ DEBUG         598 -5.965627547510621E-008
+ DEBUG         599 -5.965627547510621E-008
+ DEBUG         600 -5.965627547510621E-008
+ DEBUG         601 -7.193845030784018E-008
+ DEBUG         602 -7.193845030784018E-008
+ DEBUG         603 -7.193845030784018E-008
+ DEBUG         604 -7.193845030784018E-008
+ DEBUG         605 -8.772981718863093E-008
+ DEBUG         606 -8.772981718863093E-008
+ DEBUG         607 -8.772981718863093E-008
+ DEBUG         608 -8.772981718863093E-008
+ DEBUG         609 -1.070303765615677E-007
+ DEBUG         610 -1.070303765615677E-007
+ DEBUG         611 -1.070303765615677E-007
+ DEBUG         612 -1.070303765615677E-007
+ DEBUG         613 -1.298401293148288E-007
+ DEBUG         614 -1.298401293148288E-007
+ DEBUG         615 -1.298401293148288E-007
+ DEBUG         616 -1.298401293148288E-007
+ DEBUG         617 -1.561590741161467E-007
+ DEBUG         618 -1.561590741161467E-007
+ DEBUG         619 -1.561590741161467E-007
+ DEBUG         620 -1.561590741161467E-007
+ DEBUG         621 -1.859872114096106E-007
+ DEBUG         622 -1.859872114096106E-007
+ DEBUG         623 -1.859872114096106E-007
+ DEBUG         624 -1.859872114096106E-007
+ DEBUG         625 -2.193245425274881E-007
+ DEBUG         626 -2.193245425274881E-007
+ DEBUG         627 -2.193245425274881E-007
+ DEBUG         628 -2.193245425274881E-007
+ DEBUG         629 -2.561710656934224E-007
+ DEBUG         630 -2.561710656934224E-007
+ DEBUG         631 -2.561710656934224E-007
+ DEBUG         632 -2.561710656934224E-007
+ DEBUG         633 -2.965267813515027E-007
+ DEBUG         634 -2.965267813515027E-007
+ DEBUG         635 -2.965267813515027E-007
+ DEBUG         636 -2.965267813515027E-007
+ DEBUG         637 -3.403916895017289E-007
+ DEBUG         638 -3.403916895017289E-007
+ DEBUG         639 -3.403916895017289E-007
+ DEBUG         640 -3.403916895017289E-007
+ DEBUG         641 -3.877657905881904E-007
+ DEBUG         642 -3.877657905881904E-007
+ DEBUG         643 -3.877657905881904E-007
+ DEBUG         644 -3.877657905881904E-007
+ DEBUG         645 -4.386490846108870E-007
+ DEBUG         646 -4.386490846108870E-007
+ DEBUG         647 -4.386490846108870E-007
+ DEBUG         648 -4.386490846108870E-007
+ DEBUG         649 -4.930415702375512E-007
+ DEBUG         650 -4.930415702375512E-007
+ DEBUG         651 -4.930415702375512E-007
+ DEBUG         652 -4.930415702375512E-007
+ DEBUG         653 -5.509432501327183E-007
+ DEBUG         654 -5.509432501327183E-007
+ DEBUG         655 -5.509432501327183E-007
+ DEBUG         656 -5.509432501327183E-007
+ DEBUG         657 -6.123541220759421E-007
+ DEBUG         658 -6.123541220759421E-007
+ DEBUG         659 -6.123541220759421E-007
+ DEBUG         660 -6.123541220759421E-007
+ DEBUG         661 -6.772741865113119E-007
+ DEBUG         662 -6.772741865113119E-007
+ DEBUG         663 -6.772741865113119E-007
+ DEBUG         664 -6.772741865113119E-007
+ DEBUG         665 -7.457034438829169E-007
+ DEBUG         666 -7.457034438829169E-007
+ DEBUG         667 -7.457034438829169E-007
+ DEBUG         668 -7.457034438829169E-007
+ DEBUG         669 -8.176418937466678E-007
+ DEBUG         670 -8.176418937466678E-007
+ DEBUG         671 -8.176418937466678E-007
+ DEBUG         672 -8.176418937466678E-007
+ DEBUG         673 -8.930895365466540E-007
+ DEBUG         674 -8.930895365466540E-007
+ DEBUG         675 -8.930895365466540E-007
+ DEBUG         676 -8.930895365466540E-007
+ DEBUG         677 -9.720463713946970E-007
+ DEBUG         678 -9.720463713946970E-007
+ DEBUG         679 -9.720463713946970E-007
+ DEBUG         680 -9.720463713946970E-007
+ DEBUG         681 -1.054512399623064E-006
+ DEBUG         682 -1.054512399623064E-006
+ DEBUG         683 -1.054512399623064E-006
+ DEBUG         684 -1.054512399623064E-006
+ DEBUG         685 -1.140487619899488E-006
+ DEBUG         686 -1.140487619899488E-006
+ DEBUG         687 -1.140487619899488E-006
+ DEBUG         688 -1.140487619899488E-006
+ DEBUG         689 -1.229972032668059E-006
+ DEBUG         690 -1.229972032668059E-006
+ DEBUG         691 -1.229972032668059E-006
+ DEBUG         692 -1.229972032668059E-006
+ DEBUG         693 -1.322965638372864E-006
+ DEBUG         694 -1.322965638372864E-006
+ DEBUG         695 -1.322965638372864E-006
+ DEBUG         696 -1.322965638372864E-006
+ DEBUG         697 -1.419468437902083E-006
+ DEBUG         698 -1.419468437902083E-006
+ DEBUG         699 -1.419468437902083E-006
+ DEBUG         700 -1.419468437902083E-006
+ DEBUG         701 -6.316546796725220E-008
+ DEBUG         702 -6.316546796725220E-008
+ DEBUG         703 -6.316546796725220E-008
+ DEBUG         704 -6.316546796725220E-008
+ DEBUG         705 -6.492006443536980E-008
+ DEBUG         706 -6.492006443536980E-008
+ DEBUG         707 -6.492006443536980E-008
+ DEBUG         708 -6.492006443536980E-008
+ DEBUG         709 -7.018385339563338E-008
+ DEBUG         710 -7.018385339563338E-008
+ DEBUG         711 -7.018385339563338E-008
+ DEBUG         712 -7.018385339563338E-008
+ DEBUG         713 -7.895683484804294E-008
+ DEBUG         714 -7.895683484804294E-008
+ DEBUG         715 -7.895683484804294E-008
+ DEBUG         716 -7.895683484804294E-008
+ DEBUG         717 -9.123900968077692E-008
+ DEBUG         718 -9.123900968077692E-008
+ DEBUG         719 -9.123900968077692E-008
+ DEBUG         720 -9.123900968077692E-008
+ DEBUG         721 -1.070303765615677E-007
+ DEBUG         722 -1.070303765615677E-007
+ DEBUG         723 -1.070303765615677E-007
+ DEBUG         724 -1.070303765615677E-007
+ DEBUG         725 -1.263309359345044E-007
+ DEBUG         726 -1.263309359345044E-007
+ DEBUG         727 -1.263309359345044E-007
+ DEBUG         728 -1.263309359345044E-007
+ DEBUG         729 -1.491406886877655E-007
+ DEBUG         730 -1.491406886877655E-007
+ DEBUG         731 -1.491406886877655E-007
+ DEBUG         732 -1.491406886877655E-007
+ DEBUG         733 -1.754596334890834E-007
+ DEBUG         734 -1.754596334890834E-007
+ DEBUG         735 -1.754596334890834E-007
+ DEBUG         736 -1.754596334890834E-007
+ DEBUG         737 -2.052877707825473E-007
+ DEBUG         738 -2.052877707825473E-007
+ DEBUG         739 -2.052877707825473E-007
+ DEBUG         740 -2.052877707825473E-007
+ DEBUG         741 -2.386251019004249E-007
+ DEBUG         742 -2.386251019004249E-007
+ DEBUG         743 -2.386251019004249E-007
+ DEBUG         744 -2.386251019004249E-007
+ DEBUG         745 -2.754716250663591E-007
+ DEBUG         746 -2.754716250663591E-007
+ DEBUG         747 -2.754716250663591E-007
+ DEBUG         748 -2.754716250663591E-007
+ DEBUG         749 -3.158273407244394E-007
+ DEBUG         750 -3.158273407244394E-007
+ DEBUG         751 -3.158273407244394E-007
+ DEBUG         752 -3.158273407244394E-007
+ DEBUG         753 -3.596922488746657E-007
+ DEBUG         754 -3.596922488746657E-007
+ DEBUG         755 -3.596922488746657E-007
+ DEBUG         756 -3.596922488746657E-007
+ DEBUG         757 -4.070663499611271E-007
+ DEBUG         758 -4.070663499611271E-007
+ DEBUG         759 -4.070663499611271E-007
+ DEBUG         760 -4.070663499611271E-007
+ DEBUG         761 -4.579496439838238E-007
+ DEBUG         762 -4.579496439838238E-007
+ DEBUG         763 -4.579496439838238E-007
+ DEBUG         764 -4.579496439838238E-007
+ DEBUG         765 -5.123421296104880E-007
+ DEBUG         766 -5.123421296104880E-007
+ DEBUG         767 -5.123421296104880E-007
+ DEBUG         768 -5.123421296104880E-007
+ DEBUG         769 -5.702438095056550E-007
+ DEBUG         770 -5.702438095056550E-007
+ DEBUG         771 -5.702438095056550E-007
+ DEBUG         772 -5.702438095056550E-007
+ DEBUG         773 -6.316546814488788E-007
+ DEBUG         774 -6.316546814488788E-007
+ DEBUG         775 -6.316546814488788E-007
+ DEBUG         776 -6.316546814488788E-007
+ DEBUG         777 -6.965747458842486E-007
+ DEBUG         778 -6.965747458842486E-007
+ DEBUG         779 -6.965747458842486E-007
+ DEBUG         780 -6.965747458842486E-007
+ DEBUG         781 -7.650040032558536E-007
+ DEBUG         782 -7.650040032558536E-007
+ DEBUG         783 -7.650040032558536E-007
+ DEBUG         784 -7.650040032558536E-007
+ DEBUG         785 -8.369424531196046E-007
+ DEBUG         786 -8.369424531196046E-007
+ DEBUG         787 -8.369424531196046E-007
+ DEBUG         788 -8.369424531196046E-007
+ DEBUG         789 -9.123900959195907E-007
+ DEBUG         790 -9.123900959195907E-007
+ DEBUG         791 -9.123900959195907E-007
+ DEBUG         792 -9.123900959195907E-007
+ DEBUG         793 -9.913469307676337E-007
+ DEBUG         794 -9.913469307676337E-007
+ DEBUG         795 -9.913469307676337E-007
+ DEBUG         796 -9.913469307676337E-007
+ DEBUG         797 -1.073812958996001E-006
+ DEBUG         798 -1.073812958996001E-006
+ DEBUG         799 -1.073812958996001E-006
+ DEBUG         800 -1.073812958996001E-006
+ DEBUG         801 -1.159788179272425E-006
+ DEBUG         802 -1.159788179272425E-006
+ DEBUG         803 -1.159788179272425E-006
+ DEBUG         804 -1.159788179272425E-006
+ DEBUG         805 -1.249272592040995E-006
+ DEBUG         806 -1.249272592040995E-006
+ DEBUG         807 -1.249272592040995E-006
+ DEBUG         808 -1.249272592040995E-006
+ DEBUG         809 -1.342266197745801E-006
+ DEBUG         810 -1.342266197745801E-006
+ DEBUG         811 -1.342266197745801E-006
+ DEBUG         812 -1.342266197745801E-006
+ DEBUG         813 -1.438768997275020E-006
+ DEBUG         814 -1.438768997275020E-006
+ DEBUG         815 -1.438768997275020E-006
+ DEBUG         816 -1.438768997275020E-006
+ DEBUG         817 -8.597522072051333E-008
+ DEBUG         818 -8.597522072051333E-008
+ DEBUG         819 -8.597522072051333E-008
+ DEBUG         820 -8.597522072051333E-008
+ DEBUG         821 -8.772981718863093E-008
+ DEBUG         822 -8.772981718863093E-008
+ DEBUG         823 -8.772981718863093E-008
+ DEBUG         824 -8.772981718863093E-008
+ DEBUG         825 -9.299360570480530E-008
+ DEBUG         826 -9.299360570480530E-008
+ DEBUG         827 -9.299360570480530E-008
+ DEBUG         828 -9.299360570480530E-008
+ DEBUG         829 -1.017665880453933E-007
+ DEBUG         830 -1.017665880453933E-007
+ DEBUG         831 -1.017665880453933E-007
+ DEBUG         832 -1.017665880453933E-007
+ DEBUG         833 -1.140487624340381E-007
+ DEBUG         834 -1.140487624340381E-007
+ DEBUG         835 -1.140487624340381E-007
+ DEBUG         836 -1.140487624340381E-007
+ DEBUG         837 -1.298401293148288E-007
+ DEBUG         838 -1.298401293148288E-007
+ DEBUG         839 -1.298401293148288E-007
+ DEBUG         840 -1.298401293148288E-007
+ DEBUG         841 -1.491406886877655E-007
+ DEBUG         842 -1.491406886877655E-007
+ DEBUG         843 -1.491406886877655E-007
+ DEBUG         844 -1.491406886877655E-007
+ DEBUG         845 -1.719504414410267E-007
+ DEBUG         846 -1.719504414410267E-007
+ DEBUG         847 -1.719504414410267E-007
+ DEBUG         848 -1.719504414410267E-007
+ DEBUG         849 -1.982693862423446E-007
+ DEBUG         850 -1.982693862423446E-007
+ DEBUG         851 -1.982693862423446E-007
+ DEBUG         852 -1.982693862423446E-007
+ DEBUG         853 -2.280975235358085E-007
+ DEBUG         854 -2.280975235358085E-007
+ DEBUG         855 -2.280975235358085E-007
+ DEBUG         856 -2.280975235358085E-007
+ DEBUG         857 -2.614348546536860E-007
+ DEBUG         858 -2.614348546536860E-007
+ DEBUG         859 -2.614348546536860E-007
+ DEBUG         860 -2.614348546536860E-007
+ DEBUG         861 -2.982813778196203E-007
+ DEBUG         862 -2.982813778196203E-007
+ DEBUG         863 -2.982813778196203E-007
+ DEBUG         864 -2.982813778196203E-007
+ DEBUG         865 -3.386370934777005E-007
+ DEBUG         866 -3.386370934777005E-007
+ DEBUG         867 -3.386370934777005E-007
+ DEBUG         868 -3.386370934777005E-007
+ DEBUG         869 -3.825020016279268E-007
+ DEBUG         870 -3.825020016279268E-007
+ DEBUG         871 -3.825020016279268E-007
+ DEBUG         872 -3.825020016279268E-007
+ DEBUG         873 -4.298761027143883E-007
+ DEBUG         874 -4.298761027143883E-007
+ DEBUG         875 -4.298761027143883E-007
+ DEBUG         876 -4.298761027143883E-007
+ DEBUG         877 -4.807593967370849E-007
+ DEBUG         878 -4.807593967370849E-007
+ DEBUG         879 -4.807593967370849E-007
+ DEBUG         880 -4.807593967370849E-007
+ DEBUG         881 -5.351518828078383E-007
+ DEBUG         882 -5.351518828078383E-007
+ DEBUG         883 -5.351518828078383E-007
+ DEBUG         884 -5.351518828078383E-007
+ DEBUG         885 -5.930535622589161E-007
+ DEBUG         886 -5.930535622589161E-007
+ DEBUG         887 -5.930535622589161E-007
+ DEBUG         888 -5.930535622589161E-007
+ DEBUG         889 -6.544644342021400E-007
+ DEBUG         890 -6.544644342021400E-007
+ DEBUG         891 -6.544644342021400E-007
+ DEBUG         892 -6.544644342021400E-007
+ DEBUG         893 -7.193844986375098E-007
+ DEBUG         894 -7.193844986375098E-007
+ DEBUG         895 -7.193844986375098E-007
+ DEBUG         896 -7.193844986375098E-007
+ DEBUG         897 -7.878137560091147E-007
+ DEBUG         898 -7.878137560091147E-007
+ DEBUG         899 -7.878137560091147E-007
+ DEBUG         900 -7.878137560091147E-007
+ DEBUG         901 -8.597522058728657E-007
+ DEBUG         902 -8.597522058728657E-007
+ DEBUG         903 -8.597522058728657E-007
+ DEBUG         904 -8.597522058728657E-007
+ DEBUG         905 -9.351998482287627E-007
+ DEBUG         906 -9.351998482287627E-007
+ DEBUG         907 -9.351998482287627E-007
+ DEBUG         908 -9.351998482287627E-007
+ DEBUG         909 -1.014156683076806E-006
+ DEBUG         910 -1.014156683076806E-006
+ DEBUG         911 -1.014156683076806E-006
+ DEBUG         912 -1.014156683076806E-006
+ DEBUG         913 -1.096622711749262E-006
+ DEBUG         914 -1.096622711749262E-006
+ DEBUG         915 -1.096622711749262E-006
+ DEBUG         916 -1.096622711749262E-006
+ DEBUG         917 -1.182597932025686E-006
+ DEBUG         918 -1.182597932025686E-006
+ DEBUG         919 -1.182597932025686E-006
+ DEBUG         920 -1.182597932025686E-006
+ DEBUG         921 -1.272082344794256E-006
+ DEBUG         922 -1.272082344794256E-006
+ DEBUG         923 -1.272082344794256E-006
+ DEBUG         924 -1.272082344794256E-006
+ DEBUG         925 -1.365075950499062E-006
+ DEBUG         926 -1.365075950499062E-006
+ DEBUG         927 -1.365075950499062E-006
+ DEBUG         928 -1.365075950499062E-006
+ DEBUG         929 -1.461578750028281E-006
+ DEBUG         930 -1.461578750028281E-006
+ DEBUG         931 -1.461578750028281E-006
+ DEBUG         932 -1.461578750028281E-006
+ DEBUG         933 -1.122941655218312E-007
+ DEBUG         934 -1.122941655218312E-007
+ DEBUG         935 -1.122941655218312E-007
+ DEBUG         936 -1.122941655218312E-007
+ DEBUG         937 -1.140487619899488E-007
+ DEBUG         938 -1.140487619899488E-007
+ DEBUG         939 -1.140487619899488E-007
+ DEBUG         940 -1.140487619899488E-007
+ DEBUG         941 -1.193125509502124E-007
+ DEBUG         942 -1.193125509502124E-007
+ DEBUG         943 -1.193125509502124E-007
+ DEBUG         944 -1.193125509502124E-007
+ DEBUG         945 -1.280855324026220E-007
+ DEBUG         946 -1.280855324026220E-007
+ DEBUG         947 -1.280855324026220E-007
+ DEBUG         948 -1.280855324026220E-007
+ DEBUG         949 -1.403677072353560E-007
+ DEBUG         950 -1.403677072353560E-007
+ DEBUG         951 -1.403677072353560E-007
+ DEBUG         952 -1.403677072353560E-007
+ DEBUG         953 -1.561590741161467E-007
+ DEBUG         954 -1.561590741161467E-007
+ DEBUG         955 -1.561590741161467E-007
+ DEBUG         956 -1.561590741161467E-007
+ DEBUG         957 -1.754596334890834E-007
+ DEBUG         958 -1.754596334890834E-007
+ DEBUG         959 -1.754596334890834E-007
+ DEBUG         960 -1.754596334890834E-007
+ DEBUG         961 -1.982693862423446E-007
+ DEBUG         962 -1.982693862423446E-007
+ DEBUG         963 -1.982693862423446E-007
+ DEBUG         964 -1.982693862423446E-007
+ DEBUG         965 -2.245883310436625E-007
+ DEBUG         966 -2.245883310436625E-007
+ DEBUG         967 -2.245883310436625E-007
+ DEBUG         968 -2.245883310436625E-007
+ DEBUG         969 -2.544164683371264E-007
+ DEBUG         970 -2.544164683371264E-007
+ DEBUG         971 -2.544164683371264E-007
+ DEBUG         972 -2.544164683371264E-007
+ DEBUG         973 -2.877537994550039E-007
+ DEBUG         974 -2.877537994550039E-007
+ DEBUG         975 -2.877537994550039E-007
+ DEBUG         976 -2.877537994550039E-007
+ DEBUG         977 -3.246003226209382E-007
+ DEBUG         978 -3.246003226209382E-007
+ DEBUG         979 -3.246003226209382E-007
+ DEBUG         980 -3.246003226209382E-007
+ DEBUG         981 -3.649560382790185E-007
+ DEBUG         982 -3.649560382790185E-007
+ DEBUG         983 -3.649560382790185E-007
+ DEBUG         984 -3.649560382790185E-007
+ DEBUG         985 -4.088209464292447E-007
+ DEBUG         986 -4.088209464292447E-007
+ DEBUG         987 -4.088209464292447E-007
+ DEBUG         988 -4.088209464292447E-007
+ DEBUG         989 -4.561950475157062E-007
+ DEBUG         990 -4.561950475157062E-007
+ DEBUG         991 -4.561950475157062E-007
+ DEBUG         992 -4.561950475157062E-007
+ DEBUG         993 -5.070783415384028E-007
+ DEBUG         994 -5.070783415384028E-007
+ DEBUG         995 -5.070783415384028E-007
+ DEBUG         996 -5.070783415384028E-007
+ DEBUG         997 -5.614708271650670E-007
+ DEBUG         998 -5.614708271650670E-007
+ DEBUG         999 -5.614708271650670E-007
+ DEBUG        1000 -5.614708271650670E-007
+ DEBUG        1001 -6.193725070602341E-007
+ DEBUG        1002 -6.193725070602341E-007
+ DEBUG        1003 -6.193725070602341E-007
+ DEBUG        1004 -6.193725070602341E-007
+ DEBUG        1005 -6.807833790034579E-007
+ DEBUG        1006 -6.807833790034579E-007
+ DEBUG        1007 -6.807833790034579E-007
+ DEBUG        1008 -6.807833790034579E-007
+ DEBUG        1009 -7.457034434388277E-007
+ DEBUG        1010 -7.457034434388277E-007
+ DEBUG        1011 -7.457034434388277E-007
+ DEBUG        1012 -7.457034434388277E-007
+ DEBUG        1013 -8.141327008104327E-007
+ DEBUG        1014 -8.141327008104327E-007
+ DEBUG        1015 -8.141327008104327E-007
+ DEBUG        1016 -8.141327008104327E-007
+ DEBUG        1017 -8.860711506741836E-007
+ DEBUG        1018 -8.860711506741836E-007
+ DEBUG        1019 -8.860711506741836E-007
+ DEBUG        1020 -8.860711506741836E-007
+ DEBUG        1021 -9.615187934741698E-007
+ DEBUG        1022 -9.615187934741698E-007
+ DEBUG        1023 -9.615187934741698E-007
+ DEBUG        1024 -9.615187934741698E-007
+ DEBUG        1025 -1.040475628322213E-006
+ DEBUG        1026 -1.040475628322213E-006
+ DEBUG        1027 -1.040475628322213E-006
+ DEBUG        1028 -1.040475628322213E-006
+ DEBUG        1029 -1.122941656550580E-006
+ DEBUG        1030 -1.122941656550580E-006
+ DEBUG        1031 -1.122941656550580E-006
+ DEBUG        1032 -1.122941656550580E-006
+ DEBUG        1033 -1.208916876827004E-006
+ DEBUG        1034 -1.208916876827004E-006
+ DEBUG        1035 -1.208916876827004E-006
+ DEBUG        1036 -1.208916876827004E-006
+ DEBUG        1037 -1.298401289595574E-006
+ DEBUG        1038 -1.298401289595574E-006
+ DEBUG        1039 -1.298401289595574E-006
+ DEBUG        1040 -1.298401289595574E-006
+ DEBUG        1041 -1.391394895300380E-006
+ DEBUG        1042 -1.391394895300380E-006
+ DEBUG        1043 -1.391394895300380E-006
+ DEBUG        1044 -1.391394895300380E-006
+ DEBUG        1045 -1.421223028152951E-007
+ DEBUG        1046 -1.421223028152951E-007
+ DEBUG        1047 -1.421223028152951E-007
+ DEBUG        1048 -1.421223028152951E-007
+ DEBUG        1049 -1.438768992834127E-007
+ DEBUG        1050 -1.438768992834127E-007
+ DEBUG        1051 -1.438768992834127E-007
+ DEBUG        1052 -1.438768992834127E-007
+ DEBUG        1053 -1.491406882436763E-007
+ DEBUG        1054 -1.491406882436763E-007
+ DEBUG        1055 -1.491406882436763E-007
+ DEBUG        1056 -1.491406882436763E-007
+ DEBUG        1057 -1.579136696960859E-007
+ DEBUG        1058 -1.579136696960859E-007
+ DEBUG        1059 -1.579136696960859E-007
+ DEBUG        1060 -1.579136696960859E-007
+ DEBUG        1061 -1.701958445288199E-007
+ DEBUG        1062 -1.701958445288199E-007
+ DEBUG        1063 -1.701958445288199E-007
+ DEBUG        1064 -1.701958445288199E-007
+ DEBUG        1065 -1.859872114096106E-007
+ DEBUG        1066 -1.859872114096106E-007
+ DEBUG        1067 -1.859872114096106E-007
+ DEBUG        1068 -1.859872114096106E-007
+ DEBUG        1069 -2.052877707825473E-007
+ DEBUG        1070 -2.052877707825473E-007
+ DEBUG        1071 -2.052877707825473E-007
+ DEBUG        1072 -2.052877707825473E-007
+ DEBUG        1073 -2.280975235358085E-007
+ DEBUG        1074 -2.280975235358085E-007
+ DEBUG        1075 -2.280975235358085E-007
+ DEBUG        1076 -2.280975235358085E-007
+ DEBUG        1077 -2.544164683371264E-007
+ DEBUG        1078 -2.544164683371264E-007
+ DEBUG        1079 -2.544164683371264E-007
+ DEBUG        1080 -2.544164683371264E-007
+ DEBUG        1081 -2.842446056305903E-007
+ DEBUG        1082 -2.842446056305903E-007
+ DEBUG        1083 -2.842446056305903E-007
+ DEBUG        1084 -2.842446056305903E-007
+ DEBUG        1085 -3.175819367484678E-007
+ DEBUG        1086 -3.175819367484678E-007
+ DEBUG        1087 -3.175819367484678E-007
+ DEBUG        1088 -3.175819367484678E-007
+ DEBUG        1089 -3.544284599144021E-007
+ DEBUG        1090 -3.544284599144021E-007
+ DEBUG        1091 -3.544284599144021E-007
+ DEBUG        1092 -3.544284599144021E-007
+ DEBUG        1093 -3.947841755724824E-007
+ DEBUG        1094 -3.947841755724824E-007
+ DEBUG        1095 -3.947841755724824E-007
+ DEBUG        1096 -3.947841755724824E-007
+ DEBUG        1097 -4.386490837227086E-007
+ DEBUG        1098 -4.386490837227086E-007
+ DEBUG        1099 -4.386490837227086E-007
+ DEBUG        1100 -4.386490837227086E-007
+ DEBUG        1101 -4.860231848091701E-007
+ DEBUG        1102 -4.860231848091701E-007
+ DEBUG        1103 -4.860231848091701E-007
+ DEBUG        1104 -4.860231848091701E-007
+ DEBUG        1105 -5.369064788318667E-007
+ DEBUG        1106 -5.369064788318667E-007
+ DEBUG        1107 -5.369064788318667E-007
+ DEBUG        1108 -5.369064788318667E-007
+ DEBUG        1109 -5.912989644585309E-007
+ DEBUG        1110 -5.912989644585309E-007
+ DEBUG        1111 -5.912989644585309E-007
+ DEBUG        1112 -5.912989644585309E-007
+ DEBUG        1113 -6.492006443536980E-007
+ DEBUG        1114 -6.492006443536980E-007
+ DEBUG        1115 -6.492006443536980E-007
+ DEBUG        1116 -6.492006443536980E-007
+ DEBUG        1117 -7.106115162969218E-007
+ DEBUG        1118 -7.106115162969218E-007
+ DEBUG        1119 -7.106115162969218E-007
+ DEBUG        1120 -7.106115162969218E-007
+ DEBUG        1121 -7.755315807322916E-007
+ DEBUG        1122 -7.755315807322916E-007
+ DEBUG        1123 -7.755315807322916E-007
+ DEBUG        1124 -7.755315807322916E-007
+ DEBUG        1125 -8.439608381038965E-007
+ DEBUG        1126 -8.439608381038965E-007
+ DEBUG        1127 -8.439608381038965E-007
+ DEBUG        1128 -8.439608381038965E-007
+ DEBUG        1129 -9.158992879676475E-007
+ DEBUG        1130 -9.158992879676475E-007
+ DEBUG        1131 -9.158992879676475E-007
+ DEBUG        1132 -9.158992879676475E-007
+ DEBUG        1133 -9.913469307676337E-007
+ DEBUG        1134 -9.913469307676337E-007
+ DEBUG        1135 -9.913469307676337E-007
+ DEBUG        1136 -9.913469307676337E-007
+ DEBUG        1137 -1.070303765615677E-006
+ DEBUG        1138 -1.070303765615677E-006
+ DEBUG        1139 -1.070303765615677E-006
+ DEBUG        1140 -1.070303765615677E-006
+ DEBUG        1141 -1.152769793844044E-006
+ DEBUG        1142 -1.152769793844044E-006
+ DEBUG        1143 -1.152769793844044E-006
+ DEBUG        1144 -1.152769793844044E-006
+ DEBUG        1145 -1.238745014120468E-006
+ DEBUG        1146 -1.238745014120468E-006
+ DEBUG        1147 -1.238745014120468E-006
+ DEBUG        1148 -1.238745014120468E-006
+ DEBUG        1149 -1.328229426889038E-006
+ DEBUG        1150 -1.328229426889038E-006
+ DEBUG        1151 -1.328229426889038E-006
+ DEBUG        1152 -1.328229426889038E-006
+ DEBUG        1153 -1.421223032593844E-006
+ DEBUG        1154 -1.421223032593844E-006
+ DEBUG        1155 -1.421223032593844E-006
+ DEBUG        1156 -1.421223032593844E-006
+ DEBUG        1157 -1.754596339331727E-007
+ DEBUG        1158 -1.754596339331727E-007
+ DEBUG        1159 -1.754596339331727E-007
+ DEBUG        1160 -1.754596339331727E-007
+ DEBUG        1161 -1.772142304012903E-007
+ DEBUG        1162 -1.772142304012903E-007
+ DEBUG        1163 -1.772142304012903E-007
+ DEBUG        1164 -1.772142304012903E-007
+ DEBUG        1165 -1.824780193615538E-007
+ DEBUG        1166 -1.824780193615538E-007
+ DEBUG        1167 -1.824780193615538E-007
+ DEBUG        1168 -1.824780193615538E-007
+ DEBUG        1169 -1.912510008139634E-007
+ DEBUG        1170 -1.912510008139634E-007
+ DEBUG        1171 -1.912510008139634E-007
+ DEBUG        1172 -1.912510008139634E-007
+ DEBUG        1173 -2.035331756466974E-007
+ DEBUG        1174 -2.035331756466974E-007
+ DEBUG        1175 -2.035331756466974E-007
+ DEBUG        1176 -2.035331756466974E-007
+ DEBUG        1177 -2.193245425274881E-007
+ DEBUG        1178 -2.193245425274881E-007
+ DEBUG        1179 -2.193245425274881E-007
+ DEBUG        1180 -2.193245425274881E-007
+ DEBUG        1181 -2.386251019004249E-007
+ DEBUG        1182 -2.386251019004249E-007
+ DEBUG        1183 -2.386251019004249E-007
+ DEBUG        1184 -2.386251019004249E-007
+ DEBUG        1185 -2.614348546536860E-007
+ DEBUG        1186 -2.614348546536860E-007
+ DEBUG        1187 -2.614348546536860E-007
+ DEBUG        1188 -2.614348546536860E-007
+ DEBUG        1189 -2.877537994550039E-007
+ DEBUG        1190 -2.877537994550039E-007
+ DEBUG        1191 -2.877537994550039E-007
+ DEBUG        1192 -2.877537994550039E-007
+ DEBUG        1193 -3.175819367484678E-007
+ DEBUG        1194 -3.175819367484678E-007
+ DEBUG        1195 -3.175819367484678E-007
+ DEBUG        1196 -3.175819367484678E-007
+ DEBUG        1197 -3.509192678663453E-007
+ DEBUG        1198 -3.509192678663453E-007
+ DEBUG        1199 -3.509192678663453E-007
+ DEBUG        1200 -3.509192678663453E-007
+ DEBUG        1201 -3.877657910322796E-007
+ DEBUG        1202 -3.877657910322796E-007
+ DEBUG        1203 -3.877657910322796E-007
+ DEBUG        1204 -3.877657910322796E-007
+ DEBUG        1205 -4.281215066903599E-007
+ DEBUG        1206 -4.281215066903599E-007
+ DEBUG        1207 -4.281215066903599E-007
+ DEBUG        1208 -4.281215066903599E-007
+ DEBUG        1209 -4.719864148405861E-007
+ DEBUG        1210 -4.719864148405861E-007
+ DEBUG        1211 -4.719864148405861E-007
+ DEBUG        1212 -4.719864148405861E-007
+ DEBUG        1213 -5.193605159270476E-007
+ DEBUG        1214 -5.193605159270476E-007
+ DEBUG        1215 -5.193605159270476E-007
+ DEBUG        1216 -5.193605159270476E-007
+ DEBUG        1217 -5.702438099497442E-007
+ DEBUG        1218 -5.702438099497442E-007
+ DEBUG        1219 -5.702438099497442E-007
+ DEBUG        1220 -5.702438099497442E-007
+ DEBUG        1221 -6.246362955764084E-007
+ DEBUG        1222 -6.246362955764084E-007
+ DEBUG        1223 -6.246362955764084E-007
+ DEBUG        1224 -6.246362955764084E-007
+ DEBUG        1225 -6.825379754715755E-007
+ DEBUG        1226 -6.825379754715755E-007
+ DEBUG        1227 -6.825379754715755E-007
+ DEBUG        1228 -6.825379754715755E-007
+ DEBUG        1229 -7.439488474147993E-007
+ DEBUG        1230 -7.439488474147993E-007
+ DEBUG        1231 -7.439488474147993E-007
+ DEBUG        1232 -7.439488474147993E-007
+ DEBUG        1233 -8.088689118501691E-007
+ DEBUG        1234 -8.088689118501691E-007
+ DEBUG        1235 -8.088689118501691E-007
+ DEBUG        1236 -8.088689118501691E-007
+ DEBUG        1237 -8.772981692217741E-007
+ DEBUG        1238 -8.772981692217741E-007
+ DEBUG        1239 -8.772981692217741E-007
+ DEBUG        1240 -8.772981692217741E-007
+ DEBUG        1241 -9.492366190855250E-007
+ DEBUG        1242 -9.492366190855250E-007
+ DEBUG        1243 -9.492366190855250E-007
+ DEBUG        1244 -9.492366190855250E-007
+ DEBUG        1245 -1.024684261885511E-006
+ DEBUG        1246 -1.024684261885511E-006
+ DEBUG        1247 -1.024684261885511E-006
+ DEBUG        1248 -1.024684261885511E-006
+ DEBUG        1249 -1.103641096733554E-006
+ DEBUG        1250 -1.103641096733554E-006
+ DEBUG        1251 -1.103641096733554E-006
+ DEBUG        1252 -1.103641096733554E-006
+ DEBUG        1253 -1.186107124961921E-006
+ DEBUG        1254 -1.186107124961921E-006
+ DEBUG        1255 -1.186107124961921E-006
+ DEBUG        1256 -1.186107124961921E-006
+ DEBUG        1257 -1.272082345238346E-006
+ DEBUG        1258 -1.272082345238346E-006
+ DEBUG        1259 -1.272082345238346E-006
+ DEBUG        1260 -1.272082345238346E-006
+ DEBUG        1261 -1.361566758006916E-006
+ DEBUG        1262 -1.361566758006916E-006
+ DEBUG        1263 -1.361566758006916E-006
+ DEBUG        1264 -1.361566758006916E-006
+ DEBUG        1265 -1.454560363711721E-006
+ DEBUG        1266 -1.454560363711721E-006
+ DEBUG        1267 -1.454560363711721E-006
+ DEBUG        1268 -1.454560363711721E-006
+ DEBUG        1269 -2.123061570991069E-007
+ DEBUG        1270 -2.123061570991069E-007
+ DEBUG        1271 -2.123061570991069E-007
+ DEBUG        1272 -2.123061570991069E-007
+ DEBUG        1273 -2.140607535672245E-007
+ DEBUG        1274 -2.140607535672245E-007
+ DEBUG        1275 -2.140607535672245E-007
+ DEBUG        1276 -2.140607535672245E-007
+ DEBUG        1277 -2.193245425274881E-007
+ DEBUG        1278 -2.193245425274881E-007
+ DEBUG        1279 -2.193245425274881E-007
+ DEBUG        1280 -2.193245425274881E-007
+ DEBUG        1281 -2.280975239798977E-007
+ DEBUG        1282 -2.280975239798977E-007
+ DEBUG        1283 -2.280975239798977E-007
+ DEBUG        1284 -2.280975239798977E-007
+ DEBUG        1285 -2.403796988126317E-007
+ DEBUG        1286 -2.403796988126317E-007
+ DEBUG        1287 -2.403796988126317E-007
+ DEBUG        1288 -2.403796988126317E-007
+ DEBUG        1289 -2.561710656934224E-007
+ DEBUG        1290 -2.561710656934224E-007
+ DEBUG        1291 -2.561710656934224E-007
+ DEBUG        1292 -2.561710656934224E-007
+ DEBUG        1293 -2.754716250663591E-007
+ DEBUG        1294 -2.754716250663591E-007
+ DEBUG        1295 -2.754716250663591E-007
+ DEBUG        1296 -2.754716250663591E-007
+ DEBUG        1297 -2.982813778196203E-007
+ DEBUG        1298 -2.982813778196203E-007
+ DEBUG        1299 -2.982813778196203E-007
+ DEBUG        1300 -2.982813778196203E-007
+ DEBUG        1301 -3.246003226209382E-007
+ DEBUG        1302 -3.246003226209382E-007
+ DEBUG        1303 -3.246003226209382E-007
+ DEBUG        1304 -3.246003226209382E-007
+ DEBUG        1305 -3.544284599144021E-007
+ DEBUG        1306 -3.544284599144021E-007
+ DEBUG        1307 -3.544284599144021E-007
+ DEBUG        1308 -3.544284599144021E-007
+ DEBUG        1309 -3.877657910322796E-007
+ DEBUG        1310 -3.877657910322796E-007
+ DEBUG        1311 -3.877657910322796E-007
+ DEBUG        1312 -3.877657910322796E-007
+ DEBUG        1313 -4.246123141982139E-007
+ DEBUG        1314 -4.246123141982139E-007
+ DEBUG        1315 -4.246123141982139E-007
+ DEBUG        1316 -4.246123141982139E-007
+ DEBUG        1317 -4.649680298562942E-007
+ DEBUG        1318 -4.649680298562942E-007
+ DEBUG        1319 -4.649680298562942E-007
+ DEBUG        1320 -4.649680298562942E-007
+ DEBUG        1321 -5.088329380065204E-007
+ DEBUG        1322 -5.088329380065204E-007
+ DEBUG        1323 -5.088329380065204E-007
+ DEBUG        1324 -5.088329380065204E-007
+ DEBUG        1325 -5.562070390929819E-007
+ DEBUG        1326 -5.562070390929819E-007
+ DEBUG        1327 -5.562070390929819E-007
+ DEBUG        1328 -5.562070390929819E-007
+ DEBUG        1329 -6.070903331156785E-007
+ DEBUG        1330 -6.070903331156785E-007
+ DEBUG        1331 -6.070903331156785E-007
+ DEBUG        1332 -6.070903331156785E-007
+ DEBUG        1333 -6.614828187423427E-007
+ DEBUG        1334 -6.614828187423427E-007
+ DEBUG        1335 -6.614828187423427E-007
+ DEBUG        1336 -6.614828187423427E-007
+ DEBUG        1337 -7.193844986375098E-007
+ DEBUG        1338 -7.193844986375098E-007
+ DEBUG        1339 -7.193844986375098E-007
+ DEBUG        1340 -7.193844986375098E-007
+ DEBUG        1341 -7.807953705807336E-007
+ DEBUG        1342 -7.807953705807336E-007
+ DEBUG        1343 -7.807953705807336E-007
+ DEBUG        1344 -7.807953705807336E-007
+ DEBUG        1345 -8.457154350161034E-007
+ DEBUG        1346 -8.457154350161034E-007
+ DEBUG        1347 -8.457154350161034E-007
+ DEBUG        1348 -8.457154350161034E-007
+ DEBUG        1349 -9.141446923877083E-007
+ DEBUG        1350 -9.141446923877083E-007
+ DEBUG        1351 -9.141446923877083E-007
+ DEBUG        1352 -9.141446923877083E-007
+ DEBUG        1353 -9.860831422514593E-007
+ DEBUG        1354 -9.860831422514593E-007
+ DEBUG        1355 -9.860831422514593E-007
+ DEBUG        1356 -9.860831422514593E-007
+ DEBUG        1357 -1.061530785051445E-006
+ DEBUG        1358 -1.061530785051445E-006
+ DEBUG        1359 -1.061530785051445E-006
+ DEBUG        1360 -1.061530785051445E-006
+ DEBUG        1361 -1.140487619899488E-006
+ DEBUG        1362 -1.140487619899488E-006
+ DEBUG        1363 -1.140487619899488E-006
+ DEBUG        1364 -1.140487619899488E-006
+ DEBUG        1365 -1.222953648127856E-006
+ DEBUG        1366 -1.222953648127856E-006
+ DEBUG        1367 -1.222953648127856E-006
+ DEBUG        1368 -1.222953648127856E-006
+ DEBUG        1369 -1.308928868404280E-006
+ DEBUG        1370 -1.308928868404280E-006
+ DEBUG        1371 -1.308928868404280E-006
+ DEBUG        1372 -1.308928868404280E-006
+ DEBUG        1373 -1.398413281172850E-006
+ DEBUG        1374 -1.398413281172850E-006
+ DEBUG        1375 -1.398413281172850E-006
+ DEBUG        1376 -1.398413281172850E-006
+ DEBUG        1377 -2.526618727571872E-007
+ DEBUG        1378 -2.526618727571872E-007
+ DEBUG        1379 -2.526618727571872E-007
+ DEBUG        1380 -2.526618727571872E-007
+ DEBUG        1381 -2.544164692253048E-007
+ DEBUG        1382 -2.544164692253048E-007
+ DEBUG        1383 -2.544164692253048E-007
+ DEBUG        1384 -2.544164692253048E-007
+ DEBUG        1385 -2.596802577414792E-007
+ DEBUG        1386 -2.596802577414792E-007
+ DEBUG        1387 -2.596802577414792E-007
+ DEBUG        1388 -2.596802577414792E-007
+ DEBUG        1389 -2.684532400820672E-007
+ DEBUG        1390 -2.684532400820672E-007
+ DEBUG        1391 -2.684532400820672E-007
+ DEBUG        1392 -2.684532400820672E-007
+ DEBUG        1393 -2.807354144707119E-007
+ DEBUG        1394 -2.807354144707119E-007
+ DEBUG        1395 -2.807354144707119E-007
+ DEBUG        1396 -2.807354144707119E-007
+ DEBUG        1397 -2.965267813515027E-007
+ DEBUG        1398 -2.965267813515027E-007
+ DEBUG        1399 -2.965267813515027E-007
+ DEBUG        1400 -2.965267813515027E-007
+ DEBUG        1401 -3.158273407244394E-007
+ DEBUG        1402 -3.158273407244394E-007
+ DEBUG        1403 -3.158273407244394E-007
+ DEBUG        1404 -3.158273407244394E-007
+ DEBUG        1405 -3.386370934777005E-007
+ DEBUG        1406 -3.386370934777005E-007
+ DEBUG        1407 -3.386370934777005E-007
+ DEBUG        1408 -3.386370934777005E-007
+ DEBUG        1409 -3.649560382790185E-007
+ DEBUG        1410 -3.649560382790185E-007
+ DEBUG        1411 -3.649560382790185E-007
+ DEBUG        1412 -3.649560382790185E-007
+ DEBUG        1413 -3.947841755724824E-007
+ DEBUG        1414 -3.947841755724824E-007
+ DEBUG        1415 -3.947841755724824E-007
+ DEBUG        1416 -3.947841755724824E-007
+ DEBUG        1417 -4.281215066903599E-007
+ DEBUG        1418 -4.281215066903599E-007
+ DEBUG        1419 -4.281215066903599E-007
+ DEBUG        1420 -4.281215066903599E-007
+ DEBUG        1421 -4.649680298562942E-007
+ DEBUG        1422 -4.649680298562942E-007
+ DEBUG        1423 -4.649680298562942E-007
+ DEBUG        1424 -4.649680298562942E-007
+ DEBUG        1425 -5.053237455143744E-007
+ DEBUG        1426 -5.053237455143744E-007
+ DEBUG        1427 -5.053237455143744E-007
+ DEBUG        1428 -5.053237455143744E-007
+ DEBUG        1429 -5.491886536646007E-007
+ DEBUG        1430 -5.491886536646007E-007
+ DEBUG        1431 -5.491886536646007E-007
+ DEBUG        1432 -5.491886536646007E-007
+ DEBUG        1433 -5.965627547510621E-007
+ DEBUG        1434 -5.965627547510621E-007
+ DEBUG        1435 -5.965627547510621E-007
+ DEBUG        1436 -5.965627547510621E-007
+ DEBUG        1437 -6.474460487737588E-007
+ DEBUG        1438 -6.474460487737588E-007
+ DEBUG        1439 -6.474460487737588E-007
+ DEBUG        1440 -6.474460487737588E-007
+ DEBUG        1441 -7.018385348445122E-007
+ DEBUG        1442 -7.018385348445122E-007
+ DEBUG        1443 -7.018385348445122E-007
+ DEBUG        1444 -7.018385348445122E-007
+ DEBUG        1445 -7.597402142955900E-007
+ DEBUG        1446 -7.597402142955900E-007
+ DEBUG        1447 -7.597402142955900E-007
+ DEBUG        1448 -7.597402142955900E-007
+ DEBUG        1449 -8.211510862388138E-007
+ DEBUG        1450 -8.211510862388138E-007
+ DEBUG        1451 -8.211510862388138E-007
+ DEBUG        1452 -8.211510862388138E-007
+ DEBUG        1453 -8.860711506741836E-007
+ DEBUG        1454 -8.860711506741836E-007
+ DEBUG        1455 -8.860711506741836E-007
+ DEBUG        1456 -8.860711506741836E-007
+ DEBUG        1457 -9.545004080457886E-007
+ DEBUG        1458 -9.545004080457886E-007
+ DEBUG        1459 -9.545004080457886E-007
+ DEBUG        1460 -9.545004080457886E-007
+ DEBUG        1461 -1.026438857909540E-006
+ DEBUG        1462 -1.026438857909540E-006
+ DEBUG        1463 -1.026438857909540E-006
+ DEBUG        1464 -1.026438857909540E-006
+ DEBUG        1465 -1.101886500265437E-006
+ DEBUG        1466 -1.101886500265437E-006
+ DEBUG        1467 -1.101886500265437E-006
+ DEBUG        1468 -1.101886500265437E-006
+ DEBUG        1469 -1.180843335113479E-006
+ DEBUG        1470 -1.180843335113479E-006
+ DEBUG        1471 -1.180843335113479E-006
+ DEBUG        1472 -1.180843335113479E-006
+ DEBUG        1473 -1.263309363785936E-006
+ DEBUG        1474 -1.263309363785936E-006
+ DEBUG        1475 -1.263309363785936E-006
+ DEBUG        1476 -1.263309363785936E-006
+ DEBUG        1477 -1.349284584062360E-006
+ DEBUG        1478 -1.349284584062360E-006
+ DEBUG        1479 -1.349284584062360E-006
+ DEBUG        1480 -1.349284584062360E-006
+ DEBUG        1481 -1.438768996830930E-006
+ DEBUG        1482 -1.438768996830930E-006
+ DEBUG        1483 -1.438768996830930E-006
+ DEBUG        1484 -1.438768996830930E-006
+ DEBUG        1485 -2.965267809074135E-007
+ DEBUG        1486 -2.965267809074135E-007
+ DEBUG        1487 -2.965267809074135E-007
+ DEBUG        1488 -2.965267809074135E-007
+ DEBUG        1489 -2.982813773755311E-007
+ DEBUG        1490 -2.982813773755311E-007
+ DEBUG        1491 -2.982813773755311E-007
+ DEBUG        1492 -2.982813773755311E-007
+ DEBUG        1493 -3.035451658917054E-007
+ DEBUG        1494 -3.035451658917054E-007
+ DEBUG        1495 -3.035451658917054E-007
+ DEBUG        1496 -3.035451658917054E-007
+ DEBUG        1497 -3.123181482322934E-007
+ DEBUG        1498 -3.123181482322934E-007
+ DEBUG        1499 -3.123181482322934E-007
+ DEBUG        1500 -3.123181482322934E-007
+ DEBUG        1501 -3.246003226209382E-007
+ DEBUG        1502 -3.246003226209382E-007
+ DEBUG        1503 -3.246003226209382E-007
+ DEBUG        1504 -3.246003226209382E-007
+ DEBUG        1505 -3.403916895017289E-007
+ DEBUG        1506 -3.403916895017289E-007
+ DEBUG        1507 -3.403916895017289E-007
+ DEBUG        1508 -3.403916895017289E-007
+ DEBUG        1509 -3.596922488746657E-007
+ DEBUG        1510 -3.596922488746657E-007
+ DEBUG        1511 -3.596922488746657E-007
+ DEBUG        1512 -3.596922488746657E-007
+ DEBUG        1513 -3.825020016279268E-007
+ DEBUG        1514 -3.825020016279268E-007
+ DEBUG        1515 -3.825020016279268E-007
+ DEBUG        1516 -3.825020016279268E-007
+ DEBUG        1517 -4.088209464292447E-007
+ DEBUG        1518 -4.088209464292447E-007
+ DEBUG        1519 -4.088209464292447E-007
+ DEBUG        1520 -4.088209464292447E-007
+ DEBUG        1521 -4.386490837227086E-007
+ DEBUG        1522 -4.386490837227086E-007
+ DEBUG        1523 -4.386490837227086E-007
+ DEBUG        1524 -4.386490837227086E-007
+ DEBUG        1525 -4.719864148405861E-007
+ DEBUG        1526 -4.719864148405861E-007
+ DEBUG        1527 -4.719864148405861E-007
+ DEBUG        1528 -4.719864148405861E-007
+ DEBUG        1529 -5.088329380065204E-007
+ DEBUG        1530 -5.088329380065204E-007
+ DEBUG        1531 -5.088329380065204E-007
+ DEBUG        1532 -5.088329380065204E-007
+ DEBUG        1533 -5.491886536646007E-007
+ DEBUG        1534 -5.491886536646007E-007
+ DEBUG        1535 -5.491886536646007E-007
+ DEBUG        1536 -5.491886536646007E-007
+ DEBUG        1537 -5.930535618148269E-007
+ DEBUG        1538 -5.930535618148269E-007
+ DEBUG        1539 -5.930535618148269E-007
+ DEBUG        1540 -5.930535618148269E-007
+ DEBUG        1541 -6.404276629012884E-007
+ DEBUG        1542 -6.404276629012884E-007
+ DEBUG        1543 -6.404276629012884E-007
+ DEBUG        1544 -6.404276629012884E-007
+ DEBUG        1545 -6.913109569239850E-007
+ DEBUG        1546 -6.913109569239850E-007
+ DEBUG        1547 -6.913109569239850E-007
+ DEBUG        1548 -6.913109569239850E-007
+ DEBUG        1549 -7.457034429947385E-007
+ DEBUG        1550 -7.457034429947385E-007
+ DEBUG        1551 -7.457034429947385E-007
+ DEBUG        1552 -7.457034429947385E-007
+ DEBUG        1553 -8.036051224458163E-007
+ DEBUG        1554 -8.036051224458163E-007
+ DEBUG        1555 -8.036051224458163E-007
+ DEBUG        1556 -8.036051224458163E-007
+ DEBUG        1557 -8.650159943890401E-007
+ DEBUG        1558 -8.650159943890401E-007
+ DEBUG        1559 -8.650159943890401E-007
+ DEBUG        1560 -8.650159943890401E-007
+ DEBUG        1561 -9.299360588244099E-007
+ DEBUG        1562 -9.299360588244099E-007
+ DEBUG        1563 -9.299360588244099E-007
+ DEBUG        1564 -9.299360588244099E-007
+ DEBUG        1565 -9.983653161960149E-007
+ DEBUG        1566 -9.983653161960149E-007
+ DEBUG        1567 -9.983653161960149E-007
+ DEBUG        1568 -9.983653161960149E-007
+ DEBUG        1569 -1.070303766059766E-006
+ DEBUG        1570 -1.070303766059766E-006
+ DEBUG        1571 -1.070303766059766E-006
+ DEBUG        1572 -1.070303766059766E-006
+ DEBUG        1573 -1.145751408415663E-006
+ DEBUG        1574 -1.145751408415663E-006
+ DEBUG        1575 -1.145751408415663E-006
+ DEBUG        1576 -1.145751408415663E-006
+ DEBUG        1577 -1.224708243263706E-006
+ DEBUG        1578 -1.224708243263706E-006
+ DEBUG        1579 -1.224708243263706E-006
+ DEBUG        1580 -1.224708243263706E-006
+ DEBUG        1581 -1.307174271936162E-006
+ DEBUG        1582 -1.307174271936162E-006
+ DEBUG        1583 -1.307174271936162E-006
+ DEBUG        1584 -1.307174271936162E-006
+ DEBUG        1585 -1.393149492212586E-006
+ DEBUG        1586 -1.393149492212586E-006
+ DEBUG        1587 -1.393149492212586E-006
+ DEBUG        1588 -1.393149492212586E-006
+ DEBUG        1589 -3.439008819938749E-007
+ DEBUG        1590 -3.439008819938749E-007
+ DEBUG        1591 -3.439008819938749E-007
+ DEBUG        1592 -3.439008819938749E-007
+ DEBUG        1593 -3.456554784619925E-007
+ DEBUG        1594 -3.456554784619925E-007
+ DEBUG        1595 -3.456554784619925E-007
+ DEBUG        1596 -3.456554784619925E-007
+ DEBUG        1597 -3.509192669781669E-007
+ DEBUG        1598 -3.509192669781669E-007
+ DEBUG        1599 -3.509192669781669E-007
+ DEBUG        1600 -3.509192669781669E-007
+ DEBUG        1601 -3.596922493187549E-007
+ DEBUG        1602 -3.596922493187549E-007
+ DEBUG        1603 -3.596922493187549E-007
+ DEBUG        1604 -3.596922493187549E-007
+ DEBUG        1605 -3.719744237073996E-007
+ DEBUG        1606 -3.719744237073996E-007
+ DEBUG        1607 -3.719744237073996E-007
+ DEBUG        1608 -3.719744237073996E-007
+ DEBUG        1609 -3.877657905881904E-007
+ DEBUG        1610 -3.877657905881904E-007
+ DEBUG        1611 -3.877657905881904E-007
+ DEBUG        1612 -3.877657905881904E-007
+ DEBUG        1613 -4.070663499611271E-007
+ DEBUG        1614 -4.070663499611271E-007
+ DEBUG        1615 -4.070663499611271E-007
+ DEBUG        1616 -4.070663499611271E-007
+ DEBUG        1617 -4.298761027143883E-007
+ DEBUG        1618 -4.298761027143883E-007
+ DEBUG        1619 -4.298761027143883E-007
+ DEBUG        1620 -4.298761027143883E-007
+ DEBUG        1621 -4.561950475157062E-007
+ DEBUG        1622 -4.561950475157062E-007
+ DEBUG        1623 -4.561950475157062E-007
+ DEBUG        1624 -4.561950475157062E-007
+ DEBUG        1625 -4.860231848091701E-007
+ DEBUG        1626 -4.860231848091701E-007
+ DEBUG        1627 -4.860231848091701E-007
+ DEBUG        1628 -4.860231848091701E-007
+ DEBUG        1629 -5.193605159270476E-007
+ DEBUG        1630 -5.193605159270476E-007
+ DEBUG        1631 -5.193605159270476E-007
+ DEBUG        1632 -5.193605159270476E-007
+ DEBUG        1633 -5.562070390929819E-007
+ DEBUG        1634 -5.562070390929819E-007
+ DEBUG        1635 -5.562070390929819E-007
+ DEBUG        1636 -5.562070390929819E-007
+ DEBUG        1637 -5.965627547510621E-007
+ DEBUG        1638 -5.965627547510621E-007
+ DEBUG        1639 -5.965627547510621E-007
+ DEBUG        1640 -5.965627547510621E-007
+ DEBUG        1641 -6.404276629012884E-007
+ DEBUG        1642 -6.404276629012884E-007
+ DEBUG        1643 -6.404276629012884E-007
+ DEBUG        1644 -6.404276629012884E-007
+ DEBUG        1645 -6.878017639877498E-007
+ DEBUG        1646 -6.878017639877498E-007
+ DEBUG        1647 -6.878017639877498E-007
+ DEBUG        1648 -6.878017639877498E-007
+ DEBUG        1649 -7.386850580104465E-007
+ DEBUG        1650 -7.386850580104465E-007
+ DEBUG        1651 -7.386850580104465E-007
+ DEBUG        1652 -7.386850580104465E-007
+ DEBUG        1653 -7.930775440811999E-007
+ DEBUG        1654 -7.930775440811999E-007
+ DEBUG        1655 -7.930775440811999E-007
+ DEBUG        1656 -7.930775440811999E-007
+ DEBUG        1657 -8.509792235322777E-007
+ DEBUG        1658 -8.509792235322777E-007
+ DEBUG        1659 -8.509792235322777E-007
+ DEBUG        1660 -8.509792235322777E-007
+ DEBUG        1661 -9.123900954755015E-007
+ DEBUG        1662 -9.123900954755015E-007
+ DEBUG        1663 -9.123900954755015E-007
+ DEBUG        1664 -9.123900954755015E-007
+ DEBUG        1665 -9.773101599108713E-007
+ DEBUG        1666 -9.773101599108713E-007
+ DEBUG        1667 -9.773101599108713E-007
+ DEBUG        1668 -9.773101599108713E-007
+ DEBUG        1669 -1.045739417282476E-006
+ DEBUG        1670 -1.045739417282476E-006
+ DEBUG        1671 -1.045739417282476E-006
+ DEBUG        1672 -1.045739417282476E-006
+ DEBUG        1673 -1.117677867146227E-006
+ DEBUG        1674 -1.117677867146227E-006
+ DEBUG        1675 -1.117677867146227E-006
+ DEBUG        1676 -1.117677867146227E-006
+ DEBUG        1677 -1.193125509502124E-006
+ DEBUG        1678 -1.193125509502124E-006
+ DEBUG        1679 -1.193125509502124E-006
+ DEBUG        1680 -1.193125509502124E-006
+ DEBUG        1681 -1.272082344350167E-006
+ DEBUG        1682 -1.272082344350167E-006
+ DEBUG        1683 -1.272082344350167E-006
+ DEBUG        1684 -1.272082344350167E-006
+ DEBUG        1685 -1.354548373022624E-006
+ DEBUG        1686 -1.354548373022624E-006
+ DEBUG        1687 -1.354548373022624E-006
+ DEBUG        1688 -1.354548373022624E-006
+ DEBUG        1689 -1.440523593299048E-006
+ DEBUG        1690 -1.440523593299048E-006
+ DEBUG        1691 -1.440523593299048E-006
+ DEBUG        1692 -1.440523593299048E-006
+ DEBUG        1693 -3.947841760165716E-007
+ DEBUG        1694 -3.947841760165716E-007
+ DEBUG        1695 -3.947841760165716E-007
+ DEBUG        1696 -3.947841760165716E-007
+ DEBUG        1697 -3.965387724846892E-007
+ DEBUG        1698 -3.965387724846892E-007
+ DEBUG        1699 -3.965387724846892E-007
+ DEBUG        1700 -3.965387724846892E-007
+ DEBUG        1701 -4.018025610008635E-007
+ DEBUG        1702 -4.018025610008635E-007
+ DEBUG        1703 -4.018025610008635E-007
+ DEBUG        1704 -4.018025610008635E-007
+ DEBUG        1705 -4.105755433414515E-007
+ DEBUG        1706 -4.105755433414515E-007
+ DEBUG        1707 -4.105755433414515E-007
+ DEBUG        1708 -4.105755433414515E-007
+ DEBUG        1709 -4.228577177300963E-007
+ DEBUG        1710 -4.228577177300963E-007
+ DEBUG        1711 -4.228577177300963E-007
+ DEBUG        1712 -4.228577177300963E-007
+ DEBUG        1713 -4.386490846108870E-007
+ DEBUG        1714 -4.386490846108870E-007
+ DEBUG        1715 -4.386490846108870E-007
+ DEBUG        1716 -4.386490846108870E-007
+ DEBUG        1717 -4.579496439838238E-007
+ DEBUG        1718 -4.579496439838238E-007
+ DEBUG        1719 -4.579496439838238E-007
+ DEBUG        1720 -4.579496439838238E-007
+ DEBUG        1721 -4.807593967370849E-007
+ DEBUG        1722 -4.807593967370849E-007
+ DEBUG        1723 -4.807593967370849E-007
+ DEBUG        1724 -4.807593967370849E-007
+ DEBUG        1725 -5.070783415384028E-007
+ DEBUG        1726 -5.070783415384028E-007
+ DEBUG        1727 -5.070783415384028E-007
+ DEBUG        1728 -5.070783415384028E-007
+ DEBUG        1729 -5.369064788318667E-007
+ DEBUG        1730 -5.369064788318667E-007
+ DEBUG        1731 -5.369064788318667E-007
+ DEBUG        1732 -5.369064788318667E-007
+ DEBUG        1733 -5.702438099497442E-007
+ DEBUG        1734 -5.702438099497442E-007
+ DEBUG        1735 -5.702438099497442E-007
+ DEBUG        1736 -5.702438099497442E-007
+ DEBUG        1737 -6.070903331156785E-007
+ DEBUG        1738 -6.070903331156785E-007
+ DEBUG        1739 -6.070903331156785E-007
+ DEBUG        1740 -6.070903331156785E-007
+ DEBUG        1741 -6.474460487737588E-007
+ DEBUG        1742 -6.474460487737588E-007
+ DEBUG        1743 -6.474460487737588E-007
+ DEBUG        1744 -6.474460487737588E-007
+ DEBUG        1745 -6.913109569239850E-007
+ DEBUG        1746 -6.913109569239850E-007
+ DEBUG        1747 -6.913109569239850E-007
+ DEBUG        1748 -6.913109569239850E-007
+ DEBUG        1749 -7.386850580104465E-007
+ DEBUG        1750 -7.386850580104465E-007
+ DEBUG        1751 -7.386850580104465E-007
+ DEBUG        1752 -7.386850580104465E-007
+ DEBUG        1753 -7.895683520331431E-007
+ DEBUG        1754 -7.895683520331431E-007
+ DEBUG        1755 -7.895683520331431E-007
+ DEBUG        1756 -7.895683520331431E-007
+ DEBUG        1757 -8.439608381038965E-007
+ DEBUG        1758 -8.439608381038965E-007
+ DEBUG        1759 -8.439608381038965E-007
+ DEBUG        1760 -8.439608381038965E-007
+ DEBUG        1761 -9.018625175549744E-007
+ DEBUG        1762 -9.018625175549744E-007
+ DEBUG        1763 -9.018625175549744E-007
+ DEBUG        1764 -9.018625175549744E-007
+ DEBUG        1765 -9.632733894981982E-007
+ DEBUG        1766 -9.632733894981982E-007
+ DEBUG        1767 -9.632733894981982E-007
+ DEBUG        1768 -9.632733894981982E-007
+ DEBUG        1769 -1.028193453933568E-006
+ DEBUG        1770 -1.028193453933568E-006
+ DEBUG        1771 -1.028193453933568E-006
+ DEBUG        1772 -1.028193453933568E-006
+ DEBUG        1773 -1.096622711305173E-006
+ DEBUG        1774 -1.096622711305173E-006
+ DEBUG        1775 -1.096622711305173E-006
+ DEBUG        1776 -1.096622711305173E-006
+ DEBUG        1777 -1.168561161168924E-006
+ DEBUG        1778 -1.168561161168924E-006
+ DEBUG        1779 -1.168561161168924E-006
+ DEBUG        1780 -1.168561161168924E-006
+ DEBUG        1781 -1.244008803524821E-006
+ DEBUG        1782 -1.244008803524821E-006
+ DEBUG        1783 -1.244008803524821E-006
+ DEBUG        1784 -1.244008803524821E-006
+ DEBUG        1785 -1.322965638372864E-006
+ DEBUG        1786 -1.322965638372864E-006
+ DEBUG        1787 -1.322965638372864E-006
+ DEBUG        1788 -1.322965638372864E-006
+ DEBUG        1789 -1.405431667045320E-006
+ DEBUG        1790 -1.405431667045320E-006
+ DEBUG        1791 -1.405431667045320E-006
+ DEBUG        1792 -1.405431667045320E-006
+ DEBUG        1793 -4.491766620873250E-007
+ DEBUG        1794 -4.491766620873250E-007
+ DEBUG        1795 -4.491766620873250E-007
+ DEBUG        1796 -4.491766620873250E-007
+ DEBUG        1797 -4.509312585554426E-007
+ DEBUG        1798 -4.509312585554426E-007
+ DEBUG        1799 -4.509312585554426E-007
+ DEBUG        1800 -4.509312585554426E-007
+ DEBUG        1801 -4.561950470716170E-007
+ DEBUG        1802 -4.561950470716170E-007
+ DEBUG        1803 -4.561950470716170E-007
+ DEBUG        1804 -4.561950470716170E-007
+ DEBUG        1805 -4.649680294122049E-007
+ DEBUG        1806 -4.649680294122049E-007
+ DEBUG        1807 -4.649680294122049E-007
+ DEBUG        1808 -4.649680294122049E-007
+ DEBUG        1809 -4.772502038008497E-007
+ DEBUG        1810 -4.772502038008497E-007
+ DEBUG        1811 -4.772502038008497E-007
+ DEBUG        1812 -4.772502038008497E-007
+ DEBUG        1813 -4.930415706816405E-007
+ DEBUG        1814 -4.930415706816405E-007
+ DEBUG        1815 -4.930415706816405E-007
+ DEBUG        1816 -4.930415706816405E-007
+ DEBUG        1817 -5.123421300545772E-007
+ DEBUG        1818 -5.123421300545772E-007
+ DEBUG        1819 -5.123421300545772E-007
+ DEBUG        1820 -5.123421300545772E-007
+ DEBUG        1821 -5.351518828078383E-007
+ DEBUG        1822 -5.351518828078383E-007
+ DEBUG        1823 -5.351518828078383E-007
+ DEBUG        1824 -5.351518828078383E-007
+ DEBUG        1825 -5.614708276091562E-007
+ DEBUG        1826 -5.614708276091562E-007
+ DEBUG        1827 -5.614708276091562E-007
+ DEBUG        1828 -5.614708276091562E-007
+ DEBUG        1829 -5.912989649026201E-007
+ DEBUG        1830 -5.912989649026201E-007
+ DEBUG        1831 -5.912989649026201E-007
+ DEBUG        1832 -5.912989649026201E-007
+ DEBUG        1833 -6.246362960204976E-007
+ DEBUG        1834 -6.246362960204976E-007
+ DEBUG        1835 -6.246362960204976E-007
+ DEBUG        1836 -6.246362960204976E-007
+ DEBUG        1837 -6.614828191864319E-007
+ DEBUG        1838 -6.614828191864319E-007
+ DEBUG        1839 -6.614828191864319E-007
+ DEBUG        1840 -6.614828191864319E-007
+ DEBUG        1841 -7.018385348445122E-007
+ DEBUG        1842 -7.018385348445122E-007
+ DEBUG        1843 -7.018385348445122E-007
+ DEBUG        1844 -7.018385348445122E-007
+ DEBUG        1845 -7.457034429947385E-007
+ DEBUG        1846 -7.457034429947385E-007
+ DEBUG        1847 -7.457034429947385E-007
+ DEBUG        1848 -7.457034429947385E-007
+ DEBUG        1849 -7.930775440811999E-007
+ DEBUG        1850 -7.930775440811999E-007
+ DEBUG        1851 -7.930775440811999E-007
+ DEBUG        1852 -7.930775440811999E-007
+ DEBUG        1853 -8.439608381038965E-007
+ DEBUG        1854 -8.439608381038965E-007
+ DEBUG        1855 -8.439608381038965E-007
+ DEBUG        1856 -8.439608381038965E-007
+ DEBUG        1857 -8.983533241746500E-007
+ DEBUG        1858 -8.983533241746500E-007
+ DEBUG        1859 -8.983533241746500E-007
+ DEBUG        1860 -8.983533241746500E-007
+ DEBUG        1861 -9.562550036257278E-007
+ DEBUG        1862 -9.562550036257278E-007
+ DEBUG        1863 -9.562550036257278E-007
+ DEBUG        1864 -9.562550036257278E-007
+ DEBUG        1865 -1.017665875568952E-006
+ DEBUG        1866 -1.017665875568952E-006
+ DEBUG        1867 -1.017665875568952E-006
+ DEBUG        1868 -1.017665875568952E-006
+ DEBUG        1869 -1.082585940004321E-006
+ DEBUG        1870 -1.082585940004321E-006
+ DEBUG        1871 -1.082585940004321E-006
+ DEBUG        1872 -1.082585940004321E-006
+ DEBUG        1873 -1.151015197375926E-006
+ DEBUG        1874 -1.151015197375926E-006
+ DEBUG        1875 -1.151015197375926E-006
+ DEBUG        1876 -1.151015197375926E-006
+ DEBUG        1877 -1.222953647239677E-006
+ DEBUG        1878 -1.222953647239677E-006
+ DEBUG        1879 -1.222953647239677E-006
+ DEBUG        1880 -1.222953647239677E-006
+ DEBUG        1881 -1.298401289595574E-006
+ DEBUG        1882 -1.298401289595574E-006
+ DEBUG        1883 -1.298401289595574E-006
+ DEBUG        1884 -1.298401289595574E-006
+ DEBUG        1885 -1.377358124443617E-006
+ DEBUG        1886 -1.377358124443617E-006
+ DEBUG        1887 -1.377358124443617E-006
+ DEBUG        1888 -1.377358124443617E-006
+ DEBUG        1889 -1.459824153116074E-006
+ DEBUG        1890 -1.459824153116074E-006
+ DEBUG        1891 -1.459824153116074E-006
+ DEBUG        1892 -1.459824153116074E-006
+ DEBUG        1893 -5.070783415384028E-007
+ DEBUG        1894 -5.070783415384028E-007
+ DEBUG        1895 -5.070783415384028E-007
+ DEBUG        1896 -5.070783415384028E-007
+ DEBUG        1897 -5.088329380065204E-007
+ DEBUG        1898 -5.088329380065204E-007
+ DEBUG        1899 -5.088329380065204E-007
+ DEBUG        1900 -5.088329380065204E-007
+ DEBUG        1901 -5.140967269667840E-007
+ DEBUG        1902 -5.140967269667840E-007
+ DEBUG        1903 -5.140967269667840E-007
+ DEBUG        1904 -5.140967269667840E-007
+ DEBUG        1905 -5.228697084191936E-007
+ DEBUG        1906 -5.228697084191936E-007
+ DEBUG        1907 -5.228697084191936E-007
+ DEBUG        1908 -5.228697084191936E-007
+ DEBUG        1909 -5.351518832519275E-007
+ DEBUG        1910 -5.351518832519275E-007
+ DEBUG        1911 -5.351518832519275E-007
+ DEBUG        1912 -5.351518832519275E-007
+ DEBUG        1913 -5.509432501327183E-007
+ DEBUG        1914 -5.509432501327183E-007
+ DEBUG        1915 -5.509432501327183E-007
+ DEBUG        1916 -5.509432501327183E-007
+ DEBUG        1917 -5.702438095056550E-007
+ DEBUG        1918 -5.702438095056550E-007
+ DEBUG        1919 -5.702438095056550E-007
+ DEBUG        1920 -5.702438095056550E-007
+ DEBUG        1921 -5.930535622589161E-007
+ DEBUG        1922 -5.930535622589161E-007
+ DEBUG        1923 -5.930535622589161E-007
+ DEBUG        1924 -5.930535622589161E-007
+ DEBUG        1925 -6.193725070602341E-007
+ DEBUG        1926 -6.193725070602341E-007
+ DEBUG        1927 -6.193725070602341E-007
+ DEBUG        1928 -6.193725070602341E-007
+ DEBUG        1929 -6.492006443536980E-007
+ DEBUG        1930 -6.492006443536980E-007
+ DEBUG        1931 -6.492006443536980E-007
+ DEBUG        1932 -6.492006443536980E-007
+ DEBUG        1933 -6.825379754715755E-007
+ DEBUG        1934 -6.825379754715755E-007
+ DEBUG        1935 -6.825379754715755E-007
+ DEBUG        1936 -6.825379754715755E-007
+ DEBUG        1937 -7.193844986375098E-007
+ DEBUG        1938 -7.193844986375098E-007
+ DEBUG        1939 -7.193844986375098E-007
+ DEBUG        1940 -7.193844986375098E-007
+ DEBUG        1941 -7.597402142955900E-007
+ DEBUG        1942 -7.597402142955900E-007
+ DEBUG        1943 -7.597402142955900E-007
+ DEBUG        1944 -7.597402142955900E-007
+ DEBUG        1945 -8.036051224458163E-007
+ DEBUG        1946 -8.036051224458163E-007
+ DEBUG        1947 -8.036051224458163E-007
+ DEBUG        1948 -8.036051224458163E-007
+ DEBUG        1949 -8.509792235322777E-007
+ DEBUG        1950 -8.509792235322777E-007
+ DEBUG        1951 -8.509792235322777E-007
+ DEBUG        1952 -8.509792235322777E-007
+ DEBUG        1953 -9.018625175549744E-007
+ DEBUG        1954 -9.018625175549744E-007
+ DEBUG        1955 -9.018625175549744E-007
+ DEBUG        1956 -9.018625175549744E-007
+ DEBUG        1957 -9.562550031816386E-007
+ DEBUG        1958 -9.562550031816386E-007
+ DEBUG        1959 -9.562550031816386E-007
+ DEBUG        1960 -9.562550031816386E-007
+ DEBUG        1961 -1.014156683076806E-006
+ DEBUG        1962 -1.014156683076806E-006
+ DEBUG        1963 -1.014156683076806E-006
+ DEBUG        1964 -1.014156683076806E-006
+ DEBUG        1965 -1.075567555020029E-006
+ DEBUG        1966 -1.075567555020029E-006
+ DEBUG        1967 -1.075567555020029E-006
+ DEBUG        1968 -1.075567555020029E-006
+ DEBUG        1969 -1.140487619455399E-006
+ DEBUG        1970 -1.140487619455399E-006
+ DEBUG        1971 -1.140487619455399E-006
+ DEBUG        1972 -1.140487619455399E-006
+ DEBUG        1973 -1.208916876827004E-006
+ DEBUG        1974 -1.208916876827004E-006
+ DEBUG        1975 -1.208916876827004E-006
+ DEBUG        1976 -1.208916876827004E-006
+ DEBUG        1977 -1.280855326690755E-006
+ DEBUG        1978 -1.280855326690755E-006
+ DEBUG        1979 -1.280855326690755E-006
+ DEBUG        1980 -1.280855326690755E-006
+ DEBUG        1981 -1.356302969490741E-006
+ DEBUG        1982 -1.356302969490741E-006
+ DEBUG        1983 -1.356302969490741E-006
+ DEBUG        1984 -1.356302969490741E-006
+ DEBUG        1985 -1.435259804338784E-006
+ DEBUG        1986 -1.435259804338784E-006
+ DEBUG        1987 -1.435259804338784E-006
+ DEBUG        1988 -1.435259804338784E-006
+ DEBUG        1989 -5.684892134816266E-007
+ DEBUG        1990 -5.684892134816266E-007
+ DEBUG        1991 -5.684892134816266E-007
+ DEBUG        1992 -5.684892134816266E-007
+ DEBUG        1993 -5.702438099497442E-007
+ DEBUG        1994 -5.702438099497442E-007
+ DEBUG        1995 -5.702438099497442E-007
+ DEBUG        1996 -5.702438099497442E-007
+ DEBUG        1997 -5.755075989100078E-007
+ DEBUG        1998 -5.755075989100078E-007
+ DEBUG        1999 -5.755075989100078E-007
+ DEBUG        2000 -5.755075989100078E-007
+ DEBUG        2001 -5.842805803624174E-007
+ DEBUG        2002 -5.842805803624174E-007
+ DEBUG        2003 -5.842805803624174E-007
+ DEBUG        2004 -5.842805803624174E-007
+ DEBUG        2005 -5.965627551951513E-007
+ DEBUG        2006 -5.965627551951513E-007
+ DEBUG        2007 -5.965627551951513E-007
+ DEBUG        2008 -5.965627551951513E-007
+ DEBUG        2009 -6.123541220759421E-007
+ DEBUG        2010 -6.123541220759421E-007
+ DEBUG        2011 -6.123541220759421E-007
+ DEBUG        2012 -6.123541220759421E-007
+ DEBUG        2013 -6.316546814488788E-007
+ DEBUG        2014 -6.316546814488788E-007
+ DEBUG        2015 -6.316546814488788E-007
+ DEBUG        2016 -6.316546814488788E-007
+ DEBUG        2017 -6.544644342021400E-007
+ DEBUG        2018 -6.544644342021400E-007
+ DEBUG        2019 -6.544644342021400E-007
+ DEBUG        2020 -6.544644342021400E-007
+ DEBUG        2021 -6.807833790034579E-007
+ DEBUG        2022 -6.807833790034579E-007
+ DEBUG        2023 -6.807833790034579E-007
+ DEBUG        2024 -6.807833790034579E-007
+ DEBUG        2025 -7.106115162969218E-007
+ DEBUG        2026 -7.106115162969218E-007
+ DEBUG        2027 -7.106115162969218E-007
+ DEBUG        2028 -7.106115162969218E-007
+ DEBUG        2029 -7.439488474147993E-007
+ DEBUG        2030 -7.439488474147993E-007
+ DEBUG        2031 -7.439488474147993E-007
+ DEBUG        2032 -7.439488474147993E-007
+ DEBUG        2033 -7.807953705807336E-007
+ DEBUG        2034 -7.807953705807336E-007
+ DEBUG        2035 -7.807953705807336E-007
+ DEBUG        2036 -7.807953705807336E-007
+ DEBUG        2037 -8.211510862388138E-007
+ DEBUG        2038 -8.211510862388138E-007
+ DEBUG        2039 -8.211510862388138E-007
+ DEBUG        2040 -8.211510862388138E-007
+ DEBUG        2041 -8.650159943890401E-007
+ DEBUG        2042 -8.650159943890401E-007
+ DEBUG        2043 -8.650159943890401E-007
+ DEBUG        2044 -8.650159943890401E-007
+ DEBUG        2045 -9.123900954755015E-007
+ DEBUG        2046 -9.123900954755015E-007
+ DEBUG        2047 -9.123900954755015E-007
+ DEBUG        2048 -9.123900954755015E-007
+ DEBUG        2049 -9.632733894981982E-007
+ DEBUG        2050 -9.632733894981982E-007
+ DEBUG        2051 -9.632733894981982E-007
+ DEBUG        2052 -9.632733894981982E-007
+ DEBUG        2053 -1.017665875124862E-006
+ DEBUG        2054 -1.017665875124862E-006
+ DEBUG        2055 -1.017665875124862E-006
+ DEBUG        2056 -1.017665875124862E-006
+ DEBUG        2057 -1.075567555020029E-006
+ DEBUG        2058 -1.075567555020029E-006
+ DEBUG        2059 -1.075567555020029E-006
+ DEBUG        2060 -1.075567555020029E-006
+ DEBUG        2061 -1.136978426963253E-006
+ DEBUG        2062 -1.136978426963253E-006
+ DEBUG        2063 -1.136978426963253E-006
+ DEBUG        2064 -1.136978426963253E-006
+ DEBUG        2065 -1.201898491398623E-006
+ DEBUG        2066 -1.201898491398623E-006
+ DEBUG        2067 -1.201898491398623E-006
+ DEBUG        2068 -1.201898491398623E-006
+ DEBUG        2069 -1.270327748770228E-006
+ DEBUG        2070 -1.270327748770228E-006
+ DEBUG        2071 -1.270327748770228E-006
+ DEBUG        2072 -1.270327748770228E-006
+ DEBUG        2073 -1.342266198633979E-006
+ DEBUG        2074 -1.342266198633979E-006
+ DEBUG        2075 -1.342266198633979E-006
+ DEBUG        2076 -1.342266198633979E-006
+ DEBUG        2077 -1.417713841433965E-006
+ DEBUG        2078 -1.417713841433965E-006
+ DEBUG        2079 -1.417713841433965E-006
+ DEBUG        2080 -1.417713841433965E-006
+ DEBUG        2081 -6.334092779169964E-007
+ DEBUG        2082 -6.334092779169964E-007
+ DEBUG        2083 -6.334092779169964E-007
+ DEBUG        2084 -6.334092779169964E-007
+ DEBUG        2085 -6.351638743851140E-007
+ DEBUG        2086 -6.351638743851140E-007
+ DEBUG        2087 -6.351638743851140E-007
+ DEBUG        2088 -6.351638743851140E-007
+ DEBUG        2089 -6.404276629012884E-007
+ DEBUG        2090 -6.404276629012884E-007
+ DEBUG        2091 -6.404276629012884E-007
+ DEBUG        2092 -6.404276629012884E-007
+ DEBUG        2093 -6.492006452418764E-007
+ DEBUG        2094 -6.492006452418764E-007
+ DEBUG        2095 -6.492006452418764E-007
+ DEBUG        2096 -6.492006452418764E-007
+ DEBUG        2097 -6.614828196305211E-007
+ DEBUG        2098 -6.614828196305211E-007
+ DEBUG        2099 -6.614828196305211E-007
+ DEBUG        2100 -6.614828196305211E-007
+ DEBUG        2101 -6.772741865113119E-007
+ DEBUG        2102 -6.772741865113119E-007
+ DEBUG        2103 -6.772741865113119E-007
+ DEBUG        2104 -6.772741865113119E-007
+ DEBUG        2105 -6.965747458842486E-007
+ DEBUG        2106 -6.965747458842486E-007
+ DEBUG        2107 -6.965747458842486E-007
+ DEBUG        2108 -6.965747458842486E-007
+ DEBUG        2109 -7.193844986375098E-007
+ DEBUG        2110 -7.193844986375098E-007
+ DEBUG        2111 -7.193844986375098E-007
+ DEBUG        2112 -7.193844986375098E-007
+ DEBUG        2113 -7.457034434388277E-007
+ DEBUG        2114 -7.457034434388277E-007
+ DEBUG        2115 -7.457034434388277E-007
+ DEBUG        2116 -7.457034434388277E-007
+ DEBUG        2117 -7.755315807322916E-007
+ DEBUG        2118 -7.755315807322916E-007
+ DEBUG        2119 -7.755315807322916E-007
+ DEBUG        2120 -7.755315807322916E-007
+ DEBUG        2121 -8.088689118501691E-007
+ DEBUG        2122 -8.088689118501691E-007
+ DEBUG        2123 -8.088689118501691E-007
+ DEBUG        2124 -8.088689118501691E-007
+ DEBUG        2125 -8.457154350161034E-007
+ DEBUG        2126 -8.457154350161034E-007
+ DEBUG        2127 -8.457154350161034E-007
+ DEBUG        2128 -8.457154350161034E-007
+ DEBUG        2129 -8.860711506741836E-007
+ DEBUG        2130 -8.860711506741836E-007
+ DEBUG        2131 -8.860711506741836E-007
+ DEBUG        2132 -8.860711506741836E-007
+ DEBUG        2133 -9.299360588244099E-007
+ DEBUG        2134 -9.299360588244099E-007
+ DEBUG        2135 -9.299360588244099E-007
+ DEBUG        2136 -9.299360588244099E-007
+ DEBUG        2137 -9.773101599108713E-007
+ DEBUG        2138 -9.773101599108713E-007
+ DEBUG        2139 -9.773101599108713E-007
+ DEBUG        2140 -9.773101599108713E-007
+ DEBUG        2141 -1.028193453933568E-006
+ DEBUG        2142 -1.028193453933568E-006
+ DEBUG        2143 -1.028193453933568E-006
+ DEBUG        2144 -1.028193453933568E-006
+ DEBUG        2145 -1.082585940004321E-006
+ DEBUG        2146 -1.082585940004321E-006
+ DEBUG        2147 -1.082585940004321E-006
+ DEBUG        2148 -1.082585940004321E-006
+ DEBUG        2149 -1.140487619455399E-006
+ DEBUG        2150 -1.140487619455399E-006
+ DEBUG        2151 -1.140487619455399E-006
+ DEBUG        2152 -1.140487619455399E-006
+ DEBUG        2153 -1.201898491398623E-006
+ DEBUG        2154 -1.201898491398623E-006
+ DEBUG        2155 -1.201898491398623E-006
+ DEBUG        2156 -1.201898491398623E-006
+ DEBUG        2157 -1.266818555833993E-006
+ DEBUG        2158 -1.266818555833993E-006
+ DEBUG        2159 -1.266818555833993E-006
+ DEBUG        2160 -1.266818555833993E-006
+ DEBUG        2161 -1.335247813205598E-006
+ DEBUG        2162 -1.335247813205598E-006
+ DEBUG        2163 -1.335247813205598E-006
+ DEBUG        2164 -1.335247813205598E-006
+ DEBUG        2165 -1.407186263069349E-006
+ DEBUG        2166 -1.407186263069349E-006
+ DEBUG        2167 -1.407186263069349E-006
+ DEBUG        2168 -1.407186263069349E-006
+ DEBUG        2169 -7.018385352886014E-007
+ DEBUG        2170 -7.018385352886014E-007
+ DEBUG        2171 -7.018385352886014E-007
+ DEBUG        2172 -7.018385352886014E-007
+ DEBUG        2173 -7.035931317567190E-007
+ DEBUG        2174 -7.035931317567190E-007
+ DEBUG        2175 -7.035931317567190E-007
+ DEBUG        2176 -7.035931317567190E-007
+ DEBUG        2177 -7.088569207169826E-007
+ DEBUG        2178 -7.088569207169826E-007
+ DEBUG        2179 -7.088569207169826E-007
+ DEBUG        2180 -7.088569207169826E-007
+ DEBUG        2181 -7.176299021693922E-007
+ DEBUG        2182 -7.176299021693922E-007
+ DEBUG        2183 -7.176299021693922E-007
+ DEBUG        2184 -7.176299021693922E-007
+ DEBUG        2185 -7.299120770021261E-007
+ DEBUG        2186 -7.299120770021261E-007
+ DEBUG        2187 -7.299120770021261E-007
+ DEBUG        2188 -7.299120770021261E-007
+ DEBUG        2189 -7.457034438829169E-007
+ DEBUG        2190 -7.457034438829169E-007
+ DEBUG        2191 -7.457034438829169E-007
+ DEBUG        2192 -7.457034438829169E-007
+ DEBUG        2193 -7.650040032558536E-007
+ DEBUG        2194 -7.650040032558536E-007
+ DEBUG        2195 -7.650040032558536E-007
+ DEBUG        2196 -7.650040032558536E-007
+ DEBUG        2197 -7.878137560091147E-007
+ DEBUG        2198 -7.878137560091147E-007
+ DEBUG        2199 -7.878137560091147E-007
+ DEBUG        2200 -7.878137560091147E-007
+ DEBUG        2201 -8.141327008104327E-007
+ DEBUG        2202 -8.141327008104327E-007
+ DEBUG        2203 -8.141327008104327E-007
+ DEBUG        2204 -8.141327008104327E-007
+ DEBUG        2205 -8.439608381038965E-007
+ DEBUG        2206 -8.439608381038965E-007
+ DEBUG        2207 -8.439608381038965E-007
+ DEBUG        2208 -8.439608381038965E-007
+ DEBUG        2209 -8.772981692217741E-007
+ DEBUG        2210 -8.772981692217741E-007
+ DEBUG        2211 -8.772981692217741E-007
+ DEBUG        2212 -8.772981692217741E-007
+ DEBUG        2213 -9.141446923877083E-007
+ DEBUG        2214 -9.141446923877083E-007
+ DEBUG        2215 -9.141446923877083E-007
+ DEBUG        2216 -9.141446923877083E-007
+ DEBUG        2217 -9.545004080457886E-007
+ DEBUG        2218 -9.545004080457886E-007
+ DEBUG        2219 -9.545004080457886E-007
+ DEBUG        2220 -9.545004080457886E-007
+ DEBUG        2221 -9.983653161960149E-007
+ DEBUG        2222 -9.983653161960149E-007
+ DEBUG        2223 -9.983653161960149E-007
+ DEBUG        2224 -9.983653161960149E-007
+ DEBUG        2225 -1.045739417282476E-006
+ DEBUG        2226 -1.045739417282476E-006
+ DEBUG        2227 -1.045739417282476E-006
+ DEBUG        2228 -1.045739417282476E-006
+ DEBUG        2229 -1.096622711305173E-006
+ DEBUG        2230 -1.096622711305173E-006
+ DEBUG        2231 -1.096622711305173E-006
+ DEBUG        2232 -1.096622711305173E-006
+ DEBUG        2233 -1.151015196931837E-006
+ DEBUG        2234 -1.151015196931837E-006
+ DEBUG        2235 -1.151015196931837E-006
+ DEBUG        2236 -1.151015196931837E-006
+ DEBUG        2237 -1.208916876827004E-006
+ DEBUG        2238 -1.208916876827004E-006
+ DEBUG        2239 -1.208916876827004E-006
+ DEBUG        2240 -1.208916876827004E-006
+ DEBUG        2241 -1.270327748770228E-006
+ DEBUG        2242 -1.270327748770228E-006
+ DEBUG        2243 -1.270327748770228E-006
+ DEBUG        2244 -1.270327748770228E-006
+ DEBUG        2245 -1.335247813205598E-006
+ DEBUG        2246 -1.335247813205598E-006
+ DEBUG        2247 -1.335247813205598E-006
+ DEBUG        2248 -1.335247813205598E-006
+ DEBUG        2249 -1.403677070577203E-006
+ DEBUG        2250 -1.403677070577203E-006
+ DEBUG        2251 -1.403677070577203E-006
+ DEBUG        2252 -1.403677070577203E-006
+ DEBUG        2253 -1.475615520440954E-006
+ DEBUG        2254 -1.475615520440954E-006
+ DEBUG        2255 -1.475615520440954E-006
+ DEBUG        2256 -1.475615520440954E-006
+ DEBUG        2257 -7.737769851523524E-007
+ DEBUG        2258 -7.737769851523524E-007
+ DEBUG        2259 -7.737769851523524E-007
+ DEBUG        2260 -7.737769851523524E-007
+ DEBUG        2261 -7.755315816204700E-007
+ DEBUG        2262 -7.755315816204700E-007
+ DEBUG        2263 -7.755315816204700E-007
+ DEBUG        2264 -7.755315816204700E-007
+ DEBUG        2265 -7.807953705807336E-007
+ DEBUG        2266 -7.807953705807336E-007
+ DEBUG        2267 -7.807953705807336E-007
+ DEBUG        2268 -7.807953705807336E-007
+ DEBUG        2269 -7.895683520331431E-007
+ DEBUG        2270 -7.895683520331431E-007
+ DEBUG        2271 -7.895683520331431E-007
+ DEBUG        2272 -7.895683520331431E-007
+ DEBUG        2273 -8.018505268658771E-007
+ DEBUG        2274 -8.018505268658771E-007
+ DEBUG        2275 -8.018505268658771E-007
+ DEBUG        2276 -8.018505268658771E-007
+ DEBUG        2277 -8.176418937466678E-007
+ DEBUG        2278 -8.176418937466678E-007
+ DEBUG        2279 -8.176418937466678E-007
+ DEBUG        2280 -8.176418937466678E-007
+ DEBUG        2281 -8.369424531196046E-007
+ DEBUG        2282 -8.369424531196046E-007
+ DEBUG        2283 -8.369424531196046E-007
+ DEBUG        2284 -8.369424531196046E-007
+ DEBUG        2285 -8.597522058728657E-007
+ DEBUG        2286 -8.597522058728657E-007
+ DEBUG        2287 -8.597522058728657E-007
+ DEBUG        2288 -8.597522058728657E-007
+ DEBUG        2289 -8.860711506741836E-007
+ DEBUG        2290 -8.860711506741836E-007
+ DEBUG        2291 -8.860711506741836E-007
+ DEBUG        2292 -8.860711506741836E-007
+ DEBUG        2293 -9.158992879676475E-007
+ DEBUG        2294 -9.158992879676475E-007
+ DEBUG        2295 -9.158992879676475E-007
+ DEBUG        2296 -9.158992879676475E-007
+ DEBUG        2297 -9.492366190855250E-007
+ DEBUG        2298 -9.492366190855250E-007
+ DEBUG        2299 -9.492366190855250E-007
+ DEBUG        2300 -9.492366190855250E-007
+ DEBUG        2301 -9.860831422514593E-007
+ DEBUG        2302 -9.860831422514593E-007
+ DEBUG        2303 -9.860831422514593E-007
+ DEBUG        2304 -9.860831422514593E-007
+ DEBUG        2305 -1.026438857909540E-006
+ DEBUG        2306 -1.026438857909540E-006
+ DEBUG        2307 -1.026438857909540E-006
+ DEBUG        2308 -1.026438857909540E-006
+ DEBUG        2309 -1.070303766059766E-006
+ DEBUG        2310 -1.070303766059766E-006
+ DEBUG        2311 -1.070303766059766E-006
+ DEBUG        2312 -1.070303766059766E-006
+ DEBUG        2313 -1.117677867146227E-006
+ DEBUG        2314 -1.117677867146227E-006
+ DEBUG        2315 -1.117677867146227E-006
+ DEBUG        2316 -1.117677867146227E-006
+ DEBUG        2317 -1.168561161168924E-006
+ DEBUG        2318 -1.168561161168924E-006
+ DEBUG        2319 -1.168561161168924E-006
+ DEBUG        2320 -1.168561161168924E-006
+ DEBUG        2321 -1.222953646795588E-006
+ DEBUG        2322 -1.222953646795588E-006
+ DEBUG        2323 -1.222953646795588E-006
+ DEBUG        2324 -1.222953646795588E-006
+ DEBUG        2325 -1.280855326690755E-006
+ DEBUG        2326 -1.280855326690755E-006
+ DEBUG        2327 -1.280855326690755E-006
+ DEBUG        2328 -1.280855326690755E-006
+ DEBUG        2329 -1.342266198633979E-006
+ DEBUG        2330 -1.342266198633979E-006
+ DEBUG        2331 -1.342266198633979E-006
+ DEBUG        2332 -1.342266198633979E-006
+ DEBUG        2333 -1.407186263069349E-006
+ DEBUG        2334 -1.407186263069349E-006
+ DEBUG        2335 -1.407186263069349E-006
+ DEBUG        2336 -1.407186263069349E-006
+ DEBUG        2337 -1.475615520440954E-006
+ DEBUG        2338 -1.475615520440954E-006
+ DEBUG        2339 -1.475615520440954E-006
+ DEBUG        2340 -1.475615520440954E-006
+ DEBUG        2341 -8.492246275082493E-007
+ DEBUG        2342 -8.492246275082493E-007
+ DEBUG        2343 -8.492246275082493E-007
+ DEBUG        2344 -8.492246275082493E-007
+ DEBUG        2345 -8.509792239763669E-007
+ DEBUG        2346 -8.509792239763669E-007
+ DEBUG        2347 -8.509792239763669E-007
+ DEBUG        2348 -8.509792239763669E-007
+ DEBUG        2349 -8.562430124925413E-007
+ DEBUG        2350 -8.562430124925413E-007
+ DEBUG        2351 -8.562430124925413E-007
+ DEBUG        2352 -8.562430124925413E-007
+ DEBUG        2353 -8.650159948331293E-007
+ DEBUG        2354 -8.650159948331293E-007
+ DEBUG        2355 -8.650159948331293E-007
+ DEBUG        2356 -8.650159948331293E-007
+ DEBUG        2357 -8.772981692217741E-007
+ DEBUG        2358 -8.772981692217741E-007
+ DEBUG        2359 -8.772981692217741E-007
+ DEBUG        2360 -8.772981692217741E-007
+ DEBUG        2361 -8.930895361025648E-007
+ DEBUG        2362 -8.930895361025648E-007
+ DEBUG        2363 -8.930895361025648E-007
+ DEBUG        2364 -8.930895361025648E-007
+ DEBUG        2365 -9.123900954755015E-007
+ DEBUG        2366 -9.123900954755015E-007
+ DEBUG        2367 -9.123900954755015E-007
+ DEBUG        2368 -9.123900954755015E-007
+ DEBUG        2369 -9.351998482287627E-007
+ DEBUG        2370 -9.351998482287627E-007
+ DEBUG        2371 -9.351998482287627E-007
+ DEBUG        2372 -9.351998482287627E-007
+ DEBUG        2373 -9.615187930300806E-007
+ DEBUG        2374 -9.615187930300806E-007
+ DEBUG        2375 -9.615187930300806E-007
+ DEBUG        2376 -9.615187930300806E-007
+ DEBUG        2377 -9.913469303235445E-007
+ DEBUG        2378 -9.913469303235445E-007
+ DEBUG        2379 -9.913469303235445E-007
+ DEBUG        2380 -9.913469303235445E-007
+ DEBUG        2381 -1.024684261441422E-006
+ DEBUG        2382 -1.024684261441422E-006
+ DEBUG        2383 -1.024684261441422E-006
+ DEBUG        2384 -1.024684261441422E-006
+ DEBUG        2385 -1.061530784607356E-006
+ DEBUG        2386 -1.061530784607356E-006
+ DEBUG        2387 -1.061530784607356E-006
+ DEBUG        2388 -1.061530784607356E-006
+ DEBUG        2389 -1.101886500265437E-006
+ DEBUG        2390 -1.101886500265437E-006
+ DEBUG        2391 -1.101886500265437E-006
+ DEBUG        2392 -1.101886500265437E-006
+ DEBUG        2393 -1.145751408415663E-006
+ DEBUG        2394 -1.145751408415663E-006
+ DEBUG        2395 -1.145751408415663E-006
+ DEBUG        2396 -1.145751408415663E-006
+ DEBUG        2397 -1.193125509502124E-006
+ DEBUG        2398 -1.193125509502124E-006
+ DEBUG        2399 -1.193125509502124E-006
+ DEBUG        2400 -1.193125509502124E-006
+ DEBUG        2401 -1.244008803524821E-006
+ DEBUG        2402 -1.244008803524821E-006
+ DEBUG        2403 -1.244008803524821E-006
+ DEBUG        2404 -1.244008803524821E-006
+ DEBUG        2405 -1.298401289595574E-006
+ DEBUG        2406 -1.298401289595574E-006
+ DEBUG        2407 -1.298401289595574E-006
+ DEBUG        2408 -1.298401289595574E-006
+ DEBUG        2409 -1.356302969046652E-006
+ DEBUG        2410 -1.356302969046652E-006
+ DEBUG        2411 -1.356302969046652E-006
+ DEBUG        2412 -1.356302969046652E-006
+ DEBUG        2413 -1.417713840989876E-006
+ DEBUG        2414 -1.417713840989876E-006
+ DEBUG        2415 -1.417713840989876E-006
+ DEBUG        2416 -1.417713840989876E-006
+ DEBUG        2417 -9.281814623562923E-007
+ DEBUG        2418 -9.281814623562923E-007
+ DEBUG        2419 -9.281814623562923E-007
+ DEBUG        2420 -9.281814623562923E-007
+ DEBUG        2421 -9.299360588244099E-007
+ DEBUG        2422 -9.299360588244099E-007
+ DEBUG        2423 -9.299360588244099E-007
+ DEBUG        2424 -9.299360588244099E-007
+ DEBUG        2425 -9.351998473405843E-007
+ DEBUG        2426 -9.351998473405843E-007
+ DEBUG        2427 -9.351998473405843E-007
+ DEBUG        2428 -9.351998473405843E-007
+ DEBUG        2429 -9.439728296811722E-007
+ DEBUG        2430 -9.439728296811722E-007
+ DEBUG        2431 -9.439728296811722E-007
+ DEBUG        2432 -9.439728296811722E-007
+ DEBUG        2433 -9.562550040698170E-007
+ DEBUG        2434 -9.562550040698170E-007
+ DEBUG        2435 -9.562550040698170E-007
+ DEBUG        2436 -9.562550040698170E-007
+ DEBUG        2437 -9.720463709506078E-007
+ DEBUG        2438 -9.720463709506078E-007
+ DEBUG        2439 -9.720463709506078E-007
+ DEBUG        2440 -9.720463709506078E-007
+ DEBUG        2441 -9.913469303235445E-007
+ DEBUG        2442 -9.913469303235445E-007
+ DEBUG        2443 -9.913469303235445E-007
+ DEBUG        2444 -9.913469303235445E-007
+ DEBUG        2445 -1.014156683076806E-006
+ DEBUG        2446 -1.014156683076806E-006
+ DEBUG        2447 -1.014156683076806E-006
+ DEBUG        2448 -1.014156683076806E-006
+ DEBUG        2449 -1.040475627878124E-006
+ DEBUG        2450 -1.040475627878124E-006
+ DEBUG        2451 -1.040475627878124E-006
+ DEBUG        2452 -1.040475627878124E-006
+ DEBUG        2453 -1.070303765171587E-006
+ DEBUG        2454 -1.070303765171587E-006
+ DEBUG        2455 -1.070303765171587E-006
+ DEBUG        2456 -1.070303765171587E-006
+ DEBUG        2457 -1.103641096289465E-006
+ DEBUG        2458 -1.103641096289465E-006
+ DEBUG        2459 -1.103641096289465E-006
+ DEBUG        2460 -1.103641096289465E-006
+ DEBUG        2461 -1.140487619455399E-006
+ DEBUG        2462 -1.140487619455399E-006
+ DEBUG        2463 -1.140487619455399E-006
+ DEBUG        2464 -1.140487619455399E-006
+ DEBUG        2465 -1.180843335113479E-006
+ DEBUG        2466 -1.180843335113479E-006
+ DEBUG        2467 -1.180843335113479E-006
+ DEBUG        2468 -1.180843335113479E-006
+ DEBUG        2469 -1.224708243263706E-006
+ DEBUG        2470 -1.224708243263706E-006
+ DEBUG        2471 -1.224708243263706E-006
+ DEBUG        2472 -1.224708243263706E-006
+ DEBUG        2473 -1.272082344350167E-006
+ DEBUG        2474 -1.272082344350167E-006
+ DEBUG        2475 -1.272082344350167E-006
+ DEBUG        2476 -1.272082344350167E-006
+ DEBUG        2477 -1.322965638372864E-006
+ DEBUG        2478 -1.322965638372864E-006
+ DEBUG        2479 -1.322965638372864E-006
+ DEBUG        2480 -1.322965638372864E-006
+ DEBUG        2481 -1.377358124443617E-006
+ DEBUG        2482 -1.377358124443617E-006
+ DEBUG        2483 -1.377358124443617E-006
+ DEBUG        2484 -1.377358124443617E-006
+ DEBUG        2485 -1.435259803894695E-006
+ DEBUG        2486 -1.435259803894695E-006
+ DEBUG        2487 -1.435259803894695E-006
+ DEBUG        2488 -1.435259803894695E-006
+ DEBUG        2489 -1.010647491028749E-006
+ DEBUG        2490 -1.010647491028749E-006
+ DEBUG        2491 -1.010647491028749E-006
+ DEBUG        2492 -1.010647491028749E-006
+ DEBUG        2493 -1.012402087496866E-006
+ DEBUG        2494 -1.012402087496866E-006
+ DEBUG        2495 -1.012402087496866E-006
+ DEBUG        2496 -1.012402087496866E-006
+ DEBUG        2497 -1.017665876013041E-006
+ DEBUG        2498 -1.017665876013041E-006
+ DEBUG        2499 -1.017665876013041E-006
+ DEBUG        2500 -1.017665876013041E-006
+ DEBUG        2501 -1.026438858353629E-006
+ DEBUG        2502 -1.026438858353629E-006
+ DEBUG        2503 -1.026438858353629E-006
+ DEBUG        2504 -1.026438858353629E-006
+ DEBUG        2505 -1.038721032742274E-006
+ DEBUG        2506 -1.038721032742274E-006
+ DEBUG        2507 -1.038721032742274E-006
+ DEBUG        2508 -1.038721032742274E-006
+ DEBUG        2509 -1.054512399623064E-006
+ DEBUG        2510 -1.054512399623064E-006
+ DEBUG        2511 -1.054512399623064E-006
+ DEBUG        2512 -1.054512399623064E-006
+ DEBUG        2513 -1.073812958996001E-006
+ DEBUG        2514 -1.073812958996001E-006
+ DEBUG        2515 -1.073812958996001E-006
+ DEBUG        2516 -1.073812958996001E-006
+ DEBUG        2517 -1.096622711749262E-006
+ DEBUG        2518 -1.096622711749262E-006
+ DEBUG        2519 -1.096622711749262E-006
+ DEBUG        2520 -1.096622711749262E-006
+ DEBUG        2521 -1.122941656550580E-006
+ DEBUG        2522 -1.122941656550580E-006
+ DEBUG        2523 -1.122941656550580E-006
+ DEBUG        2524 -1.122941656550580E-006
+ DEBUG        2525 -1.152769793844044E-006
+ DEBUG        2526 -1.152769793844044E-006
+ DEBUG        2527 -1.152769793844044E-006
+ DEBUG        2528 -1.152769793844044E-006
+ DEBUG        2529 -1.186107124961921E-006
+ DEBUG        2530 -1.186107124961921E-006
+ DEBUG        2531 -1.186107124961921E-006
+ DEBUG        2532 -1.186107124961921E-006
+ DEBUG        2533 -1.222953648127856E-006
+ DEBUG        2534 -1.222953648127856E-006
+ DEBUG        2535 -1.222953648127856E-006
+ DEBUG        2536 -1.222953648127856E-006
+ DEBUG        2537 -1.263309363785936E-006
+ DEBUG        2538 -1.263309363785936E-006
+ DEBUG        2539 -1.263309363785936E-006
+ DEBUG        2540 -1.263309363785936E-006
+ DEBUG        2541 -1.307174271936162E-006
+ DEBUG        2542 -1.307174271936162E-006
+ DEBUG        2543 -1.307174271936162E-006
+ DEBUG        2544 -1.307174271936162E-006
+ DEBUG        2545 -1.354548373022624E-006
+ DEBUG        2546 -1.354548373022624E-006
+ DEBUG        2547 -1.354548373022624E-006
+ DEBUG        2548 -1.354548373022624E-006
+ DEBUG        2549 -1.405431667045320E-006
+ DEBUG        2550 -1.405431667045320E-006
+ DEBUG        2551 -1.405431667045320E-006
+ DEBUG        2552 -1.405431667045320E-006
+ DEBUG        2553 -1.459824153116074E-006
+ DEBUG        2554 -1.459824153116074E-006
+ DEBUG        2555 -1.459824153116074E-006
+ DEBUG        2556 -1.459824153116074E-006
+ DEBUG        2557 -1.096622711305173E-006
+ DEBUG        2558 -1.096622711305173E-006
+ DEBUG        2559 -1.096622711305173E-006
+ DEBUG        2560 -1.096622711305173E-006
+ DEBUG        2561 -1.098377307773291E-006
+ DEBUG        2562 -1.098377307773291E-006
+ DEBUG        2563 -1.098377307773291E-006
+ DEBUG        2564 -1.098377307773291E-006
+ DEBUG        2565 -1.103641096733554E-006
+ DEBUG        2566 -1.103641096733554E-006
+ DEBUG        2567 -1.103641096733554E-006
+ DEBUG        2568 -1.103641096733554E-006
+ DEBUG        2569 -1.112414078185964E-006
+ DEBUG        2570 -1.112414078185964E-006
+ DEBUG        2571 -1.112414078185964E-006
+ DEBUG        2572 -1.112414078185964E-006
+ DEBUG        2573 -1.124696253018698E-006
+ DEBUG        2574 -1.124696253018698E-006
+ DEBUG        2575 -1.124696253018698E-006
+ DEBUG        2576 -1.124696253018698E-006
+ DEBUG        2577 -1.140487619899488E-006
+ DEBUG        2578 -1.140487619899488E-006
+ DEBUG        2579 -1.140487619899488E-006
+ DEBUG        2580 -1.140487619899488E-006
+ DEBUG        2581 -1.159788179272425E-006
+ DEBUG        2582 -1.159788179272425E-006
+ DEBUG        2583 -1.159788179272425E-006
+ DEBUG        2584 -1.159788179272425E-006
+ DEBUG        2585 -1.182597932025686E-006
+ DEBUG        2586 -1.182597932025686E-006
+ DEBUG        2587 -1.182597932025686E-006
+ DEBUG        2588 -1.182597932025686E-006
+ DEBUG        2589 -1.208916876827004E-006
+ DEBUG        2590 -1.208916876827004E-006
+ DEBUG        2591 -1.208916876827004E-006
+ DEBUG        2592 -1.208916876827004E-006
+ DEBUG        2593 -1.238745014120468E-006
+ DEBUG        2594 -1.238745014120468E-006
+ DEBUG        2595 -1.238745014120468E-006
+ DEBUG        2596 -1.238745014120468E-006
+ DEBUG        2597 -1.272082345238346E-006
+ DEBUG        2598 -1.272082345238346E-006
+ DEBUG        2599 -1.272082345238346E-006
+ DEBUG        2600 -1.272082345238346E-006
+ DEBUG        2601 -1.308928868404280E-006
+ DEBUG        2602 -1.308928868404280E-006
+ DEBUG        2603 -1.308928868404280E-006
+ DEBUG        2604 -1.308928868404280E-006
+ DEBUG        2605 -1.349284584062360E-006
+ DEBUG        2606 -1.349284584062360E-006
+ DEBUG        2607 -1.349284584062360E-006
+ DEBUG        2608 -1.349284584062360E-006
+ DEBUG        2609 -1.393149492212586E-006
+ DEBUG        2610 -1.393149492212586E-006
+ DEBUG        2611 -1.393149492212586E-006
+ DEBUG        2612 -1.393149492212586E-006
+ DEBUG        2613 -1.440523593299048E-006
+ DEBUG        2614 -1.440523593299048E-006
+ DEBUG        2615 -1.440523593299048E-006
+ DEBUG        2616 -1.440523593299048E-006
+ DEBUG        2617 -1.186107124073743E-006
+ DEBUG        2618 -1.186107124073743E-006
+ DEBUG        2619 -1.186107124073743E-006
+ DEBUG        2620 -1.186107124073743E-006
+ DEBUG        2621 -1.187861720541861E-006
+ DEBUG        2622 -1.187861720541861E-006
+ DEBUG        2623 -1.187861720541861E-006
+ DEBUG        2624 -1.187861720541861E-006
+ DEBUG        2625 -1.193125509502124E-006
+ DEBUG        2626 -1.193125509502124E-006
+ DEBUG        2627 -1.193125509502124E-006
+ DEBUG        2628 -1.193125509502124E-006
+ DEBUG        2629 -1.201898490954534E-006
+ DEBUG        2630 -1.201898490954534E-006
+ DEBUG        2631 -1.201898490954534E-006
+ DEBUG        2632 -1.201898490954534E-006
+ DEBUG        2633 -1.214180665787268E-006
+ DEBUG        2634 -1.214180665787268E-006
+ DEBUG        2635 -1.214180665787268E-006
+ DEBUG        2636 -1.214180665787268E-006
+ DEBUG        2637 -1.229972032668059E-006
+ DEBUG        2638 -1.229972032668059E-006
+ DEBUG        2639 -1.229972032668059E-006
+ DEBUG        2640 -1.229972032668059E-006
+ DEBUG        2641 -1.249272592040995E-006
+ DEBUG        2642 -1.249272592040995E-006
+ DEBUG        2643 -1.249272592040995E-006
+ DEBUG        2644 -1.249272592040995E-006
+ DEBUG        2645 -1.272082344794256E-006
+ DEBUG        2646 -1.272082344794256E-006
+ DEBUG        2647 -1.272082344794256E-006
+ DEBUG        2648 -1.272082344794256E-006
+ DEBUG        2649 -1.298401289595574E-006
+ DEBUG        2650 -1.298401289595574E-006
+ DEBUG        2651 -1.298401289595574E-006
+ DEBUG        2652 -1.298401289595574E-006
+ DEBUG        2653 -1.328229426889038E-006
+ DEBUG        2654 -1.328229426889038E-006
+ DEBUG        2655 -1.328229426889038E-006
+ DEBUG        2656 -1.328229426889038E-006
+ DEBUG        2657 -1.361566758006916E-006
+ DEBUG        2658 -1.361566758006916E-006
+ DEBUG        2659 -1.361566758006916E-006
+ DEBUG        2660 -1.361566758006916E-006
+ DEBUG        2661 -1.398413281172850E-006
+ DEBUG        2662 -1.398413281172850E-006
+ DEBUG        2663 -1.398413281172850E-006
+ DEBUG        2664 -1.398413281172850E-006
+ DEBUG        2665 -1.438768996830930E-006
+ DEBUG        2666 -1.438768996830930E-006
+ DEBUG        2667 -1.438768996830930E-006
+ DEBUG        2668 -1.438768996830930E-006
+ DEBUG        2669 -1.279100729778548E-006
+ DEBUG        2670 -1.279100729778548E-006
+ DEBUG        2671 -1.279100729778548E-006
+ DEBUG        2672 -1.279100729778548E-006
+ DEBUG        2673 -1.280855326246666E-006
+ DEBUG        2674 -1.280855326246666E-006
+ DEBUG        2675 -1.280855326246666E-006
+ DEBUG        2676 -1.280855326246666E-006
+ DEBUG        2677 -1.286119115206930E-006
+ DEBUG        2678 -1.286119115206930E-006
+ DEBUG        2679 -1.286119115206930E-006
+ DEBUG        2680 -1.286119115206930E-006
+ DEBUG        2681 -1.294892096659339E-006
+ DEBUG        2682 -1.294892096659339E-006
+ DEBUG        2683 -1.294892096659339E-006
+ DEBUG        2684 -1.294892096659339E-006
+ DEBUG        2685 -1.307174271492073E-006
+ DEBUG        2686 -1.307174271492073E-006
+ DEBUG        2687 -1.307174271492073E-006
+ DEBUG        2688 -1.307174271492073E-006
+ DEBUG        2689 -1.322965638372864E-006
+ DEBUG        2690 -1.322965638372864E-006
+ DEBUG        2691 -1.322965638372864E-006
+ DEBUG        2692 -1.322965638372864E-006
+ DEBUG        2693 -1.342266197745801E-006
+ DEBUG        2694 -1.342266197745801E-006
+ DEBUG        2695 -1.342266197745801E-006
+ DEBUG        2696 -1.342266197745801E-006
+ DEBUG        2697 -1.365075950499062E-006
+ DEBUG        2698 -1.365075950499062E-006
+ DEBUG        2699 -1.365075950499062E-006
+ DEBUG        2700 -1.365075950499062E-006
+ DEBUG        2701 -1.391394895300380E-006
+ DEBUG        2702 -1.391394895300380E-006
+ DEBUG        2703 -1.391394895300380E-006
+ DEBUG        2704 -1.391394895300380E-006
+ DEBUG        2705 -1.421223032593844E-006
+ DEBUG        2706 -1.421223032593844E-006
+ DEBUG        2707 -1.421223032593844E-006
+ DEBUG        2708 -1.421223032593844E-006
+ DEBUG        2709 -1.454560363711721E-006
+ DEBUG        2710 -1.454560363711721E-006
+ DEBUG        2711 -1.454560363711721E-006
+ DEBUG        2712 -1.454560363711721E-006
+ DEBUG        2713 -1.375603529307767E-006
+ DEBUG        2714 -1.375603529307767E-006
+ DEBUG        2715 -1.375603529307767E-006
+ DEBUG        2716 -1.375603529307767E-006
+ DEBUG        2717 -1.377358125775885E-006
+ DEBUG        2718 -1.377358125775885E-006
+ DEBUG        2719 -1.377358125775885E-006
+ DEBUG        2720 -1.377358125775885E-006
+ DEBUG        2721 -1.382621914736148E-006
+ DEBUG        2722 -1.382621914736148E-006
+ DEBUG        2723 -1.382621914736148E-006
+ DEBUG        2724 -1.382621914736148E-006
+ DEBUG        2725 -1.391394896188558E-006
+ DEBUG        2726 -1.391394896188558E-006
+ DEBUG        2727 -1.391394896188558E-006
+ DEBUG        2728 -1.391394896188558E-006
+ DEBUG        2729 -1.403677071021292E-006
+ DEBUG        2730 -1.403677071021292E-006
+ DEBUG        2731 -1.403677071021292E-006
+ DEBUG        2732 -1.403677071021292E-006
+ DEBUG        2733 -1.419468437902083E-006
+ DEBUG        2734 -1.419468437902083E-006
+ DEBUG        2735 -1.419468437902083E-006
+ DEBUG        2736 -1.419468437902083E-006
+ DEBUG        2737 -1.438768997275020E-006
+ DEBUG        2738 -1.438768997275020E-006
+ DEBUG        2739 -1.438768997275020E-006
+ DEBUG        2740 -1.438768997275020E-006
+ DEBUG        2741 -1.461578750028281E-006
+ DEBUG        2742 -1.461578750028281E-006
+ DEBUG        2743 -1.461578750028281E-006
+ DEBUG        2744 -1.461578750028281E-006
+ DEBUG        2745 -1.475615519552775E-006
+ DEBUG        2746 -1.475615519552775E-006
+ DEBUG        2747 -1.475615519552775E-006
+ DEBUG        2748 -1.475615519552775E-006
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002ACE1034DF0C  for__signal_handl     Unknown  Unknown
+libpthread-2.12.s  00000030F660F7E0  Unknown               Unknown  Unknown
+libc-2.12.so       00000030F5EFF73A  __strncat_chk         Unknown  Unknown
+libifport.so.5     00002ACE100D429C  abort_                Unknown  Unknown
+MASTERODB          0000000013D215E9  espnheesi_.V              292  espnheesi.F90
+MASTERODB          0000000013D0DE7F  espcm_.V                  376  espcm.F90
+libiomp5.so        00002ACE123937A3  __kmp_invoke_micr     Unknown  Unknown
+libiomp5.so        00002ACE123619C7  __kmp_fork_call       Unknown  Unknown
+libiomp5.so        00002ACE1232AABC  __kmpc_fork_call      Unknown  Unknown
+MASTERODB          0000000013D0938D  espcm_.V                  369  espcm.F90
+MASTERODB          0000000013542576  stepo_.V                  458  stepo.F90
+MASTERODB          00000000005D51FE  cnt4_.V                  1060  cnt4.F90
+MASTERODB          00000000005D01E0  cnt3_                     199  cnt3.F90
+MASTERODB          00000000005CFBE6  cnt2_.V                   138  cnt2.F90
+MASTERODB          00000000005CF46E  cnt1_                     161  cnt1.F90
+MASTERODB          00000000005CE3C6  cnt0_                     205  cnt0.F90
+MASTERODB          00000000005C66E5  MAIN__                    189  master.F90
+MASTERODB          00000000005C63AE  Unknown               Unknown  Unknown
+libc-2.12.so       00000030F5E1ED1D  __libc_start_main     Unknown  Unknown
+MASTERODB          00000000005C62B9  Unknown               Unknown  Unknown

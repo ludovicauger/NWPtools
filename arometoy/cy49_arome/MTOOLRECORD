@@ -1,0 +1,1845 @@
+bless( {
+  'mtoolrc' => '/home/gmap/mrpa/auger/.mtoolrc',
+  'verbose' => 1,
+  'search' => [
+    '.',
+    '/home/gmap/mrpa/auger/.mtoolrc/include/__LANG__',
+    '/home/gmap/mrpa/auger/.mtoolrc/include',
+    '/home/gmap/mrpa/auger/.mtoolrc',
+    '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/include/__LANG__',
+    '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/include',
+    '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0'
+  ],
+  'autoclean' => 'on',
+  'timer' => 'time',
+  'jobtest' => undef,
+  'epilog' => [
+    '#MTOOL include files=epilog.step,banner.end'
+  ],
+  'lockstyle' => 'flock',
+  'setvars' => undef,
+  'nest' => undef,
+  'user' => 'auger',
+  'jshort' => '7HTX.20150601.00.production.fc_i.forecast.job2',
+  'id' => 'mstep_098651_7HTX_frc',
+  'export' => 'no',
+  'profiles' => {
+    'beaufixcn_default' => [
+      '#SBATCH --export=NONE
+',
+      '#SBATCH --job-name=[this:jobname]
+',
+      '#SBATCH --mem=240000
+',
+      '#SBATCH --nodes=[this:submit_nodes]
+',
+      '#SBATCH --partition=huge256
+',
+      '#SBATCH --time=66:40:00
+',
+      '#SBATCH --exclusive
+',
+      '#SBATCH --verbose
+',
+      '#SBATCH --no-requeue
+'
+    ]
+  },
+  'submitmethod' => 'slurm',
+  'incpath' => '.',
+  'pycoding' => undef,
+  'inclprompt' => 1,
+  'on_error' => [],
+  'autolog' => 'on',
+  'pyfuture' => undef,
+  'steps' => [
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => '_xxx_',
+      'target' => 'beaufix',
+      'order' => 0,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '
+',
+        '
+',
+        '################################################################################
+',
+        '# START of manual for target computer beaufix.meteo.fr
+',
+        '#  ( taken from /shared/sms/targets_experiment/beaufix )
+',
+        '
+',
+        '# include part manual not activated for this host
+',
+        '
+',
+        '# END of manual for target computer beaufix.meteo.fr
+',
+        '################################################################################
+',
+        '
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        '#MTOOL set jobname=frc@7HTX
+',
+        '#MTOOL set submit_nodes=1
+',
+        '#MTOOL set submit_nproc=1
+',
+        '#MTOOL set submit_openmp=1
+',
+        '#MTOOL set submit_tasks=1
+',
+        '#MTOOL end
+',
+        '
+',
+        'export AUTO_PROFILE_MEM="240000"
+',
+        'export AUTO_PROFILE_HT="on"
+',
+        'export AUTO_PROFILE_ALGO="minimax"
+',
+        'export AUTO_PROFILE_CPU="200000"
+',
+        'export AUTO_PROFILE_EMAIL="ludovic.auger@meteo.fr"
+',
+        'export AUTO_PROFILE_SMS_PATH="7HTX/20150601/00/production/fc_i/forecast"
+',
+        'export AUTO_PROFILE_OPENMP="1"
+',
+        'export AUTO_PROFILE_TARGET="beaufixcn"
+',
+        'export AUTO_PROFILE_TASKS_PN="1"
+',
+        'export AUTO_PROFILE_LANGUAGE="ksh"
+',
+        'export AUTO_PROFILE_VM="0"
+',
+        'export AUTO_PROFILE_SET="default"
+',
+        'export AUTO_PROFILE_NPROC="1"
+',
+        'export AUTO_PROFILE_CORES="40"
+',
+        'export AUTO_PROFILE_MIN="384"
+',
+        '
+',
+        '
+',
+        '# swapp internals
+',
+        '
+',
+        'export SWAPP_USER=mrpa645
+',
+        'export SWAPP_GROUP=mrpa
+',
+        'export SWAPP_TARGET=beaufix.meteo.fr
+',
+        '
+',
+        '################################################################################
+',
+        '# START of head for target computer beaufix.meteo.fr
+',
+        '#  ( taken from /shared/sms/targets_experiment/beaufix )
+',
+        '
+',
+        '#--- head/start ----------------------------------------------------------------
+',
+        '
+',
+        'set -axv
+',
+        'unalias -a
+',
+        'date
+',
+        '
+',
+        '#MTOOL autoclean
+',
+        '#MTOOL autolog
+',
+        '#MTOOL set jobtag=[this:jobname]
+',
+        '
+',
+        '#MTOOL setconf files=targets.[this:host]
+',
+        '# setconf start /home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/include/targets.beaufix
+',
+        '#MTOOL set frontend=[this:host][this:suffixfe]
+',
+        '#MTOOL set cpunodes=[this:host][this:suffixcn]
+',
+        '# setconf end
+
+',
+        '#MTOOL set logtarget=[this:frontend]
+',
+        '
+',
+        '#MTOOL set fetch=[this:frontend]
+',
+        '#MTOOL set compute=[this:cpunodes]
+',
+        '#MTOOL set backup=[this:frontend]
+',
+        '
+',
+        '#MTOOL configure submitcmd=sbatch
+',
+        '
+',
+        '#MTOOL export TARGET=[this:target]
+',
+        '
+',
+        'env | fgrep MTOOL_STEP
+',
+        '
+',
+        '
+',
+        '
+',
+        '
+',
+        '#--- head/path -----------------------------------------------------------------
+',
+        '
+',
+        '#MTOOL include files=path.basic.[this:target]
+',
+        '#MTOOL include files=path.mtool.[this:target]
+',
+        '
+',
+        '
+',
+        '
+',
+        '#--- head/olive ----------------------------------------------------------------
+',
+        '
+',
+        'MTOOL_CONTEXT=Research
+',
+        '#MTOOL export MTOOL_CONTEXT=Research.[this:target]
+',
+        '
+',
+        'PATH=$PATH:/home/mf/dp/marp/verolive/XpToolbox/current/$MTOOL_CONTEXT
+',
+        'PATH=$PATH:/home/mf/dp/marp/verolive/public/mpsh/$TARGET/bin
+',
+        '
+',
+        'SWAPP_SERVER_ID=verolive:sxproc1.cnrm.meteo.fr:7171
+',
+        'SWAPP_OUTPUT_ID=verolive:sxproc1.cnrm.meteo.fr:7272
+',
+        '
+',
+        '# This variables should be setup by Olive...
+',
+        '# The user may still override this by setting these in the SWAPP interface
+',
+        'unset GRIB_SAMPLES_PATH
+',
+        'unset GRIB_DEFINITION_PATH 
+',
+        '
+',
+        '#MTOOL include files=env.swapp.[this:target]
+',
+        '
+',
+        'IJA_SKIP=1
+',
+        '
+',
+        '
+',
+        '#--- head/sms ------------------------------------------------------------------
+',
+        '
+',
+        '# specific sms path 
+',
+        '
+',
+        'PATH=/home/mf/dp/marp/verolive/public/sms-gateway-0.0.7/$TARGET:$PATH
+',
+        '
+',
+        '# env provided by SMS daemon
+',
+        '
+',
+        'SMSNAME=/mrpa645/7HTX/20150601/00/production/fc_i/forecast
+',
+        'SMSNODE=sxproc1.cnrm.meteo.fr
+',
+        'SMSPASS=IYPyYfXA
+',
+        'SMSTRYNO=2
+',
+        'SMS_PROG=314159
+',
+        'SMSJOBOUT=/home/verolive/smshome/mrpa645/7HTX/20150601/00/production/fc_i/forecast.2
+',
+        'SMSDATE=20100323
+',
+        'SMSTIME=05:37
+',
+        'SMSDAY=tuesday
+',
+        'SMSDOY=82
+',
+        '
+',
+        'MTOOL_STEP_LOGFILE=$(xplocout $SMSJOBOUT)
+',
+        '
+',
+        'GATEWAY_HOST=$SMSNODE
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'all',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => 'beaufix',
+      'order' => 1,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common
+',
+        '
+',
+        '# error handler
+',
+        '
+',
+        'function ERROR {
+',
+        ' set +e
+',
+        ' set -x
+',
+        ' echo ERROR
+',
+        ' smsabort
+',
+        ' xprescue
+',
+        ' xja
+',
+        '#MTOOL include files=epilog.clean.step,epilog.step,epilog.emergency.[this:autolog]
+',
+        ' trap "" 0
+',
+        ' exit 0
+',
+        '}
+',
+        '
+',
+        '# trap all errors
+',
+        '
+',
+        'trap ERROR 0
+',
+        'trap \'{ set +e; echo "got signal"; smsabort; trap "" 0; exit 0; }\' 1 2 3 4 5 6 7 8 10 12 13 15 30
+',
+        '
+',
+        '
+',
+        '
+',
+        '#--- head/gco ------------------------------------------------------------------
+',
+        '
+',
+        '#MTOOL include files=env.gco.[this:target]
+',
+        'PATH=$PATH:$GGET_PATH
+',
+        '
+',
+        '
+',
+        '#--- head/arch -----------------------------------------------------------------
+',
+        '
+',
+        'XPOPTS=""
+',
+        'EC_PROFILE_HEAP=0
+',
+        'EC_MPI_ATEXIT=0
+',
+        '
+',
+        'ulimit -s unlimited
+',
+        'ulimit -l unlimited || echo "ulimit -l failed: ignoring it."
+',
+        'ulimit -c unlimited || echo "ulimit -c failed: ignoring it."
+',
+        'export decfort_dump_flag=TRUE
+',
+        '
+',
+        '#MTOOL include files=arch.system.[this:target]
+',
+        '#MTOOL include files=arch.fortran.[this:target]
+',
+        '#MTOOL include files=arch.mpi.[this:target]
+',
+        '#MTOOL include files=arch.drhook.[this:target]
+',
+        '
+',
+        '
+',
+        '
+',
+        '
+',
+        '#--- head/init -----------------------------------------------------------------
+',
+        '
+',
+        '# initiate sms job
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'all',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => 'beaufix',
+      'order' => 2,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common join=fetch
+',
+        '
+',
+        'smsinit $PBS_JOBID
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'fetch',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => 'beaufix',
+      'order' => 3,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common
+',
+        '
+',
+        'smslabel jobid $(xplabel begin [this:target])
+',
+        '
+',
+        'set -e
+',
+        '
+',
+        'MTOOL_RUNDIR=$MTOOL_STEP_WORKSPACE
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'all',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'clear',
+      'target' => 'beaufix',
+      'order' => 4,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common not=clear
+',
+        '
+',
+        '
+',
+        '
+',
+        '# END of head for target computer beaufix.meteo.fr
+',
+        '################################################################################
+',
+        '
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'VORTEX=""
+',
+        'CPLMOD="coupling"
+',
+        'CONTEXT="Research"
+',
+        'TOOLBOX_VERSION="current"
+',
+        'CLASSCPL="coupling"
+',
+        'CLASSFC="forecast"
+',
+        'MM="$( xpmm 20150601  )"
+',
+        'SCRIPT_LANGUAGE="ksh"
+',
+        'TYPE="fc"
+',
+        'XPID="7HTX"
+',
+        'YYYYMMDDHH="2015060100"
+',
+        'YYYYMMDD_FIRST="20150601"
+',
+        'YYYYMMDD_LAST="20150601"
+',
+        'MODEL="arome"
+',
+        'COUNTRY="franmg"
+',
+        'DOMAIN="FRANGP0025,EURW1S100"
+',
+        'AREA="france"
+',
+        'SUITE="oper"
+',
+        'TIMESTEP="50"
+',
+        'TRUNCATION_ARPEGE="1198"
+',
+        'TARGET_HOST="beaufix"
+',
+        'SWAPP_DEFAULT_INTENT="in"
+',
+        'LFICYCLE="cy40_op2"
+',
+        'CYCLE="al40_arome-op2HR.24"
+',
+        'ARPEGE_CYCLE="cy40_op2HR.30"
+',
+        'SWAPP_OUTPUT_ID="verolive:sxproc1.cnrm.meteo.fr:7272"
+',
+        'SWAPP_SERVER_ID="verolive:sxproc1.cnrm.meteo.fr:7171"
+',
+        'YYYYMMDD="20150601"
+',
+        'YYYYMMDD_PREV="undef"
+',
+        'YYYYMMDD_NEXT="undef"
+',
+        'HH="00"
+',
+        'HHBASE="00"
+',
+        'HHDELTA="0"
+',
+        'CUTOFF="production"
+',
+        'CLASS="forecast"
+',
+        'NPROC="1"
+',
+        'CTERMS="0-42-1"
+',
+        'TERM="1"
+',
+        'FPTERMS="0-1-1"
+',
+        'SWAPP_ARCHIVE_DISCARD="type:Gridpoint"
+',
+        'PROFILE="mem:240000 time:200000 openmp:1 ht:on tasks_pn:1  len:1 nproc:1"
+',
+        'SWAPP_XXT_DEF="1"
+',
+        'SWAPP_IOSERVER_NODES="0"
+',
+        'SWAPP_NPRGPNS="26"
+',
+        'SWAPP_NPRGPEW="16"
+',
+        'SWAPP_IOSERVER_TASKS="0"
+',
+        'SMSNAME="/mrpa645/7HTX/20150601/00/production/fc_i/forecast"
+',
+        'SWAPP_TARGET_HOST="beaufix"
+',
+        'SWAPP_TARGET_LOGNAME="auger"
+',
+        'SWAPP_ARCHIVE_USER="auger"
+',
+        '
+',
+        '#MTOOL include files=setup.[this:id].[this:target],setup.rundir.gfs
+',
+        '
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'cat -> al40_arome-op2HR.24.def << END_OF_CYCLE
+',
+        '{
+',
+        '  \'CLIM_DAP\' => \'clim_dap.eurw1s100.02 clim_dap.frangp0025.03\',
+',
+        '  \'CLIM_DAP_FRANGP0025\' => \'clim_dap.frangp0025.03\',
+',
+        '  \'MASTER_AROME_FORECAST\' => \'cy40_master-op2.11.IMPI500IFC1301.2x.exe\',
+',
+        '  \'CLIM_FRANMG_01KM30\' => \'clim_franmg.01km30.02\',
+',
+        '  \'CLIM_DAP_EURW1S100\' => \'clim_dap.eurw1s100.02\',
+',
+        '  \'NAMELIST_ALADIN\' => \'al40_arome-op2HR.13.nam\',
+',
+        '  \'MASTER_AROME\' => \'cy40_masterodb-op2.11.IMPI500IFC1301.2x.exe\',
+',
+        '  \'MASTER_AROME_LIST\' => \'cy40_master-op2.11.IMPI500IFC1301.2x.exe cy40_masterodb-op2.11.IMPI500IFC1301.2x.exe\',
+',
+        '  \'CLIM_FRANMG\' => \'clim_franmg.01km30.02\',
+',
+        '  \'NAMELIST_UTILITIES\' => \'ut40_arome-op2HR.03.nam\',
+',
+        '  \'NAMELIST_AROME\' => \'al40_arome-op2HR.13.nam\'
+',
+        '}
+',
+        'END_OF_CYCLE
+',
+        'cat -> cy40_op2HR.30.def << END_OF_CYCLE
+',
+        '{
+',
+        '  \'RTCOEF_TGZ\' => \'var.sat.misc_rtcoef.19.tgz\',
+',
+        '  \'RRTM_CONST\' => \'rrtm.const.01.tgz\',
+',
+        '  \'ECOCLIMAP_COVERS_PARAM\' => \'ecoclimap.covers.param.02.tgz\'
+',
+        '}
+',
+        'END_OF_CYCLE
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'all',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => '[this:fetch]',
+      'order' => 5,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'fetch',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL step id=fetch target=[this:fetch]
+',
+        '
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --format="fa"                                                          \\
+',
+        '  --local="Const.Clim.sfx"                                               \\
+',
+        '  --remote="/scratch/work/auger/clim/PGD_.fa"                            \\
+',
+        '  --type="Pgdfa"                                                        
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --class="coupling"                                                     \\
+',
+        '  --cutoff="$CUTOFF"                                                     \\
+',
+        '  --date="$YYYYMMDDHH"                                                   \\
+',
+        '  --experiment="$XPID"                                                   \\
+',
+        '  --format="fa"                                                          \\
+',
+        '  --local="ICMSHFCSTINIT.sfx"                                            \\
+',
+        '  --model="surfex"                                                       \\
+',
+        '  --term="0,op+$HHDELTA"                                                 \\
+',
+        '  --type="Historic"                                                     
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --format="unknown"                                                     \\
+',
+        '  --genv="$ARPEGE_CYCLE"                                                 \\
+',
+        '  --local="ecoclimap_covers_param.tgz"                                   \\
+',
+        '  --type="Coversparam"                                                  
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --format="unknown"                                                     \\
+',
+        '  --genv="$ARPEGE_CYCLE"                                                 \\
+',
+        '  --local="rrtm.const.tgz"                                               \\
+',
+        '  --type="Rrtm"                                                         
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --format="unknown"                                                     \\
+',
+        '  --genv="$ARPEGE_CYCLE"                                                 \\
+',
+        '  --local="var.sat.misc_rtcoef.01.tgz"                                   \\
+',
+        '  --type="Rtcoeftgz"                                                    
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --area="$COUNTRY"                                                      \\
+',
+        '  --class="$CLASSCPL"                                                    \\
+',
+        '  --cutoff="$CUTOFF"                                                     \\
+',
+        '  --date="$YYYYMMDDHH"                                                   \\
+',
+        '  --experiment="$XPID"                                                   \\
+',
+        '  --format="fa"                                                          \\
+',
+        '  --local="ELSCFFCSTALBC(term)"                                          \\
+',
+        '  --model="$MODEL"                                                       \\
+',
+        '  --term="$CTERMS,op+$HHDELTA"                                           \\
+',
+        '  --type="Elscf"                                                        
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --area="$COUNTRY"                                                      \\
+',
+        '  --class="$CLASSCPL"                                                    \\
+',
+        '  --cutoff="$CUTOFF"                                                     \\
+',
+        '  --date="$YYYYMMDDHH"                                                   \\
+',
+        '  --experiment="$XPID"                                                   \\
+',
+        '  --format="fa"                                                          \\
+',
+        '  --local="ICMSHFCSTINIT"                                                \\
+',
+        '  --model="$MODEL"                                                       \\
+',
+        '  --term="0,op+$HHDELTA "                                                \\
+',
+        '  --type="Elscf"                                                        
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --domain="$DOMAIN"                                                     \\
+',
+        '  --format="unknown"                                                     \\
+',
+        '  --genv="$CYCLE"                                                        \\
+',
+        '  --local="const.clim.(domain)"                                          \\
+',
+        '  --model="$MODEL"                                                       \\
+',
+        '  --month="$MM"                                                          \\
+',
+        '  --type="Clim::Domain"                                                 
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --country="$COUNTRY"                                                   \\
+',
+        '  --format="unknown"                                                     \\
+',
+        '  --genv="$CYCLE"                                                        \\
+',
+        '  --local="Const.Clim"                                                   \\
+',
+        '  --model="$MODEL"                                                       \\
+',
+        '  --month="$MM"                                                          \\
+',
+        '  --type="Clim::Country"                                                
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --binary="arome"                                                       \\
+',
+        '  --format="ascii"                                                       \\
+',
+        '  --genv="$CYCLE"                                                        \\
+',
+        '  --local="fort.4"                                                       \\
+',
+        '  --nproc="$NPROC"                                                       \\
+',
+        '  --source="namel_previ_dyn_assim"                                       \\
+',
+        '  --type="Namelist"                                                     
+',
+        '
+',
+        '  # Apply delta nam from Setup Forecast Terms
+',
+        '
+',
+        '  xpnam -i --delta="
+',
+        '&NAMCT0
+',
+        '  NSFXHISTS(0)=-1,
+',
+        '  NSFXHISTS(1)=-1,
+',
+        '  NFRPOS=1,
+',
+        '  NPOSTS(0)=-2,
+',
+        '  NPOSTS(1)=-0,
+',
+        '  NPOSTS(2)=-1,
+',
+        '  NFRHIS=1,
+',
+        '  NHISTS(0)=-2,
+',
+        '  NHISTS(1)=-0,
+',
+        '  NHISTS(2)=-1,
+',
+        '  NFRSDI=1,
+',
+        '  NSDITS(0)=-1,
+',
+        '  NSDITS(1)=-0,
+',
+        '/
+',
+        '&NAMCT1
+',
+        '  N1SFXHIS=1,
+',
+        '  N1POS=1,
+',
+        '  N1HIS=1,
+',
+        '  N1SDI=1,
+',
+        '/
+',
+        '&NAMOPH
+',
+        '  LINC=.TRUE.,
+',
+        '/
+',
+        '
+',
+        '"  fort.4
+',
+        '
+',
+        '
+',
+        '  # Apply delta nam from Setup Coupling Terms
+',
+        '
+',
+        '  xpnam -i --delta="
+',
+        '&NEMELBC0B
+',
+        '  TEFRCL=3600,
+',
+        '/
+',
+        '
+',
+        '"  fort.4
+',
+        '
+',
+        '
+',
+        '  # Apply delta nam from gnam
+',
+        '
+',
+        '  xpnam -i --delta="
+',
+        '&NAMCT0
+',
+        '  NFPOS=0,
+',
+        '  CNPPATH=\'\',
+',
+        '/
+',
+        '&NAMFPC
+',
+        '  CFP2DF(9)=--,
+',
+        '  CFP2DF(10)=-,
+',
+        '/
+',
+        '&NAMPAR0
+',
+        '  NPRGPNS=1,
+',
+        '  NPRGPEW=1,
+',
+        '  NPRTRW=1,
+',
+        '  NPRTRV=1,
+',
+        '/
+',
+        '
+',
+        '"  fort.4
+',
+        '
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --binary="$MODEL"                                                      \\
+',
+        '  --format="ascii"                                                       \\
+',
+        '  --genv="$CYCLE"                                                        \\
+',
+        '  --local="selectfp(term)"                                               \\
+',
+        '  --nproc="$NPROC"                                                       \\
+',
+        '  --source="select_fp"                                                   \\
+',
+        '  --term="$FPTERMS"                                                      \\
+',
+        '  --type="Namselect"                                                    
+',
+        '
+',
+        '  # Apply delta nam from Setup Forecast Terms
+',
+        '
+',
+        '  xpnam -i --delta="
+',
+        '&NAMCT0
+',
+        '  NSFXHISTS(0)=-1,
+',
+        '  NSFXHISTS(1)=-1,
+',
+        '  NFRPOS=1,
+',
+        '  NPOSTS(0)=-2,
+',
+        '  NPOSTS(1)=-0,
+',
+        '  NPOSTS(2)=-1,
+',
+        '  NFRHIS=1,
+',
+        '  NHISTS(0)=-2,
+',
+        '  NHISTS(1)=-0,
+',
+        '  NHISTS(2)=-1,
+',
+        '  NFRSDI=1,
+',
+        '  NSDITS(0)=-1,
+',
+        '  NSDITS(1)=-0,
+',
+        '/
+',
+        '&NAMCT1
+',
+        '  N1SFXHIS=1,
+',
+        '  N1POS=1,
+',
+        '  N1HIS=1,
+',
+        '  N1SDI=1,
+',
+        '/
+',
+        '&NAMOPH
+',
+        '  LINC=.TRUE.,
+',
+        '/
+',
+        '
+',
+        '"  selectfp*
+',
+        '
+',
+        '
+',
+        '  # Apply delta nam from Setup Coupling Terms
+',
+        '
+',
+        '  xpnam -i --delta="
+',
+        '&NEMELBC0B
+',
+        '  TEFRCL=3600,
+',
+        '/
+',
+        '
+',
+        '"  selectfp*
+',
+        '
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpinput   \\
+',
+        '  --binary="arome"                                                       \\
+',
+        '  --format="ascii"                                                       \\
+',
+        '  --genv="$CYCLE"                                                        \\
+',
+        '  --local="EXSEG1.nam"                                                   \\
+',
+        '  --nproc="$NPROC"                                                       \\
+',
+        '  --source="namel_previ_surfex"                                          \\
+',
+        '  --type="Namelist"                                                     
+',
+        '
+',
+        '  # Apply delta nam from Setup Forecast Terms
+',
+        '
+',
+        '  xpnam -i --delta="
+',
+        '&NAMCT0
+',
+        '  NSFXHISTS(0)=-1,
+',
+        '  NSFXHISTS(1)=-1,
+',
+        '  NFRPOS=1,
+',
+        '  NPOSTS(0)=-2,
+',
+        '  NPOSTS(1)=-0,
+',
+        '  NPOSTS(2)=-1,
+',
+        '  NFRHIS=1,
+',
+        '  NHISTS(0)=-2,
+',
+        '  NHISTS(1)=-0,
+',
+        '  NHISTS(2)=-1,
+',
+        '  NFRSDI=1,
+',
+        '  NSDITS(0)=-1,
+',
+        '  NSDITS(1)=-0,
+',
+        '/
+',
+        '&NAMCT1
+',
+        '  N1SFXHIS=1,
+',
+        '  N1POS=1,
+',
+        '  N1HIS=1,
+',
+        '  N1SDI=1,
+',
+        '/
+',
+        '&NAMOPH
+',
+        '  LINC=.TRUE.,
+',
+        '/
+',
+        '
+',
+        '"  EXSEG1.nam
+',
+        '
+',
+        '
+',
+        '  # Apply delta nam from Setup Coupling Terms
+',
+        '
+',
+        '  xpnam -i --delta="
+',
+        '&NEMELBC0B
+',
+        '  TEFRCL=3600,
+',
+        '/
+',
+        '
+',
+        '"  EXSEG1.nam
+',
+        '
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'yes',
+      'join' => '_xxx_',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => '[this:compute]',
+      'order' => 6,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'compute',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL step id=compute target=[this:compute]
+',
+        '
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpexec   \\
+',
+        '  --finalterm="$TERM"                                                    \\
+',
+        '  --format="sx"                                                          \\
+',
+        '  --genv="$CYCLE"                                                        \\
+',
+        '  --local="AROME.EX"                                                     \\
+',
+        '  --mode="forecast"                                                      \\
+',
+        '  --timescheme="sli"                                                     \\
+',
+        '  --timestep="$TIMESTEP"                                                 \\
+',
+        '  --type="Arome"                                                        
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'yes',
+      'join' => '_xxx_',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => 'beaufix',
+      'order' => 7,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'outputs',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common id=outputs join=backup
+',
+        '
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpoutput   \\
+',
+        '  --class="$CLASS"                                                       \\
+',
+        '  --cutoff="$CUTOFF"                                                     \\
+',
+        '  --date="$YYYYMMDDHH"                                                   \\
+',
+        '  --experiment="$XPID"                                                   \\
+',
+        '  --format="fa"                                                          \\
+',
+        '  --local="+exec"                                                        \\
+',
+        '  --model="$MODEL"                                                       \\
+',
+        '  --term="all"                                                           \\
+',
+        '  --type="Historic"                                                     
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpoutput   \\
+',
+        '  --class="$CLASS"                                                       \\
+',
+        '  --cutoff="$CUTOFF"                                                     \\
+',
+        '  --date="$YYYYMMDDHH"                                                   \\
+',
+        '  --domain="all"                                                         \\
+',
+        '  --experiment="$XPID"                                                   \\
+',
+        '  --format="fa"                                                          \\
+',
+        '  --local="+exec"                                                        \\
+',
+        '  --model="$MODEL"                                                       \\
+',
+        '  --origin="historic"                                                    \\
+',
+        '  --term="all"                                                           \\
+',
+        '  --type="Gridpoint"                                                    
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpoutput   \\
+',
+        '  --binary="$MODEL"                                                      \\
+',
+        '  --class="$CLASS"                                                       \\
+',
+        '  --cutoff="$CUTOFF"                                                     \\
+',
+        '  --date="$YYYYMMDDHH"                                                   \\
+',
+        '  --experiment="$XPID"                                                   \\
+',
+        '  --format="ascii"                                                       \\
+',
+        '  --local="+exec"                                                        \\
+',
+        '  --task="$SMSNAME"                                                      \\
+',
+        '  --type="Listing"                                                      
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        'xpoutput   \\
+',
+        '  --class="$CLASS"                                                       \\
+',
+        '  --cutoff="$CUTOFF"                                                     \\
+',
+        '  --date="$YYYYMMDDHH"                                                   \\
+',
+        '  --experiment="$XPID"                                                   \\
+',
+        '  --format="ascii"                                                       \\
+',
+        '  --local="exec.log"                                                     \\
+',
+        '  --model="$MODEL"                                                       \\
+',
+        '  --section="fcst"                                                       \\
+',
+        '  --task="forecast"                                                      \\
+',
+        '  --type="Tbxlog"                                                       
+',
+        '
+',
+        '#-------------------------------------------------------------------------------
+',
+        '
+',
+        '
+',
+        '
+',
+        '################################################################################
+',
+        '# START of tail for target computer beaufix.meteo.fr
+',
+        '#  ( taken from /shared/sms/targets_experiment/beaufix )
+',
+        '
+',
+        '#--- tail/flush ----------------------------------------------------------------
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'backup',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => 'beaufix',
+      'order' => 8,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common join=fetch
+',
+        'ls
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'fetch',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => 'beaufix',
+      'order' => 9,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common join=fetch,backup
+',
+        'ftflush
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'fetch,backup',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => '[this:backup]',
+      'order' => 10,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'backup',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL step id=backup target=[this:backup]
+',
+        '
+',
+        'set +e
+',
+        '
+',
+        '#xplog
+',
+        'smslabel jobid $(xplabel end [this:target])
+',
+        'sleep 1
+',
+        'smscomplete expire
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'yes',
+      'join' => '_xxx_',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'clear',
+      'target' => 'beaufix',
+      'order' => 11,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common join=autolog not=clear
+',
+        '
+',
+        'xpjobout $SMSJOBOUT
+',
+        '
+',
+        '
+',
+        '
+',
+        '#--- tail/epilog ---------------------------------------------------------------
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'autolog',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'backup,autolog',
+      'target' => 'beaufix',
+      'order' => 12,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common not=backup,autolog
+',
+        '
+',
+        'if [ "$MTOOL_PREFETCH_ONLY" = "on" ]; then
+',
+        '  smscomplete expire
+',
+        '#MTOOL include files=epilog.emergency.on
+',
+        '  export MTOOL_SUBMIT_SKIP="on"
+',
+        'else
+',
+        '  smslabel jobid $(xplabel end [this:target])
+',
+        'fi
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'all',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => 0,
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => 'beaufix',
+      'order' => 13,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'void',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL common
+',
+        '
+',
+        '#MTOOL include files=epilog.clean.step
+',
+        '
+',
+        '/opt/softs/bin/ja  || echo "The ja command failed. Whatever..."
+',
+        '
+',
+        'date
+',
+        'trap "" 0
+',
+        '
+',
+        '
+',
+        '
+',
+        '# END of tail for target computer beaufix.meteo.fr
+',
+        '################################################################################
+',
+        '
+'
+      ],
+      'proftag' => 'default',
+      'initsh' => 'ksh',
+      'active' => 'no',
+      'join' => 'all',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    },
+    {
+      'subshell' => '0',
+      'number' => undef,
+      'not' => 'autolog',
+      'target' => '[this:logtarget]',
+      'order' => 14,
+      'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+      'id' => 'autolog',
+      'shell' => 'ksh',
+      'submitmethod' => 'slurm',
+      'language' => 'ksh',
+      'corpus' => [
+        '#MTOOL step id=autolog target=[this:logtarget] tag=autolog language=ksh subshell=0
+',
+        '#MTOOL include files=auto.log.[this:logtarget]
+'
+      ],
+      'proftag' => 'autolog',
+      'initsh' => 'ksh',
+      'active' => 'yes',
+      'join' => '_xxx_',
+      'submitcmd' => 'sbatch',
+      'languagext' => 'sh',
+      'type' => 'std'
+    }
+  ],
+  'subshell' => 0,
+  'time' => 1,
+  'submit' => 1,
+  'variables' => {
+    'compute' => 'beaufixcn',
+    'frontend' => 'beaufixfe',
+    'workdir' => '/scratch/work/auger',
+    'suffixcn' => 'cn',
+    'suffixfe' => 'fe',
+    'notdefault' => 'autolog',
+    'bangline' => '/bin/ksh',
+    'submit_openmp' => '1',
+    'tmploc' => '$TMP_LOC',
+    'fetch' => 'beaufixfe',
+    'logfile' => '/home/gmap/mrpa/auger/7HTX.20150601.00.production.fc_i.forecast.job2.o20203',
+    'count' => '098651',
+    'abort' => 'dump_098651_7HTX_frc',
+    'aliveroot' => '/scratch/mtool/auger/alive',
+    'spoolroot' => '/scratch/mtool/auger/spool',
+    'jobtag' => 'frc@7HTX',
+    'spool' => undef,
+    'tmpdir' => '$TMPDIR',
+    'cpunodes' => 'beaufixcn',
+    'abortroot' => '/scratch/mtool/auger/abort',
+    'cacheroot' => '/scratch/mtool/auger/cache',
+    'depotroot' => '/scratch/mtool/auger/depot',
+    'public' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0/public',
+    'backup' => 'beaufixfe',
+    'proftag' => 'default',
+    'nested' => 'off',
+    'host' => 'beaufix',
+    'submit_nodes' => '1',
+    'submit_nproc' => '1',
+    'submit_tasks' => '1',
+    'ftdir' => '/scratch/utmp/ftdir/auger',
+    'logtarget' => 'beaufixfe',
+    'jobname' => 'frc@7HTX',
+    'cleanmode' => 'olive'
+  },
+  'node' => 'beaufix',
+  'mtooldir' => '/scratch/mtool/auger',
+  'root' => '/home/mf/dp/marp/verolive/SAVE/public/mtool-2.3.0',
+  'shell' => 'ksh',
+  'evalcode' => [],
+  'language' => 'ksh',
+  'job' => 'tmp/7HTX.20150601.00.production.fc_i.forecast.job2',
+  '_shell' => bless( {
+    'adds' => [],
+    'cmds' => [
+      'mv',
+      'cp',
+      'rm',
+      'ln',
+      'timex',
+      'simplemkdir',
+      'mkdir',
+      'cat',
+      'ls',
+      'spawn',
+      'gget',
+      'ksh',
+      'touch',
+      'rcp',
+      'tail',
+      'gzip',
+      'gunzip',
+      'echo',
+      'tar',
+      'cd',
+      'export',
+      'unset',
+      'remsh',
+      'rmdir',
+      'uncompress',
+      'which',
+      'ftget',
+      'ftput'
+    ],
+    'flags' => {
+      'e' => '+',
+      'x' => '-'
+    },
+    'log' => [
+      'mkdir( /scratch/mtool/auger/depot/mstep_098651_7HTX_frc )',
+      'mkdir( /scratch/mtool/auger/spool/spool_098651_7HTX_frc )'
+    ],
+    'tag' => 'mtoolkit',
+    'dels' => []
+  }, 'Mtool::Shell' ),
+  'submitcmd' => 'sbatch',
+  'languagext' => 'sh',
+  'header' => []
+}, 'Mtool::Filter' )

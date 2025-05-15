@@ -1,0 +1,968 @@
+bless( {
+  '_log_method' => 'input',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'Const.Clim.sfx'
+  },
+  '_status' => '1',
+  'remote' => '/scratch/work/auger/clim/PGD_.fa',
+  '_provider' => 'remote'
+}, 'Meteo::Pgdfa' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'model' => 'surfex',
+  '_status' => '1',
+  'term' => '0',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ICMSHFCSTINIT.sfx'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Historic' )
+,
+bless( {
+  'genv' => 'cy40_op2HR.30',
+  '_log_method' => 'input',
+  '_file_attributes' => {
+    'format' => 'unknown',
+    'local' => 'ecoclimap_covers_param.tgz'
+  },
+  '_status' => '1',
+  '_provider' => 'genv'
+}, 'Meteo::Coversparam' )
+,
+bless( {
+  'genv' => 'cy40_op2HR.30',
+  '_log_method' => 'input',
+  '_file_attributes' => {
+    'format' => 'unknown',
+    'local' => 'rrtm.const.tgz'
+  },
+  '_status' => '1',
+  '_provider' => 'genv'
+}, 'Meteo::Rrtm' )
+,
+bless( {
+  'genv' => 'cy40_op2HR.30',
+  '_log_method' => 'input',
+  '_file_attributes' => {
+    'format' => 'unknown',
+    'local' => 'var.sat.misc_rtcoef.01.tgz'
+  },
+  '_status' => '1',
+  '_provider' => 'genv'
+}, 'Meteo::Rtcoeftgz' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '0',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0000'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '1',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0001'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '2',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0002'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '3',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0003'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '4',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0004'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '5',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0005'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '6',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0006'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '7',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0007'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '8',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0008'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '9',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0009'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '10',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0010'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '11',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0011'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '12',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0012'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '13',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0013'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '14',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0014'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '15',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0015'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '16',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0016'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '17',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0017'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '18',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0018'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '19',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0019'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '20',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0020'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '21',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0021'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '22',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0022'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '23',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0023'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '24',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0024'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '25',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0025'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '26',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0026'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '27',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0027'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '28',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0028'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '29',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0029'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '30',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0030'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '31',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0031'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '32',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0032'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '33',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0033'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '34',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0034'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '35',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0035'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '36',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0036'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '37',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0037'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '38',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0038'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '39',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0039'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '40',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0040'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '41',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0041'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '42',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ELSCFFCSTALBC0042'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'experiment' => '7HTX',
+  'cutoff' => 'production',
+  '_log_method' => 'input',
+  'date' => '2015060100',
+  'area' => 'franmg',
+  'model' => 'arome',
+  '_status' => '1',
+  'term' => '0',
+  '_op_term' => '+0',
+  '_file_attributes' => {
+    'format' => 'fa',
+    'local' => 'ICMSHFCSTINIT'
+  },
+  'class' => 'coupling',
+  '_provider' => 'experiment'
+}, 'Meteo::Elscf' )
+,
+bless( {
+  'genv' => 'al40_arome-op2HR.24',
+  '_log_method' => 'input',
+  'month' => '06',
+  'model' => 'arome',
+  '_status' => '1',
+  'domain' => 'FRANGP0025',
+  '_file_attributes' => {
+    'format' => 'unknown',
+    'local' => 'const.clim.FRANGP0025'
+  },
+  '_provider' => 'genv'
+}, 'Meteo::Clim::Domain' )
+,
+bless( {
+  'genv' => 'al40_arome-op2HR.24',
+  '_log_method' => 'input',
+  'month' => '06',
+  'model' => 'arome',
+  '_status' => '1',
+  'domain' => 'EURW1S100',
+  '_file_attributes' => {
+    'format' => 'unknown',
+    'local' => 'const.clim.EURW1S100'
+  },
+  '_provider' => 'genv'
+}, 'Meteo::Clim::Domain' )
+,
+bless( {
+  'genv' => 'al40_arome-op2HR.24',
+  'country' => 'franmg',
+  '_log_method' => 'input',
+  'month' => '06',
+  'model' => 'arome',
+  '_status' => '1',
+  '_file_attributes' => {
+    'format' => 'unknown',
+    'local' => 'Const.Clim'
+  },
+  '_provider' => 'genv'
+}, 'Meteo::Clim::Country' )
+,
+bless( {
+  'source' => 'namel_previ_dyn_assim',
+  'genv' => 'al40_arome-op2HR.24',
+  '_log_method' => 'input',
+  'binary' => 'arome',
+  '_status' => '1',
+  '_file_attributes' => {
+    'format' => 'ascii',
+    'local' => 'fort.4'
+  },
+  'nproc' => '1',
+  '_provider' => 'genv'
+}, 'Meteo::Namelist' )
+,
+bless( {
+  'source' => 'select_fp0',
+  'genv' => 'al40_arome-op2HR.24',
+  '_log_method' => 'input',
+  'binary' => 'arome',
+  '_status' => '1',
+  'term' => '0',
+  '_file_attributes' => {
+    'format' => 'ascii',
+    'local' => 'selectfp0'
+  },
+  'nproc' => '1',
+  '_provider' => 'genv'
+}, 'Meteo::Namselect' )
+,
+bless( {
+  'source' => 'select_fp',
+  'genv' => 'al40_arome-op2HR.24',
+  '_log_method' => 'input',
+  'binary' => 'arome',
+  '_status' => '1',
+  'term' => '1',
+  '_file_attributes' => {
+    'format' => 'ascii',
+    'local' => 'selectfp1'
+  },
+  'nproc' => '1',
+  '_provider' => 'genv'
+}, 'Meteo::Namselect' )
+,
+bless( {
+  'source' => 'namel_previ_surfex',
+  'genv' => 'al40_arome-op2HR.24',
+  '_log_method' => 'input',
+  'binary' => 'arome',
+  '_status' => '1',
+  '_file_attributes' => {
+    'format' => 'ascii',
+    'local' => 'EXSEG1.nam'
+  },
+  'nproc' => '1',
+  '_provider' => 'genv'
+}, 'Meteo::Namelist' )
+,
+bless( {
+  'genv' => 'al40_arome-op2HR.24',
+  '_log_method' => 'input',
+  'timestep' => '50',
+  'mode' => 'forecast',
+  'timescheme' => 'sli',
+  '_status' => '1',
+  '_file_attributes' => {
+    'format' => 'sx',
+    'local' => 'AROME.EX'
+  },
+  '_provider' => 'genv',
+  'finalterm' => 'h1'
+}, 'Meteo::Arome' )
+,

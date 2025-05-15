@@ -1,0 +1,3 @@
+ &NAMIO_SERV
+   NPROC_IO=0,
+ /

@@ -1,0 +1,536 @@
+getf
+Arch            : ARCH::Linux
+Scheduler       : Scheduler::SLURM
+MPI             : MPI::IntelMPI
+Binary          : ./getf
+Args            : 
+Config          : 
+      - /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiauto.conf
+      - /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiauto.mf-bull4.conf
+      - /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiauto.mf-bull4.IntelMPI.conf
+Options         : 
+      --nn                           : 1
+      --np                           : 1
+      --nnp                          : 1
+      --openmp                       : 1
+      --distribution                 : block
+      --proc                         : Rome-2x64
+      --mpi-allow-odd-dist           : false
+      --serial                       : false
+      --serial-mpi                   : false
+      --dryrun                       : false
+      --help                         : false
+      --verbose                      : true
+      --prefix-command               : []
+      --prefix-mpirun                : []
+      --mpirun-name                  : {'IntelMPI' => 'mpiexec.hydra'}
+      --mpi-special-opts             : {}
+      --mpi-special-env              : {'IntelMPI' => 'DAPL_ACK_RETRY=7,DAPL_ACK_TIMER=20,DAPL_IB_SL=0,DAPL_MAX_INLINE=64,DAPL_RNR_RETRY=10,DAPL_RNR_TIMER=12,DAPL_UCM_CQ_SIZE=8192,DAPL_UCM_QP_SIZE=8192,DAPL_UCM_REP_TIME=10000,DAPL_UCM_RETRY=7,DAPL_UCM_RTU_TIME=8000,DAPL_UCM_TX_BURST=100,I_MPI_CHECK_DAPL_PROVIDER_COMPATIBILITY=0,I_MPI_CHECK_DAPL_PROVIDER_MISMATCH=none,I_MPI_DAPL_SCALABLE_PROGRESS=1,I_MPI_DAPL_TRANSLATION_CACHE=1,I_MPI_DAPL_UD_TRANSLATION_CACHE=1,I_MPI_DAPL_UD_ACK_RECV_POOL_SIZE=8704,I_MPI_DAPL_UD_ACK_SEND_POOL_SIZE=8704,I_MPI_DAPL_UD_DIRECT_COPY_THRESHOLD=65536,I_MPI_DAPL_UD_DESIRED_STATIC_CONNECTIONS_NUM=20,I_MPI_DAPL_UD_EAGER_DYNAMIC_CONNECTION=0,I_MPI_DAPL_UD=on,I_MPI_DAPL_UD_PROVIDER=ofa-v2-mlx5_0-1u,I_MPI_DAPL_UD_RDMA_MIXED=1,I_MPI_DAPL_UD_RECV_BUFFER_NUM=8208,I_MPI_DAPL_UD_REQUEST_QUEUE_SIZE=80,I_MPI_DAPL_UD_RNDV_DYNAMIC_CONNECTION=1,I_MPI_DAPL_UD_RNDV_EP_NUM=4,I_MPI_DAPL_UD_SEND_BUFFER_NUM=8208,I_MPI_DEBUG=1,I_MPI_DYNAMIC_CONNECTION=1,I_MPI_EAGER_THRESHOLD=65536,I_MPI_EXTRA_FILESYSTEM_LIST=lustre,I_MPI_EXTRA_FILESYSTEM=on,I_MPI_FABRICS=shm:dapl,I_MPI_FALLBACK=0,I_MPI_FALLBACK_DEVICE=disable,I_MPI_FAST_COLLECTIVES=1,I_MPI_HARD_FINALIZE=1,I_MPI_HYDRA_BOOTSTRAP=slurm,I_MPI_HYDRA_IFACE=ib0,I_MPI_HYDRA_PMI_CONNECT=alltoall,I_MPI_LARGE_SCALE_THRESHOLD=8192,I_MPI_LIBRARY_KIND=release_mt,I_MPI_PLATFORM_CHECK=0,I_MPI_PLATFORM=uniform,I_MPI_SCALABLE_OPTIMIZATION=0,I_MPI_SHM_SPIN_COUNT=10,I_MPI_SPIN_COUNT=10,PMI_TIME=10'}
+      --use-mpi-machinefile          : false
+      --mpi-stdin-null               : true
+      --use-session                  : false
+      --init-timeout                 : 90
+      --init-timeout-restart         : 1
+      --init-timeout-control         : false
+      --mpi-alloc                    : 
+      --debug                        : false
+      --debugger-x11-proxy           : true
+      --debug-try-gmkpack            : true
+      --debugger-path                : /opt/softs/arm/20.0.2/forge/bin/ddt
+      --debugger-break               : 0
+      --debugger-options             : 
+      --x11-display                  : 
+      --x11-direct                   : false
+      --x11-proxy                    : false
+      --x11-f-proxy                  : []
+      --x11-b-proxy                  : []
+      --config                       : 
+      --site                         : mf-bull4
+      --wrap                         : true
+      --wrap-stdeo                   : true
+      --wrap-stdeo-pack              : true
+      --wrap-stdeo-silent            : false
+      --wrap-verbose                 : false
+      --wrap-output-format           : $STDEO.$MPIRANK
+      --wrap-directory               : .
+      --wrap-env                     : {}
+      --use-slurm-mpi                : false
+      --fix-slurm-env                : true
+      --fix-slurm-env-nodes          : true
+      --setup-grib_api-env           : true
+      --use-slurm-bind               : false
+      --use-arch-bind                : true
+      --arch-bind-verbose            : false
+      --use-openmpi-bind             : false
+      --use-intelmpi-bind            : false
+      --umpi-mpi-label               : 
+      --umpi-verbose                 : false
+Remark          : MPI environment was modified
+      DAPL_ACK_RETRY                 : '7'
+      DAPL_ACK_TIMER                 : '20'
+      DAPL_IB_SL                     : '0'
+      DAPL_MAX_INLINE                : '64'
+      DAPL_RNR_RETRY                 : '10'
+      DAPL_RNR_TIMER                 : '12'
+      DAPL_UCM_CQ_SIZE               : '8192'
+      DAPL_UCM_QP_SIZE               : '8192'
+      DAPL_UCM_REP_TIME              : '10000'
+      DAPL_UCM_RETRY                 : '7'
+      DAPL_UCM_RTU_TIME              : '8000'
+      DAPL_UCM_TX_BURST              : '100'
+      I_MPI_CHECK_DAPL_PROVIDER_COMPATIBILITY : '0'
+      I_MPI_CHECK_DAPL_PROVIDER_MISMATCH : 'none'
+      I_MPI_DAPL_SCALABLE_PROGRESS   : '1'
+      I_MPI_DAPL_TRANSLATION_CACHE   : '1'
+      I_MPI_DAPL_UD                  : 'on'
+      I_MPI_DAPL_UD_ACK_RECV_POOL_SIZE : '8704'
+      I_MPI_DAPL_UD_ACK_SEND_POOL_SIZE : '8704'
+      I_MPI_DAPL_UD_DESIRED_STATIC_CONNECTIONS_NUM : '20'
+      I_MPI_DAPL_UD_DIRECT_COPY_THRESHOLD : '65536'
+      I_MPI_DAPL_UD_EAGER_DYNAMIC_CONNECTION : '0'
+      I_MPI_DAPL_UD_PROVIDER         : 'ofa-v2-mlx5_0-1u'
+      I_MPI_DAPL_UD_RDMA_MIXED       : '1'
+      I_MPI_DAPL_UD_RECV_BUFFER_NUM  : '8208'
+      I_MPI_DAPL_UD_REQUEST_QUEUE_SIZE : '80'
+      I_MPI_DAPL_UD_RNDV_DYNAMIC_CONNECTION : '1'
+      I_MPI_DAPL_UD_RNDV_EP_NUM      : '4'
+      I_MPI_DAPL_UD_SEND_BUFFER_NUM  : '8208'
+      I_MPI_DAPL_UD_TRANSLATION_CACHE : '1'
+      I_MPI_DEBUG                    : '1'
+      I_MPI_DYNAMIC_CONNECTION       : '1'
+      I_MPI_EAGER_THRESHOLD          : '65536'
+      I_MPI_EXTRA_FILESYSTEM         : 'on'
+      I_MPI_EXTRA_FILESYSTEM_LIST    : 'lustre'
+      I_MPI_FABRICS                  : 'shm:dapl'
+      I_MPI_FALLBACK                 : '0'
+      I_MPI_FALLBACK_DEVICE          : 'disable'
+      I_MPI_FAST_COLLECTIVES         : '1'
+      I_MPI_HARD_FINALIZE            : '1'
+      I_MPI_HYDRA_BOOTSTRAP          : 'slurm'
+      I_MPI_HYDRA_IFACE              : 'ib0'
+      I_MPI_HYDRA_PMI_CONNECT        : 'alltoall'
+      I_MPI_LARGE_SCALE_THRESHOLD    : '8192'
+      I_MPI_LIBRARY_KIND             : 'release_mt'
+      I_MPI_PLATFORM                 : 'uniform'
+      I_MPI_PLATFORM_CHECK           : '0'
+      I_MPI_SCALABLE_OPTIMIZATION    : '0'
+      I_MPI_SHM_SPIN_COUNT           : '10'
+      I_MPI_SPIN_COUNT               : '10'
+      PMI_TIME                       : '10'
+MPI command     : /opt/softs/intel/2018.04/impi/2018.5.274/intel64/lib/../bin/mpiexec.hydra -np 1 -ppn 1 /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiautowrap --stdeo -- ./getf < /dev/null
+Warning         : Slurm environment was modified
+      SLURM_TASKS_PER_NODE  = 128(x150)    -> 1(x1)     
+
+      SLURM_NNODES          = 150          -> 1         
+
+      SLURM_NODELIST        = belenos[53]  -> belenos53 
+
+      SLURM_JOB_NODELIST    = belenos[53]  -> belenos53 
+
+      SLURM_JOB_NUM_NODES   = 150          -> 1         
+
+*------------------------------------------------------------------------------*
+|                                                                              |
+|                                   stdeo.0                                    |
+|                                                                              |
+*------------------------------------------------------------------------------*
+MPIAUTOTIMEOUT is set to 90 seconds
+MPI_Init took 1 seconds
+ MAIN: IREQUIRED, MPI_THREAD_MULTIPLE, MPI_THREAD_SINGLE, IPROVIDED, LTHSAFEMPI, LLMPI1 = 3 3 0 3 T F
+[EC_DRHOOK:hostname:myproc:omptid:pid:unixtid] [YYYYMMDD:HHMMSS:epoch:walltime] [function@file:lineno] -- Max OpenMP threads = 1
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2492] fp = 0x2ab3e60361c0
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2499] DR_HOOK_ALLOW_COREDUMP=-1
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2505] Hardlimit for core file is now 18446744073709551615 (0xffffffffffffffff)
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2523] DR_HOOK_PROFILE_PROC=-1
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2529] DR_HOOK_PROFILE_LIMIT=-10.000
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2617] DR_HOOK_RANDOM_MEMSTAT=0  (RAND_MAX=2147483647)
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2628] DR_HOOK_HASHBITS=16
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2636] DR_HOOK_NCALLSTACK=64
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2644] DR_HOOK_HARAKIRI_TIMEOUT=500
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2651] DR_HOOK_USE_LOCKFILE=1
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2658] DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2665] DR_HOOK_TRAPFPE_INVALID=1
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2672] DR_HOOK_TRAPFPE_DIVBYZERO=1
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [process_options@drhook.c:2679] DR_HOOK_TRAPFPE_OVERFLOW=1
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1481] DR_HOOK_IGNORE_SIGNALS=-1
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#1 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#2 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#3 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#4 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#5 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#6 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#7 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#8 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#9 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#10 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#11 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#12 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#13 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#14 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#15 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#16 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#17 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#18 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#19 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#20 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#21 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#22 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#23 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#24 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#25 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#26 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#27 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#28 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#29 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#30 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.000] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#31 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#32 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#33 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#34 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#35 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#36 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#37 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#38 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#39 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#40 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#41 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#42 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#43 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#44 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#45 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#46 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#47 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#48 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#49 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#50 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#51 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#52 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#53 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#54 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#55 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#56 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#57 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#58 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#59 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#60 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#61 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#62 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#63 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#64 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [ignore_signals@drhook.c:1509] DR_HOOK ignores signal#65 altogether
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [restore_default_signals@drhook.c:1432] DR_HOOK_RESTORE_DEFAULT_SIGNALS=<undef>
+[EC_DRHOOK:belenos53:1:1:30336:30336] [20241115:154915:1731685755:0.001] [catch_signals@drhook.c:1344] DR_HOOK_CATCH_SIGNALS=<undef>
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /home/gmap/mrpa/auger/pack/cy48t1_op1_dyn/bin/MASTERODB -- wall-time :      0.077s
+## EC_MEMINFO Running on 1 nodes (4-numa) with 1 compute + 0 I/O-tasks and 1+0 threads at 15:49:15.539 on 15-Nov-2024
+## EC_MEMINFO The Job Name is _fp@G5SH and the Job ID is 38912134
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------    -------------    -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 | Numa region  2 | Numa region  3 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 belenos53                 17      87       0     12815   15376     6122   24650     6240   25238     5334   26192    249014    1334      0.0   0.0         0      0  Sm/p:master:computation
+MPL_BUFFER_METHOD:  2  2048000000
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /home/gmap/mrpa/auger/pack/cy48t1_op1_dyn/bin/MASTERODB -- wall-time :      0.496s
+## EC_MEMINFO Running on 1 nodes (4-numa) with 1 compute + 0 I/O-tasks and 1+0 threads at 15:49:15.958 on 15-Nov-2024
+## EC_MEMINFO The Job Name is _fp@G5SH and the Job ID is 38912134
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------    -------------    -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 | Numa region  2 | Numa region  3 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 belenos53               1979     106       0     12790   15376     6122   24650     6240   25238     5334   26192    248990    1349      0.0   0.0         0      0  Sm/p:oops:ifs_init
+ sufpxfu (cb) SIZE(CFPXFU)=          65 JFLD=           1 CFPXFU(JFLD)=
+                 
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:26 STEP    0 H=   0:00 +CPU=  4.003    
+           STEP    0 :## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------    -------------    -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power
+           STEP    0 :## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 | Numa region  2 | Numa region  3 |                |               |    (J)    (W)
+           STEP    0 :## EC_MEMINFO Node Name                 | Heap  | RSS(tsk)        | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Total          |
+           STEP    0 :## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  | Memfree+Cached |
+           STEP    0 :## EC_MEMINFO    0 belenos53               2760     924       0     11915   15376     6120   24652     6240   25238     5334   26192    248116    1499      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:28 STEP    1 H=   0:00 +CPU=  1.943    
+           STEP    1 :## EC_MEMINFO    0 belenos53               2767     928       0     11902   15376     6120   24652     6240   25238     5334   26192    248102    1507      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:30 STEP    2 H=   0:01 +CPU=  1.909    
+           STEP    2 :## EC_MEMINFO    0 belenos53               2773     934       0     11887   15376     6120   24652     6240   25238     5334   26192    248087    1516      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:32 STEP    3 H=   0:02 +CPU=  1.438    
+           STEP    3 :## EC_MEMINFO    0 belenos53               2773     934       0     11881   15376     6120   24652     6240   25238     5334   26192    248081    1522      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:33 STEP    4 H=   0:03 +CPU=  1.440    
+           STEP    4 :## EC_MEMINFO    0 belenos53               2773     935       0     11875   15376     6120   24652     6240   25238     5334   26192    248075    1528      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:35 STEP    5 H=   0:04 +CPU=  1.449    
+           STEP    5 :## EC_MEMINFO    0 belenos53               2773     935       0     11886   15376     6120   24652     6240   25238     5334   26192    248086    1534      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:36 STEP    6 H=   0:05 +CPU=  1.461    
+           STEP    6 :## EC_MEMINFO    0 belenos53               2773     935       0     11880   15376     6120   24652     6240   25238     5334   26192    248080    1540      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:38 STEP    7 H=   0:05 +CPU=  1.470    
+           STEP    7 :## EC_MEMINFO    0 belenos53               2773     935       0     11876   15376     6120   24652     6240   25238     5334   26192    248076    1547      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:39 STEP    8 H=   0:06 +CPU=  1.446    
+           STEP    8 :## EC_MEMINFO    0 belenos53               2773     935       0     11870   15376     6120   24652     6240   25238     5334   26192    248070    1553      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:40 STEP    9 H=   0:07 +CPU=  1.442    
+           STEP    9 :## EC_MEMINFO    0 belenos53               2773     935       0     11864   15376     6120   24652     6240   25238     5334   26192    248064    1559      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:42 STEP   10 H=   0:08 +CPU=  1.442    
+           STEP   10 :## EC_MEMINFO    0 belenos53               2773     935       0     11858   15376     6120   24652     6240   25238     5334   26192    248058    1565      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:43 STEP   11 H=   0:09 +CPU=  1.443    
+           STEP   11 :## EC_MEMINFO    0 belenos53               2773     935       0     11851   15376     6120   24652     6240   25238     5334   26192    248052    1571      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:45 STEP   12 H=   0:10 +CPU=  1.446    
+           STEP   12 :## EC_MEMINFO    0 belenos53               2773     935       0     11845   15376     6120   24652     6240   25238     5334   26192    248045    1578      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:46 STEP   13 H=   0:10 +CPU=  1.448    
+           STEP   13 :## EC_MEMINFO    0 belenos53               2773     935       0     11839   15376     6120   24652     6240   25238     5334   26192    248040    1584      0.4   0.0         0      0  Sm/p
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+ DEBUG ESPCM debut yyy
+ DEBUG ESPCM debut yyy         242
+ DEBUG ESPCM debut xxxx
+ DEBUG ESPCM debut yyy         279
+ DEBUG ESPCM debut yyy         350
+ DEBUG ESPCM debut yyy         355
+ DEBUG ESPCM debut yyy         375
+ DEBUG ESPCM debut yyy         455
+  15:49:48 STEP   14 H=   0:11 +CPU=  1.445    
+           STEP   14 :## EC_MEMINFO    0 belenos53               2773     935       0     11832   15376     6120   24652     6240   25238     5334   26192    248033    1589      0.4   0.0         0      0  Sm/p
+  15:49:48 STEP   15 H=   0:12 +CPU=  0.472    
+           STEP   15 :## EC_MEMINFO    0 belenos53               2774     935       0     11811   15376     6120   24652     6240   25238     5334   26192    248012    1592      0.4   0.0         0      0  Sm/p
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------    -------------    -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 | Numa region  2 | Numa region  3 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 belenos53               2774     935       0     11920   15376     6120   24652     6240   25238     5334   26192    248121    1592      0.4   0.0         0      0  Sm/p:ec_mpi_finalize:mpl_end
+## EC_MEMINFO 
+## EC_MEMINFO 
+## EC_MEMINFO  Total energy consumed :        0.000 kWh (0 J)
+## EC_MEMINFO  Avg. power / node     : 0 W across 1 nodes
+## EC_MEMINFO 
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program /home/gmap/mrpa/auger/pack/cy48t1_op1_dyn/bin/MASTERODB -- wall-time :     33.242s
+## EC_MEMINFO Running on 1 nodes (4-numa) with 1 compute + 0 I/O-tasks and 1+0 threads at 15:49:48.704 on 15-Nov-2024
+## EC_MEMINFO The Job Name is _fp@G5SH and the Job ID is 38912134
+## EC_MEMINFO 

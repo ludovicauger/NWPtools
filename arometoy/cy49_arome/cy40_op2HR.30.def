@@ -1,0 +1,5 @@
+{
+  'RTCOEF_TGZ' => 'var.sat.misc_rtcoef.19.tgz',
+  'RRTM_CONST' => 'rrtm.const.01.tgz',
+  'ECOCLIMAP_COVERS_PARAM' => 'ecoclimap.covers.param.02.tgz'
+}
