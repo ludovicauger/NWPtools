@@ -4,7 +4,7 @@ import sys
 import re 
 
 
-
+#liste tous les champs d'un fichier grib de facon a pouvoir etre utilisés par  plotlist.py
 myargs=sys.argv
 if '-h' in myargs:
    print('usage listgrib <grib_file>')
