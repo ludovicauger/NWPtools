@@ -10,6 +10,8 @@ date2_str = '2025050213'
 myzoom='lonmin=-1, lonmax=3, latmin=42, latmax=45'
 nbarg=len(sys.argv)
 
+subprocess.run([f"module load eccodes"],shell=True)
+
 if (nbarg==2) and (sys.argv[1] == '-h'):
    print("Extract antilope rain accumulation between date1 and date2. The period ends at date2 not date2 + 1 hour")
    print("usage : antilope <beginning date1 YYYYMMDDHH> <date2 format YYYYMMDDHH> ['lonmin=-1, lonmax=3, latmin=42, latmax=45']")
