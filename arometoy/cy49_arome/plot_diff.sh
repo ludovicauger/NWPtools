@@ -1,12 +1,15 @@
 #!/opt/softs/anaconda3/bin/python
 import epygram
+import numpy
 epygram.init_env()
 
 
 
 def rms(fielda,fieldb):
-   return sum(sum((fieldb.data-fielda.data)**2))
+   return numpy.sqrt(sum(sum((fieldb.data-fielda.data)**2)))
 
+def moyq(fielda):
+   return numpy.sqrt(sum(sum((fielda.data)**2)))
 
 def extract(file,field):
   a=epygram.formats.resource(file,'r')
@@ -32,18 +35,11 @@ for i in range(1,16):
    #fieldcurp1=extract(f'ICMSHFCST+00{j:02d}',field)
    j=i-1
    #fieldcurm1=extract(f'ICMSHFCST+00{j:02d}',field)
-   fieldh1=extract(f'ICMSHFCST+00{i:02d}.h1',field)
-   fieldh0=extract(f'ICMSHFCST+00{i:02d}.h0',field)
-   fieldnh1=extract(f'ICMSHFCST+00{i:02d}.nh1',field)
-   fieldnh0=extract(f'ICMSHFCST+00{i:02d}.nh0',field)
-   print(rms(fieldh0,fieldh1))
-   print(rms(fieldnh0,fieldnh1))
-   print(rms(fieldh0,fieldnh0))
-   print(rms(fieldh1,fieldnh1))
-   print(rms(fieldcur,fieldh1))
-   #print(rms(fieldcurp1,fieldh1))
-   #print(rms(fieldcurm1,fieldh1))
-   print(rms(fieldcur,fieldnh1))
+   field1=extract(f'ICMSHFCST+00{i:02d}.ref',field)
+   field2=extract(f'ICMSHFCST+00{i:02d}.ref1',field)
+   print(rms(fieldcur,field1))
+   print(rms(fieldcur,field2))
+   print(moyq(field1))
 
 
 
