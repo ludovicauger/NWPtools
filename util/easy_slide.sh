@@ -16,26 +16,40 @@ ulimit -s unlimited
 zoom='lonmin=3,lonmax=8,latmin=42,latmax=45'
 
 
-#get_arome_oper.sh $dat $ech
-#get_arome_ifs.sh $dat $ech
-#antilope.py 2025051900 2025052024 $zoom
+
+
+
+
+get_arome_oper.sh $dat $ech
+get_arome_ifs.sh $dat $ech
+antilope.py 2025051900 2025052024 $zoom
 set -x
 #epy_cartoplot.py --zoom  ${zoom}  --pm contourf --depts  -f SURFACCPLUIE -c 'rr24h' -o png -O aromeifs$dat.png aromeifs$dat$ech.fa
 #epy_cartoplot.py --zoom $zoom --pm contourf --depts  -f SURFACCPLUIE -c 'rr24h' -o png -O aromeoper$dat.png aromeoper$dat$ech.fa
-
-ssh rm6@hpc-login 'cd /scratch/rm6/plot;rm /scratch/rm6/plot/* ;ecp ec:/rm6/deode/alaroCY48t3_ALARO_nwp_FRA_20250519_20250519/archive/2025/05/19/00/ICMSHDEOD+0045h00m00s .'
-scp rm6@hpc-login:/scratch/rm6/plot/ICMSHDEOD+0045h00m00s .
-add_prec_gec_con.py ICMSHDEOD+0045h00m00s
-epy_cartoplot.py --zoom $zoom --pm contourf --depts  -f SURFPREC.EAU.GEC -c 'rr24h' -o png -O deodealaro$dat.png ICMSHDEOD+0045h00m00s 
-
+#
+#ssh rm6@hpc-login 'cd /scratch/rm6/plot;rm /scratch/rm6/plot/* ;ecp ec:/rm6/deode/alaroCY48t3_ALARO_nwp_FRA_20250519_20250519/archive/2025/05/19/00/ICMSHDEOD+0045h00m00s .'
+#scp rm6@hpc-login:/scratch/rm6/plot/ICMSHDEOD+0045h00m00s .
+#add_prec_gec_con.py ICMSHDEOD+0045h00m00s
+#epy_cartoplot.py --zoom $zoom --pm contourf --depts  -f SURFPREC.EAU.GEC -c 'rr24h' -o png -O deodecy48alaro$dat.png ICMSHDEOD+0045h00m00s 
+#
 #ssh rm6@hpc-login 'cd /scratch/rm6/plot;rm /scratch/rm6/plot/* ;ecp ec:/rm6/deode/CY48t3_AROME_nwp_FRA_20250519_20250519/archive/2025/05/19/00/ICMSHDEOD+0045h00m00s .'
 #scp rm6@hpc-login:/scratch/rm6/plot/ICMSHDEOD+0045h00m00s .
-#epy_cartoplot.py --zoom $zoom --pm contourf --depts  -f SURFACCPLUIE -c 'rr24h' -o png -O deodearome$dat.png ICMSHDEOD+0045h00m00s 
-	
-
-#ssh rm6@hpc-login 'cd /scratch/rm6/plot;rm /scratch/rm6/plot/* ;ecp ec:/rm6/deode/har_aromeCY48t3_HARMONIE_AROME_nwp_FRA_20250519_20250519/archive/2025/05/19/00/ICMSHDEOD+0045h00m00s .'
+#epy_cartoplot.py --zoom $zoom --pm contourf --depts  -f SURFACCPLUIE -c 'rr24h' -o png -O deodecy48arome$dat.png ICMSHDEOD+0045h00m00s 
+#	
+#
+#ssh rm6@hpc-login 'cd /scratch/rm6/plot;rm /scratch/rm6/plot/* ;ecp ec:/rm6/deode/har_aromeCY49t2_HARMONIE_AROME_nwp_FRA_20250519_20250519/archive/2025/05/19/00/ICMSHDEOD+0045h00m00s .'
 #scp rm6@hpc-login:/scratch/rm6/plot/ICMSHDEOD+0045h00m00s .
-#epy_cartoplot.py --zoom $zoom --pm contourf --depts  -f SURFACCPLUIE -c 'rr24h' -o png -O deodehar_arome$dat.png ICMSHDEOD+0045h00m00s 
+#epy_cartoplot.py --zoom $zoom --pm contourf --depts  -f SURFACCPLUIE -c 'rr24h' -o png -O deodecy49har_arome$dat.png ICMSHDEOD+0045h00m00s 
+#
+#ssh rm6@hpc-login 'cd /scratch/rm6/plot;rm /scratch/rm6/plot/* ;ecp ec:/rm6/deode/CY49t2_AROME_nwp_FRA_20250519_20250519/archive/2025/05/19/00/ICMSHDEOD+0045h00m00s .'
+#scp rm6@hpc-login:/scratch/rm6/plot/ICMSHDEOD+0045h00m00s .
+#epy_cartoplot.py --zoom $zoom --pm contourf --depts  -f SURFACCPLUIE -c 'rr24h' -o png -O deodecy49arome$dat.png ICMSHDEOD+0045h00m00s 
+#
+#ssh rm6@hpc-login 'cd /scratch/rm6/plot;rm /scratch/rm6/plot/* ;ecp ec:/rm6/deode/CY49t2_ALARO_nwp_FRA_20250519_20250519/archive/2025/05/19/00/ICMSHDEOD+0045h00m00s .'
+#scp rm6@hpc-login:/scratch/rm6/plot/ICMSHDEOD+0045h00m00s .
+#add_prec_gec_con.py ICMSHDEOD+0045h00m00s 
+#epy_cartoplot.py --zoom $zoom --pm contourf --depts  -f SURFPREC.EAU.GEC -c 'rr24h' -o png -O deodecy49alaro$dat.png ICMSHDEOD+0045h00m00s 
+
 
 generate_html cas20mai2025 cas20mai2025
 
