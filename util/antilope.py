@@ -83,10 +83,10 @@ fin
 /usr/local/sopra/bin/dap3_dev_date_ech questionRequeteDap3
 #dap3_date_ech questionRequeteDap3
 ''')
-subprocess.run(["scp cmd.ksh auger@sotrtm31-sidev:cmd.ksh"],shell=True)
-subprocess.run(["ssh auger@sotrtm31-sidev 'chmod 744 cmd.ksh'"],shell=True)
-subprocess.run(["ssh auger@sotrtm31-sidev './cmd.ksh'"],shell=True)
-subprocess.run([f"scp auger@sotrtm31-sidev:{nomfic} {nomfic}"],shell=True)
+subprocess.run(["scp cmd.ksh auger@sotrtm37-sidev:cmd.ksh"],shell=True)
+subprocess.run(["ssh auger@sotrtm37-sidev 'chmod 744 cmd.ksh'"],shell=True)
+subprocess.run(["ssh auger@sotrtm37-sidev './cmd.ksh'"],shell=True)
+subprocess.run([f"scp auger@sotrtm37-sidev:{nomfic} {nomfic}"],shell=True)
 epygram.init_env()
 
 a=epygram.formats.resource(nomfic,'r')
