@@ -11,6 +11,7 @@ module load eccodes
 
 dat=$1
 #for dat in 20241016 20241017 20241018;do
+echo $2,$3,$4,$5
 WORKDIR=/scratch/work/auger/antilope/$dat
 cd $WORKDIR
 source /home/gmap/mrpa/auger/.epygram_profile

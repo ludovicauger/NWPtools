@@ -7,7 +7,9 @@ import argparse
 # work on belenos with python/3.10... module
 #create virutal environment and install
 # numpy pillow webcolors
-
+#####before running on belenos :
+# module load python/3.10.12
+# source ~/.venvpng2score/bin/activate
 
 # Create the parser
 parser = argparse.ArgumentParser(description="A simple script to demonstrate argument parsing.")
@@ -129,7 +131,7 @@ def png_vers_matrice_couleurs(fichier_png):
     matrice = []
     for y in range(hauteur):
         ligne = []
-        print(y,range(hauteur))
+#        print(y,range(hauteur))
         for x in range(largeur):
             rgb = image.getpixel((x, y))
             ligne.append(couleur_la_plus_proche(rgb))
@@ -178,7 +180,7 @@ def equitable_threat_score(prevu, observe, seuil=1.0):
         "correct_negatives": CN,
     }
     return ets, stats
-def reech(matrice, N=50):
+def reech(matrice, N=80):
     matrice = np.array(matrice)
     h, w = matrice.shape
     resultat = np.zeros((N, N))
@@ -190,7 +192,7 @@ def reech(matrice, N=50):
             c0 = int(j * w / N)
             c1 = int((j + 1) * w / N)
             boite = matrice[r0:r1, c0:c1]
-            resultat[i, j] = np.mean(boite)
+            resultat[i, j] = np.median(boite)
     return resultat
 
 def matrice_couleurs_vers_real(matrice_couleur):
