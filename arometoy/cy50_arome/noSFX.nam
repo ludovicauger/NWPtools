@@ -1,0 +1,6 @@
+&NAMARPHY
+  LMSE=.FALSE.,
+/
+&NAMCT1
+  N1SFXHIS=0,
+/

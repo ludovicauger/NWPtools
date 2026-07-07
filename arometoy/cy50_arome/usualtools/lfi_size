@@ -1,0 +1,507 @@
+#!/usr/bin/perl -w
+#
+
+
+package lfitools;
+
+use strict;
+use FileHandle;
+use File::Basename;
+use File::stat;
+use File::Spec;
+use File::Temp;
+use File::Copy qw ();
+use Data::Dumper;
+
+sub lfitools
+{
+  my ($class, %args) = @_;
+
+  local $ENV{DR_HOOK} = 0;
+  local $ENV{DR_HOOK_NOT_MPI} = 1;
+  local $ENV{DR_HOOK_SILENT} = 1;
+  local $ENV{OMP_NUM_THREADS};
+  delete $ENV{OMP_NUM_THREADS};
+
+  (my $lfitools = $ENV{LFITOOLS})
+    or die ("Environment variable LFITOOLS must be set\n");
+
+  my @cmd = ($lfitools, @{ $args{cmd} });
+
+  if ($args{verbose})
+    {
+      print STDERR "@cmd\n";
+    }
+
+  if (system (@cmd))
+    {
+       if ($? == -1) 
+         {
+           die ("Failed to execute `@cmd': $!\n");
+         }
+       elsif ($? & 127) 
+         {
+           die (sprintf ("`@cmd' was killed by signal %d\n", ($? & 127)));
+         }
+       else 
+         {
+           die (sprintf ("`@cmd' exited with value %d\n", $? >> 8));
+         }
+    }
+
+  return 1;
+}
+  
+sub usage
+{
+  my ($class, %args) = @_;
+
+  my $method = $args{method};
+
+  if ($method eq 'remove')
+    {
+      die ("Usage: lfi_remove source\n");
+    }
+  elsif ($method eq 'size')
+    {
+      die ("Usage: lfi_size source\n");
+    }
+  elsif ($method eq 'pack')
+    {
+      die ("Usage: lfi_pack source\n");
+    }
+  elsif ($method eq 'index')
+    {
+      die ("Usage: lfi_index [-intent=in|inout] source... dest\n");
+    }
+  else
+    {
+      die ("Usage: lfi_$method [-pack] [-force] [-intent=in|inout] source... dest\n");
+    }
+}
+
+sub getopts
+{
+  my ($class, %args) = @_;
+ 
+  my ($intent, $pack, $verbose, $relative, $force) = ('in', 0, 0, [], 0);
+
+  my @args = @{ $args{args} };
+
+  while ($args[0] && ($args[0] =~ m/^-/o))
+    {
+      if ($args[0] =~ m/^--?pack$/o)
+        {
+          $pack = 1;
+        }
+      elsif ($args[0] =~ m/^--?verbose$/o)
+        {
+          $verbose = 1;
+        }
+      elsif ($args[0] =~ m/^--?force$/o)
+        {
+          $force = 1;
+        }
+      elsif ($args[0] =~ m/^--?intent=(in|inout)$/o)
+        {
+          $intent = $1;
+        }
+      elsif ($args[0] =~ m/^--?relative$/o)
+        {
+          $relative = ['--relative'];
+        }
+      else
+        {
+          warn ("Unknown option $args[0]\n");
+          $class->usage (method => $args{method});
+        }
+      shift (@args);
+    }
+
+  @{ $args{args} } = @args;
+
+  return (intent => $intent, pack => $pack, verbose => $verbose, relative => $relative, force => $force);
+}
+
+sub getmult
+{
+  my ($class, $src) = @_;
+
+  my $mult = do 
+               { 
+                 (my $fh = 'FileHandle'->new ("<$src")) 
+                   or die ("Cannot access $src: $!\n"); 
+                 $fh->read (my $buf, 8); 
+                 $buf eq 'LFI_ALTM'
+               };
+
+  return $mult;
+}
+
+
+sub getdst
+{
+  my ($class, $src, $dst) = @_;
+
+  return unless ($dst);
+
+  $dst = 'File::Spec'->rel2abs ($dst);
+  
+  if (-d $dst)
+    {
+      $dst = 'File::Spec'->catfile ($dst, &basename ($src));
+    }
+
+  return $dst;
+}
+
+sub getddev
+{
+  my ($class, $src, $dst) = @_;
+  
+  my $Dst = &dirname ($dst);
+  
+  (my $src_st = stat ($src))
+    or die ("Cannot access $src: $!\n");
+  
+  (my $Dst_st = stat ($Dst))
+    or die ("Cannot access $Dst: $!\n");
+
+  return $src_st->dev () != $Dst_st->dev ();
+}
+
+sub copy_method
+{
+  my ($class, %args) = @_;
+
+  my %copy_method = 
+  (
+    '0000', 'file_link_ro',
+    '1000', 'file_link_ro',
+    '0100', 'file_copy_ro',
+    '1100', 'file_copy_ro',
+    '0010', 'mult_link_ro',
+    '1010', 'mult_pack_ro',
+    '0110', 'mult_pack_ro',
+    '1110', 'mult_pack_ro',
+    '0001', 'ftom_copy_rw',
+    '1001', 'file_copy_rw',
+    '0101', 'file_copy_rw',
+    '1101', 'file_copy_rw',
+    '0011', 'mult_link_rw',
+    '1011', 'mult_pack_rw',
+    '0111', 'mult_pack_rw',
+    '1111', 'mult_pack_rw',
+  );
+
+  return $copy_method
+    {
+      sprintf ('%d%d%d%d', map { $_ ? 1 : 0 } ($args{pack}, $args{ddev}, $args{mult}, $args{rdwr}))
+    };
+}
+
+sub copy
+{
+  my ($class, @args) = @_;
+ 
+  my %opts = $class->getopts (method => 'copy', args => \@args);
+
+  if ((scalar (@args) > 2) && (! -d $args[-1]))
+    {
+      die ("lfi_copy : target `$args[-1]' is not a directory\n");
+    }
+
+  do
+    {
+       my $src = shift (@args);
+      
+       $class->usage (method => 'copy')
+         unless ($src);
+      
+       my $mult = $class->getmult ($src);
+      
+       my $dst = $class->getdst ($src, $args[-1]);
+      
+       $class->usage (method => 'copy')
+         unless ($dst);
+      
+       my $ddev = $class->getddev ($src, $dst);
+
+       $class->remove ('--force', $dst)
+         if ($opts{force} && (-f $dst));
+      
+       my $method = $class->copy_method (mult => $mult, ddev => $ddev, rdwr => $opts{intent} ne 'in', pack => $opts{pack});
+      
+       $class->$method (%opts, src => $src, dst => $dst);
+
+    }
+  while (scalar (@args) > 1);
+  
+}
+
+sub remove_method
+{
+  my ($class, %args) = @_;
+
+  return $args{mult}
+       ? 'mult_delete'
+       : 'file_delete';
+}
+
+sub remove
+{
+  my ($class, @args) = @_;
+
+  my %opts = $class->getopts (method => 'remove', args => \@args);
+  
+  $class->usage (method => 'remove')
+    unless (@args);
+
+  for my $src (@args)
+    {
+       my $mult = $class->getmult ($src);
+
+       my $method = $class->remove_method (mult => $mult);
+      
+       $class->$method (%opts, src => $src);
+    }
+
+}
+
+sub move
+{
+  my ($class, @args) = @_;
+
+  my %opts = $class->getopts (method => 'move', args => \@args);
+
+  if ((scalar (@args) > 2) && (! -d $args[-1]))
+    {
+      die ("lfi_move : target `$args[-1]' is not a directory\n");
+    }
+
+  do
+    {
+       my $src = shift (@args);
+      
+       $class->usage (method => 'move')
+         unless ($src);
+      
+       my $mult = $class->getmult ($src);
+      
+       my $dst = $class->getdst ($src, $args[-1]);
+      
+       $class->usage (method => 'move')
+         unless ($dst);
+      
+       my $ddev = $class->getddev ($src, $dst);
+      
+       $class->remove ('--force', $dst)
+         if ($opts{force} && (-f $dst));
+      
+       my $copy_method = $class->copy_method (mult => $mult, ddev => $ddev, rdwr => $opts{intent} ne 'in', pack => $opts{pack});
+      
+       $class->$copy_method (%opts, src => $src, dst => $dst);
+
+       my $remove_method = $class->remove_method (mult => $mult);
+      
+       $class->$remove_method (%opts, src => $src);
+    }
+  while (scalar (@args) > 1);
+  
+}
+
+
+sub file_copy_ro
+{
+  my ($class, %args) = @_;
+  my ($src, $dst) = @args{qw (src dst)};
+  &File::Copy::copy ($src, $dst)
+    or die ("Cannot copy $src to $dst : $!\n");
+  chmod (0444, $dst);
+}
+
+sub file_copy_rw
+{
+  my ($class, %args) = @_;
+  my ($src, $dst) = @args{qw (src dst)};
+  &File::Copy::copy ($src, $dst)
+    or die ("Cannot copy $src to $dst : $!\n");
+  chmod (0644, $dst);
+}
+
+sub ftom_copy_rw
+{
+  my ($class, %args) = @_;
+  my ($src, $dst) = @args{qw (src dst)};
+  $class->merge ($args{verbose} ? ('--verbose') : (), '--intent=inout', $src, $dst);
+}
+
+sub file_link_ro
+{
+  my ($class, %args) = @_;
+  my ($src, $dst) = @args{qw (src dst)};
+  link ($src, $dst)
+    or die ("Cannot link $src to $dst : $!\n");
+  chmod (0444, $dst);
+}
+
+sub mult_link_ro
+{
+  my ($class, %args) = @_;
+  my ($src, $dst) = @args{qw (src dst)};
+  $class->lfitools (%args, cmd => ['lfi_alt_copy', @{ $args{relative} }, '--lfi-file-in', $src, '--lfi-file-out', $dst]);
+  chmod (0444, $dst);
+}
+
+sub mult_link_rw
+{
+  my ($class, %args) = @_;
+  my ($src, $dst) = @args{qw (src dst)};
+  $class->lfitools (%args, cmd => ['lfi_alt_copy', @{ $args{relative} }, '--lfi-file-in', $src, '--lfi-file-out', $dst]);
+  chmod (0644, $dst);
+}
+
+sub mult_pack_ro
+{
+  my ($class, %args) = @_;
+  my ($src, $dst) = @args{qw (src dst)};
+  $class->lfitools (%args, cmd => ['lfi_alt_pack', '--lfi-file-in', $src, '--lfi-file-out', $dst]);
+  chmod (0444, $dst);
+}
+
+sub mult_pack_rw
+{
+  my ($class, %args) = @_;
+  my ($src, $dst) = @args{qw (src dst)};
+  $class->lfitools (%args, cmd => ['lfi_alt_pack', '--lfi-file-in', $src, '--lfi-file-out', $dst]);
+  chmod (0644, $dst);
+}
+
+sub mult_delete
+{
+  my ($class, %args) = @_;
+  my $src = $args{src};
+  $class->lfitools (%args, cmd => ['lfi_alt_remove', ($args{force} ? ('--force') : ()), '--lfi-file', $src]);
+}
+
+sub file_delete
+{
+  my ($class, %args) = @_;
+  my $src = $args{src};
+  unlink ($src)
+    or die ("Cannot unlink $src : $!\n");
+}
+
+sub pack : method
+{
+  my ($class, @args) = @_;
+
+  my %opts = $class->getopts (method => 'pack', args => \@args);
+  
+  $class->usage (method => 'pack')
+    unless (scalar (@args) == 1);
+
+  my $src = $args[0];
+
+  my $mult = $class->getmult ($src);
+     
+  if ($mult)
+    {
+      $class->lfitools (%opts, cmd => ['lfi_alt_pack', '--lfi-file-in', $src, '--lfi-file-out', '-']);
+    }
+  else
+    {
+      &File::Copy::copy ($src, \*STDOUT);
+    }
+
+}
+
+sub merge
+{
+  my ($class, @args) = @_;
+
+  my %opts = $class->getopts (method => 'merge', args => \@args);
+  
+  $class->usage (method => 'merge')
+    unless (scalar (@args) > 1);
+
+  my $dst = pop (@args);
+  my @src = @args;
+
+  ($dst, @src) = map { 'File::Spec'->rel2abs ($_) } ($dst, @src);
+
+  if ($opts{pack})
+    {
+      my $fh = 'File::Temp'->new (DIR => &dirname ($dst), TEMPLATE => &basename ($dst) . '.XXXXX', UNLINK => 1);
+      $class->lfitools (%opts, cmd => ['lfi_alt_index', @{ $opts{relative} }, '--lfi-file-in', @src, '--lfi-file-out', $fh->filename ()]);
+      $class->lfitools (%opts, cmd => ['lfi_alt_pack', '--lfi-file-in', $fh->filename (), '--lfi-file-out', $dst]);
+    }
+  else
+    {
+      $class->lfitools (%opts, cmd => ['lfi_alt_merge', @{ $opts{relative} }, '--lfi-file-in', @src, '--lfi-file-out', $dst]);
+    }
+
+  chmod (0444, $dst)
+    if ($opts{intent} eq 'in');
+}
+
+sub index : method
+{
+  my ($class, @args) = @_;
+
+  my %opts = $class->getopts (method => 'index', args => \@args);
+  
+  $class->usage (method => 'index')
+    unless (scalar (@args) > 1);
+
+  my $dst = pop (@args);
+  my @src = @args;
+
+  ($dst, @src) = map { 'File::Spec'->rel2abs ($_) } ($dst, @src);
+
+  $class->lfitools (%opts, cmd => ['lfi_alt_index', @{ $opts{relative} }, '--lfi-file-in', @src, '--lfi-file-out', $dst]);
+
+  chmod (0444, $dst)
+    if ($opts{intent} eq 'in');
+}
+
+sub size
+{
+  my ($class, @args) = @_;
+
+  my %opts = $class->getopts (method => 'size', args => \@args);
+  
+  $class->usage (method => 'size')
+    unless (scalar (@args) == 1);
+
+  my $src = $args[0];
+
+  $class->lfitools (%opts, cmd => ['lfi_alt_size', '--lfi-file-in', $src]);
+
+}
+
+package main;
+
+use strict;
+use File::Basename;
+use FindBin qw ($Bin);
+
+(my $method = &basename ($0)) =~ s/^lfi_//o;
+
+if ($method)
+  {
+    'lfitools'->$method (@ARGV);
+  }
+else
+  {
+    for my $method (qw (copy move pack remove merge index size))
+      {
+        symlink ($0, "$Bin/lfi_$method");
+      }
+  }
+
+
+exit (0);
+
+  
+

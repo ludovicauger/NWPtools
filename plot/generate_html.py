@@ -19,6 +19,10 @@ def generate_html(directory):
     png_files = [f for f in a if f.endswith('.png')]
     print(png_files)
 
+              # display: grid;
+              # grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              # gap: 0rem;               /* espace entre les cellules */
+              # padding: 0rem;
     # Start the HTML structure
     html_content = """
     <!DOCTYPE html>
@@ -28,21 +32,50 @@ def generate_html(directory):
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Images Gallery</title>
         <style>
-            .gallery {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
-                padding: 10px;
-            }
-            .gallery img {
-                width: 100%;
-                height: auto;
-            }
-            .caption {
-                text-align: center;
-                font-size: 40;
-                padding: 5px;
-            }
+           .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;               /* ← espace total (colonne + ligne) */
+    /* ou bien, séparément : */
+    column-gap: 0px;        /* ← espace uniquement entre les colonnes */
+    row-gap:    0px;        /* ← espace uniquement entre les lignes */
+    padding: 0px;         /* ← garde le même padding autour du bloc */
+           }
+/* -------------------------------------------------
+   2️⃣ FIGURE : chaque cellule devient un flex‑column
+   ------------------------------------------------- */
+.image-item {
+    display: flex;
+    flex-direction: column;   /* image au‑dessus, légende en bas */
+    align-items: center;      /* centre horizontalement */
+    background:#fafafa;       /* optionnel : contraste léger */
+    border:1px solid #e0e0e0;
+    border-radius:4px;
+    overflow:hidden;          /* évite que l’image dépasse */
+}
+
+/* -------------------------------------------------
+   3️⃣ IMAGE : on force la largeur à 100 % du conteneur,
+               on garde les proportions.
+   ------------------------------------------------- */
+.image-item img {
+    width: 100%;               /* remplissage complet du bloc */
+    height: auto;              /* conserve le ratio */
+    object-fit: contain;       /* évite le recadrage */
+}
+
+/* -------------------------------------------------
+   4️⃣ LEGEND (figcaption) : style de la légende
+   ------------------------------------------------- */
+.image-item figcaption {
+    margin-top: .5rem;         /* petit espace au dessus */
+    font-size: 0.9rem;          /* taille lisible */
+    color:#333;
+    text-align:center;
+    padding: .3rem .5rem;
+    width:100%;
+    background:#f0f0f0;
+}
         </style>
     </head>
     <body>
@@ -53,12 +86,12 @@ def generate_html(directory):
     myindex=0
     for index, png in enumerate(png_files):
         html_content += f"""
-        <div class="image-item">
-            <img src="{directory}/{png}" alt="{png}">
-#            <div class="caption">{mycaption[myindex%3]}</div>
-            <div class="caption">{png}</div>
-        </div>
+    <figure class="image-item">
+        <img src="{directory}/{png}" alt="{png}">
+        <figcaption>{png}</figcaption>
+    </figure>
         """
+ #       <figcaption>{mycaption[myindex%3]}</figcaption>
         myindex=myindex+1
 
     # Close the gallery and HTML tags

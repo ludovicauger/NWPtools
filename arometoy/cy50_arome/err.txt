@@ -1,0 +1,3 @@
+rm: cannot remove ‘ICMSHFCST+00??’: No such file or directory
+rm: cannot remove ‘PFFCSTFRANGP0025+0000’: No such file or directory
+`/opt/softs/intel/oneapi/2023.2/mpi/2021.10.0/lib/../bin/mpirun -np 1 -ppn 1 /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiautowrap --stdeo -- ./getf < /dev/null' exited with value 134

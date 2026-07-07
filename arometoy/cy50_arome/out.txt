@@ -1,0 +1,1347 @@
+getf
+Arch            : ARCH::Linux
+Scheduler       : Scheduler::SLURM
+MPI             : MPI::IntelMPI
+Binary          : ./getf
+Args            : 
+Config          : 
+      - /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiauto.conf
+      - /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiauto.mf-bull4.conf
+      - /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiauto.mf-bull4.IntelMPI.conf
+      - /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiauto.mf-bull4.IntelMPI.2021.conf
+Options         : 
+      --nn                           : 1
+      --np                           : 1
+      --nnp                          : 1
+      --openmp                       : 1
+      --distribution                 : block
+      --proc                         : Rome-2x64
+      --mpi-allow-odd-dist           : false
+      --serial                       : false
+      --serial-mpi                   : false
+      --dryrun                       : false
+      --help                         : false
+      --verbose                      : true
+      --prefix-command               : []
+      --prefix-mpirun                : []
+      --mpirun-name                  : {'IntelMPI' => 'mpirun'}
+      --mpi-special-opts             : {}
+      --mpi-special-env              : {'IntelMPI' => 'I_MPI_DEBUG=1,I_MPI_DYNAMIC_CONNECTION=1,I_MPI_EXTRA_FILESYSTEM=on,I_MPI_FABRICS=shm:ofi,I_MPI_HYDRA_BOOTSTRAP=slurm,I_MPI_HYDRA_IFACE=ib0,I_MPI_HYDRA_PMI_CONNECT=alltoall,I_MPI_LARGE_SCALE_THRESHOLD=8192,I_MPI_LIBRARY_KIND=release_mt,I_MPI_PLATFORM=uniform,I_MPI_SHM_SPIN_COUNT=300,I_MPI_OFFLOAD_DEVICES=disable,I_MPI_SHM_EAGER_THRESHOLD=65536,I_MPI_EXTRA_FILESYSTEM=lustre,I_MPI_SHM_SEND_SPIN_COUNT=300,I_MPI_SHM_RECV_SPIN_COUNT=300,I_MPI_EXTRA_FILESYSTEM_FORCE=lustre,I_MPI_EXTRA_FILESYSTEM=on,UCX_IB_PCI_RELAXED_ORDERING=off,PMI_TIME=10'}
+      --use-mpi-machinefile          : false
+      --mpi-stdin-null               : true
+      --use-session                  : false
+      --init-timeout                 : 90
+      --init-timeout-restart         : 1
+      --init-timeout-control         : false
+      --mpi-alloc                    : 
+      --debug                        : false
+      --debugger-x11-proxy           : true
+      --debug-try-gmkpack            : true
+      --debugger-path                : /opt/softs/arm/20.0.2/forge/bin/ddt
+      --debugger-break               : 0
+      --debugger-options             : 
+      --x11-display                  : 
+      --x11-direct                   : false
+      --x11-proxy                    : false
+      --x11-f-proxy                  : []
+      --x11-b-proxy                  : []
+      --config                       : 
+      --site                         : mf-bull4
+      --wrap                         : true
+      --wrap-stdeo                   : true
+      --wrap-stdeo-pack              : true
+      --wrap-stdeo-silent            : false
+      --wrap-verbose                 : false
+      --wrap-output-format           : $STDEO.$MPIRANK
+      --wrap-directory               : .
+      --wrap-env                     : {}
+      --use-slurm-mpi                : false
+      --fix-slurm-env                : true
+      --fix-slurm-env-nodes          : true
+      --setup-grib_api-env           : true
+      --use-slurm-bind               : false
+      --use-arch-bind                : true
+      --arch-bind-verbose            : false
+      --use-openmpi-bind             : false
+      --use-intelmpi-bind            : false
+      --umpi-mpi-label               : 
+      --umpi-verbose                 : false
+Remark          : MPI environment was modified
+      I_MPI_DEBUG                    : '1'
+      I_MPI_DYNAMIC_CONNECTION       : '1'
+      I_MPI_EXTRA_FILESYSTEM         : 'on'
+      I_MPI_EXTRA_FILESYSTEM_FORCE   : 'lustre'
+      I_MPI_FABRICS                  : 'shm:ofi'
+      I_MPI_HYDRA_BOOTSTRAP          : 'slurm'
+      I_MPI_HYDRA_IFACE              : 'ib0'
+      I_MPI_HYDRA_PMI_CONNECT        : 'alltoall'
+      I_MPI_LARGE_SCALE_THRESHOLD    : '8192'
+      I_MPI_LIBRARY_KIND             : 'release_mt'
+      I_MPI_OFFLOAD_DEVICES          : 'disable'
+      I_MPI_PLATFORM                 : 'uniform'
+      I_MPI_SHM_EAGER_THRESHOLD      : '65536'
+      I_MPI_SHM_RECV_SPIN_COUNT      : '300'
+      I_MPI_SHM_SEND_SPIN_COUNT      : '300'
+      I_MPI_SHM_SPIN_COUNT           : '300'
+      PMI_TIME                       : '10'
+      UCX_IB_PCI_RELAXED_ORDERING    : 'off'
+MPI command     : /opt/softs/intel/oneapi/2023.2/mpi/2021.10.0/lib/../bin/mpirun -np 1 -ppn 1 /home/mf/dp/marp/verolive/public/mpi-tools/mpiauto-latest/mpiautowrap --stdeo -- ./getf < /dev/null
+Warning         : Slurm environment was modified
+      SLURM_TASKS_PER_NODE  = 128(x150)     -> 1(x1)      
+
+      SLURM_NNODES          = 150           -> 1          
+
+      SLURM_NODELIST        = belenos[279]  -> belenos279 
+
+      SLURM_JOB_NODELIST    = belenos[279]  -> belenos279 
+
+      SLURM_JOB_NUM_NODES   = 150           -> 1          
+
+*------------------------------------------------------------------------------*
+|                                                                              |
+|                                   stdeo.0                                    |
+|                                                                              |
+*------------------------------------------------------------------------------*
+MPIAUTOTIMEOUT is set to 90 seconds
+[0] MPI startup(): Intel(R) MPI Library, Version 2021.10  Build 20230619 (id: c2e19c2f3e)
+[0] MPI startup(): Copyright (C) 2003-2023 Intel Corporation.  All rights reserved.
+[0] MPI startup(): library kind: release
+[0] MPI startup(): libfabric version: 1.18.0-impi
+[0] MPI startup(): libfabric provider: mlx
+[0] MPI startup(): I_MPI_SHM_SPIN_COUNT environment variable is not supported.
+[0] MPI startup(): Similar variables:
+[0] 	 I_MPI_SHM_HEAP_OPT
+[0] 	 I_MPI_SHM_SEND_SPIN_COUNT
+[0] 	 I_MPI_SHM_RECV_SPIN_COUNT
+[0] 	 I_MPI_SPIN_COUNT
+[0] MPI startup(): To check the list of supported variables, use the impi_info utility or refer to https://software.intel.com/en-us/mpi-library/documentation/get-started.
+MPI_Init took 0 seconds
+ MAIN: IREQUIRED, MPI_THREAD_MULTIPLE, MPI_THREAD_SINGLE, IPROVIDED, LTHSAFEMPI, LLMPI1 = 3 3 0 3 T F
+Reading namelist NAMPAR0 from /scratch/work/auger/NWPtools/arometoy/cy50_arome/fort.4
+Reading namelist NAMPAR0 from /scratch/work/auger/NWPtools/arometoy/cy50_arome/fort.4
+MPL_INIT : MPL_COMM=1140850688 (default) , MPL_NUMPROC=1
+MPL_INIT : MPL_METHOD=JP_BLOCKING_BUFFERED , MPL_MBX_SIZE=1000000
+ EC_MEMINFO@RNSORT: MINCID, MAXCID, NUMNODES =  0 0 1
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program ./getf -- wall-time :      0.002s
+## EC_MEMINFO Running on 1 nodes (8-numa) with 1 compute + 0 I/O-tasks and 1+0 threads at 14:06:05.732 on 06-Jul-2026
+## EC_MEMINFO The Job Name is _fp@G5SH and the Job ID is 34520252
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------    -------------    -------------    -------------    -------------    -------------    -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 | Numa region  2 | Numa region  3 | Numa region  4 | Numa region  5 | Numa region  6 | Numa region  7 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 belenos279                 0     118       0      6220   22054     5706   25060     6219   25236     5852   25714     4348   27102     5683   25236     5482   26020     6424   24722    248676    1831      0.0   0.0         0      0       1  Sm/p:master:computation
+Reading namelist NAM_DISTRIBUTED_VECTORS from fort.4
+Reading namelist NAMPAR0 from /scratch/work/auger/NWPtools/arometoy/cy50_arome/fort.4
+[EC_DRHOOK:hostname:myproc:omltid:pid:unixtid] [YYYYMMDD:HHMMSS:walltime] [function@file:lineno] -- Max OpenMP threads = 1
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2276] DR_HOOK_SILENT=0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2279] fp = 0x2b65ef63d1c0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2301] DR_HOOK_ALLOW_COREDUMP=0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2328] DR_HOOK_PROFILE_PROC=-1
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2334] DR_HOOK_PROFILE_LIMIT=-10.000
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2422] DR_HOOK_RANDOM_MEMSTAT=0  (RAND_MAX=2147483647)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2433] DR_HOOK_HASHBITS=16
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2441] DR_HOOK_NCALLSTACK=0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2449] DR_HOOK_HARAKIRI_TIMEOUT=500
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2456] DR_HOOK_USE_LOCKFILE=1
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2463] DR_HOOK_TRAPFPE=1
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2470] DR_HOOK_TRAPFPE_INVALID=1
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2477] DR_HOOK_TRAPFPE_DIVBYZERO=1
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [process_options@drhook.c:2484] DR_HOOK_TRAPFPE_OVERFLOW=1
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_signals@drhook.c:1417]  DR_HOOK_IGNORE_SIGNALS=-1
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#1 (Hangup)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#2 (Interrupt)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#3 (Quit)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#4 (Illegal instruction)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#5 (Trace/breakpoint trap)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#6 (Aborted)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#7 (Bus error)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#8 (Floating point exception)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#9 (Killed)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#10 (User defined signal 1)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.004] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#11 (Segmentation fault)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#12 (User defined signal 2)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#13 (Broken pipe)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#14 (Alarm clock)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#15 (Terminated)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#16 (Stack fault)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#17 (Child exited)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#18 (Continued)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#19 (Stopped (signal))
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#20 (Stopped)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#21 (Stopped (tty input))
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#22 (Stopped (tty output))
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#23 (Urgent I/O condition)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#24 (CPU time limit exceeded)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#25 (File size limit exceeded)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#26 (Virtual timer expired)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#27 (Profiling timer expired)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#28 (Window changed)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#29 (I/O possible)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#30 (Power failure)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#31 (Bad system call)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#32 (Unknown signal 32)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#33 (Unknown signal 33)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#34 (Real-time signal 0)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#35 (Real-time signal 1)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#36 (Real-time signal 2)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#37 (Real-time signal 3)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#38 (Real-time signal 4)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#39 (Real-time signal 5)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#40 (Real-time signal 6)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#41 (Real-time signal 7)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#42 (Real-time signal 8)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#43 (Real-time signal 9)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#44 (Real-time signal 10)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#45 (Real-time signal 11)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#46 (Real-time signal 12)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#47 (Real-time signal 13)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#48 (Real-time signal 14)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#49 (Real-time signal 15)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#50 (Real-time signal 16)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#51 (Real-time signal 17)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#52 (Real-time signal 18)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#53 (Real-time signal 19)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#54 (Real-time signal 20)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#55 (Real-time signal 21)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#56 (Real-time signal 22)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#57 (Real-time signal 23)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#58 (Real-time signal 24)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#59 (Real-time signal 25)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#60 (Real-time signal 26)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#61 (Real-time signal 27)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#62 (Real-time signal 28)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#63 (Real-time signal 29)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#64 (Real-time signal 30)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [ignore_one_signal@drhook.c:1400]   DR_HOOK ignores signal#65 (Unknown signal 65)
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [restore_default_signals@drhook.c:1350] DR_HOOK_RESTORE_DEFAULT_SIGNALS=<undef>
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140605:0.005] [catch_signals@drhook.c:1262] DR_HOOK_CATCH_SIGNALS=<undef>
+MPL_BUFFER_METHOD:  2  2048000000
+## EC_MEMINFO 
+## EC_MEMINFO Detailed memory information for program ./getf -- wall-time :      0.007s
+## EC_MEMINFO Running on 1 nodes (8-numa) with 1 compute + 0 I/O-tasks and 1+0 threads at 14:06:05.736 on 06-Jul-2026
+## EC_MEMINFO The Job Name is _fp@G5SH and the Job ID is 34520252
+## EC_MEMINFO 
+## EC_MEMINFO                           | TC    | MEMORY USED(MB) | MEMORY FREE(MB)  -------------    -------------    -------------    -------------    -------------    -------------    -------------   INCLUDING CACHED|  %USED %HUGE  | Energy  Power Running
+## EC_MEMINFO                           | Malloc| Inc Heap        | Numa region  0 | Numa region  1 | Numa region  2 | Numa region  3 | Numa region  4 | Numa region  5 | Numa region  6 | Numa region  7 |                |               |    (J)    (W)
+## EC_MEMINFO Node Name                 | Heap  | RSS(sum)        | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Small  Huge or | Total          |
+## EC_MEMINFO                           | (sum) | Small    Huge   |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  |  Only   Small  | Memfree+Cached |
+## EC_MEMINFO    0 belenos279              2048     125       0      6215   22054     5706   25060     6219   25236     5852   25714     4348   27102     5683   25236     5482   26020     6424   24722    248671    1831      0.0   0.0         0      0       1  Sm/p:oops:ifs_init
+(I) LOGGER RE-CONFIGURED BY IFS_INIT
+ ODB Observation Store options : L_READ_FROM_OBS_STORE =  F
+ ODB Observation Store options : L_WRITE_TO_OBS_STORE  =  F
+ ODB Observation Store options : ODB_OBS_STORE_PATH    = 
+ ODB Observation Store options : NPOOLS_COPEDB         =            0
+ DEBUG N_AEROSOL_TYPESsu_radiation_scheme.F90         467          13
+ ///// LFIAFM - KNUMER=-10, KFACTM=6
+ ///// LFIAFM - KREP=0
+ FADGRA: Field `SFX.AOSIM' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.AOSIP' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.AOSJM' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.AOSJP' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.ASPECT' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.AVG_SLO' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.AVG_ZS' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.BATHY' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.ZS' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SLOPE_DIR05' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SLOPE_DIR06' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.WDRAIN' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.CLAY' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER001' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER002' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER151' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER153' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER155' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER157' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER158' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER159' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER160' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER161' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER166' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER180' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER182' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER189' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER193' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER203' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER211' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER218' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER221' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER235' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER238' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER240' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER241' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.COVER243' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SLOPE_DIR07' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_DIR01' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_DIR02' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_DIR03' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_DIR04' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_DIR05' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_DIR06' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_DIR07' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_DIR08' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_NATURE' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_SEA' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_TOWN' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.FRAC_WATER' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMAXS_DIR01' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMAXS_DIR02' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMAXS_DIR03' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMAXS_DIR04' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMAXS_DIR05' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMAXS_DIR06' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMAXS_DIR07' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMAXS_DIR08' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMINS_DIR01' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMINS_DIR02' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMINS_DIR03' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMINS_DIR04' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMINS_DIR05' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMINS_DIR06' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMINS_DIR07' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HMINS_DIR08' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HO2IM' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HO2IP' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HO2JM' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.HO2JP' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SLOPE_DIR08' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SVF' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SSO_STDEV' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.MAX_ZS' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.MIN_ZS' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SSO_SLOPE' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SSO_DIR' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SSO_ANIS' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.RUNOFFB' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SAND' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SIL_ZS' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SLOPE' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SLOPE_DIR01' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SLOPE_DIR02' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SLOPE_DIR03' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ FADGRA: Field `SFX.SLOPE_DIR04' is not declared in `faFieldName.def' and has no encoded FMULTM and FMULTE
+ ///// LFIAFM - KNUMER=-81, KFACTM=6
+ ///// LFIAFM - KREP=0
+ --- START DUMP OF SURFEX CACHE --- [ 
+ 'ALBEDO','C0','', [ 
+  ], 
+ 'ALBNIRP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'ALBNIR_S','X1','NATURE', [ 
+   10000,
+  ], 
+ 'ALBUVP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'ALBUV_S','X1','NATURE', [ 
+   10000,
+  ], 
+ 'ALBVISP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'ALBVIS_S','X1','NATURE', [ 
+   10000,
+  ], 
+ 'AOSIM','X1','FULL', [ 
+   10000,
+  ], 
+ 'AOSIP','X1','FULL', [ 
+   10000,
+  ], 
+ 'AOSJM','X1','FULL', [ 
+   10000,
+  ], 
+ 'AOSJP','X1','FULL', [ 
+   10000,
+  ], 
+ 'ASN_RD','X1','TOWN', [ 
+   10000,
+  ], 
+ 'ASN_RF','X1','TOWN', [ 
+   10000,
+  ], 
+ 'ASN_VEGP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'ASPECT','X1','FULL', [ 
+   10000,
+  ], 
+ 'ASPSECTORS','N0','', [ 
+  ], 
+ 'AVG_SLO','X1','FULL', [ 
+   10000,
+  ], 
+ 'AVG_ZS','X1','FULL', [ 
+   10000,
+  ], 
+ 'BATHY','X1','SEA', [ 
+   10000,
+  ], 
+ 'BEM','C0','', [ 
+  ], 
+ 'BETA','X0','', [ 
+  ], 
+ 'BIBUSER','C0','', [ 
+  ], 
+ 'BLD_ATYPE','C0','', [ 
+  ], 
+ 'BUDC','L0','', [ 
+  ], 
+ 'BUG','N0','', [ 
+  ], 
+ 'BUGFIX','N0','', [ 
+  ], 
+ 'CARTESIAN','L0','', [ 
+  ], 
+ 'CH_EMIS','L0','', [ 
+  ], 
+ 'CLAY','X1','NATURE', [ 
+   10000,
+  ], 
+ 'COVER001','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER002','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER151','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER153','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER155','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER157','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER158','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER159','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER160','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER161','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER166','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER180','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER182','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER189','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER193','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER203','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER211','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER218','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER221','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER235','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER238','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER240','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER241','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER243','X1','FULL', [ 
+   10000,
+  ], 
+ 'COVER_LIST','L1','', [ 
+     573,
+  ], 
+ 'CTI','L0','', [ 
+  ], 
+ 'CVP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'DAD_NAME','C0','', [ 
+  ], 
+ 'DATA_IRRIG','L0','', [ 
+  ], 
+ 'DG1P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'DG2P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'DG3P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'DIM_FULL','N0','', [ 
+  ], 
+ 'DIM_NATURE','N0','', [ 
+  ], 
+ 'DIM_SEA','N0','', [ 
+  ], 
+ 'DIM_TOWN','N0','', [ 
+  ], 
+ 'DIM_WATER','N0','', [ 
+  ], 
+ 'DTCUR','T0','', [ 
+  ], 
+ 'DUMMY_GR_NBR','N0','', [ 
+  ], 
+ 'DX','X1','FULL', [ 
+   10000,
+  ], 
+ 'DY','X1','FULL', [ 
+   10000,
+  ], 
+ 'ECOCLIMAP','L0','', [ 
+  ], 
+ 'ECOSG','L0','', [ 
+  ], 
+ 'EMIS_ISBAP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'FRAC_DIR01','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_DIR02','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_DIR03','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_DIR04','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_DIR05','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_DIR06','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_DIR07','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_DIR08','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_NATURE','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_SEA','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_TOWN','X1','FULL', [ 
+   10000,
+  ], 
+ 'FRAC_WATER','X1','FULL', [ 
+   10000,
+  ], 
+ 'GAMMAP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'GARDEN','L0','', [ 
+  ], 
+ 'GLACIER','L0','', [ 
+  ], 
+ 'GRID_TYPE','C0','', [ 
+  ], 
+ 'GROUND_LAYER','N0','', [ 
+  ], 
+ 'HANDLE_SIC','L0','', [ 
+  ], 
+ 'HMAXS_DIR01','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMAXS_DIR02','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMAXS_DIR03','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMAXS_DIR04','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMAXS_DIR05','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMAXS_DIR06','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMAXS_DIR07','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMAXS_DIR08','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMINS_DIR01','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMINS_DIR02','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMINS_DIR03','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMINS_DIR04','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMINS_DIR05','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMINS_DIR06','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMINS_DIR07','X1','FULL', [ 
+   10000,
+  ], 
+ 'HMINS_DIR08','X1','FULL', [ 
+   10000,
+  ], 
+ 'HO2IM','X1','FULL', [ 
+   10000,
+  ], 
+ 'HO2IP','X1','FULL', [ 
+   10000,
+  ], 
+ 'HO2JM','X1','FULL', [ 
+   10000,
+  ], 
+ 'HO2JP','X1','FULL', [ 
+   10000,
+  ], 
+ 'H_TREEP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'IMAX','N0','', [ 
+  ], 
+ 'ISBA','C0','', [ 
+  ], 
+ 'ISBA_CANOPY','L0','', [ 
+  ], 
+ 'JMAX','N0','', [ 
+  ], 
+ 'KMAX','N0','', [ 
+  ], 
+ 'LAIP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'LAT0','X0','', [ 
+  ], 
+ 'LATORI','X0','', [ 
+  ], 
+ 'LCLIM_LAI','L0','', [ 
+  ], 
+ 'LCPL_GCM','L0','', [ 
+  ], 
+ 'LON0','X0','', [ 
+  ], 
+ 'LONORI','X0','', [ 
+  ], 
+ 'LORORAD','L0','', [ 
+  ], 
+ 'LSNOW_FRAC_T','L0','', [ 
+  ], 
+ 'L_ALBNIR_SOI','L1','', [ 
+     684,
+  ], 
+ 'L_ALBNIR_VEG','L1','', [ 
+     684,
+  ], 
+ 'L_ALBUV_SOI','L1','', [ 
+     684,
+  ], 
+ 'L_ALBUV_VEG','L1','', [ 
+     684,
+  ], 
+ 'L_ALBVIS_SOI','L1','', [ 
+     684,
+  ], 
+ 'L_ALBVIS_VEG','L1','', [ 
+     684,
+  ], 
+ 'L_ALB_PANEL','L0','', [ 
+  ], 
+ 'L_ALB_ROAD','L0','', [ 
+  ], 
+ 'L_ALB_ROOF','L0','', [ 
+  ], 
+ 'L_ALB_WALL','L0','', [ 
+  ], 
+ 'L_BCOEF','L0','', [ 
+  ], 
+ 'L_BLD','L0','', [ 
+  ], 
+ 'L_BLDTYPE','L0','', [ 
+  ], 
+ 'L_BLD_AGE','L0','', [ 
+  ], 
+ 'L_BLD_HEIGHT','L0','', [ 
+  ], 
+ 'L_BSLAI','L1','', [ 
+      20,
+  ], 
+ 'L_CE_NITRO','L1','', [ 
+      20,
+  ], 
+ 'L_CF_NITRO','L1','', [ 
+      20,
+  ], 
+ 'L_CNA_NITRO','L1','', [ 
+      20,
+  ], 
+ 'L_CONDSAT','L0','', [ 
+  ], 
+ 'L_CV','L1','', [ 
+      20,
+  ], 
+ 'L_DG','L1','', [ 
+      20,
+  ], 
+ 'L_DICE','L1','', [ 
+      20,
+  ], 
+ 'L_DMAX','L1','', [ 
+      20,
+  ], 
+ 'L_D_ROAD','L0','', [ 
+  ], 
+ 'L_D_ROOF','L0','', [ 
+  ], 
+ 'L_D_WALL','L0','', [ 
+  ], 
+ 'L_EFF_PANEL','L0','', [ 
+  ], 
+ 'L_EMIS','L1','', [ 
+     684,
+  ], 
+ 'L_EMIS_PANEL','L0','', [ 
+  ], 
+ 'L_EMIS_ROAD','L0','', [ 
+  ], 
+ 'L_EMIS_ROOF','L0','', [ 
+  ], 
+ 'L_EMIS_WALL','L0','', [ 
+  ], 
+ 'L_F2I','L1','', [ 
+      20,
+  ], 
+ 'L_FRAC_PANEL','L0','', [ 
+  ], 
+ 'L_F_RESIDENT','L0','', [ 
+  ], 
+ 'L_GAMMA','L1','', [ 
+      20,
+  ], 
+ 'L_GARDEN','L0','', [ 
+  ], 
+ 'L_GC','L1','', [ 
+      20,
+  ], 
+ 'L_GMES','L1','', [ 
+      20,
+  ], 
+ 'L_GNDLITTER','L1','', [ 
+     684,
+  ], 
+ 'L_GREENROOF','L0','', [ 
+  ], 
+ 'L_GROUND_DPT','L1','', [ 
+      20,
+  ], 
+ 'L_HC_ROAD','L0','', [ 
+  ], 
+ 'L_HC_ROOF','L0','', [ 
+  ], 
+ 'L_HC_WALL','L0','', [ 
+  ], 
+ 'L_H_IND','L0','', [ 
+  ], 
+ 'L_H_TRAF','L0','', [ 
+  ], 
+ 'L_H_TREE','L1','', [ 
+      20,
+  ], 
+ 'L_H_VEG','L1','', [ 
+     684,
+  ], 
+ 'L_IRRIG','L1','', [ 
+     684,
+  ], 
+ 'L_LAI','L1','', [ 
+     684,
+  ], 
+ 'L_LAIMIN','L1','', [ 
+      20,
+  ], 
+ 'L_LE_IND','L0','', [ 
+  ], 
+ 'L_LE_TRAF','L0','', [ 
+  ], 
+ 'L_MPOTSAT','L0','', [ 
+  ], 
+ 'L_PAR_GD_IRR','L0','', [ 
+  ], 
+ 'L_PAR_GR_IRR','L0','', [ 
+  ], 
+ 'L_PAR_RD_IRR','L0','', [ 
+  ], 
+ 'L_RE25','L1','', [ 
+      20,
+  ], 
+ 'L_REAP_D','L1','', [ 
+      20,
+  ], 
+ 'L_REAP_M','L1','', [ 
+      20,
+  ], 
+ 'L_RGL','L1','', [ 
+      20,
+  ], 
+ 'L_ROAD_DIR','L0','', [ 
+  ], 
+ 'L_ROOTFRAC','L1','', [ 
+      20,
+  ], 
+ 'L_ROOT_DEPTH','L1','', [ 
+      20,
+  ], 
+ 'L_ROOT_EXT','L1','', [ 
+      20,
+  ], 
+ 'L_ROOT_LIN','L1','', [ 
+      20,
+  ], 
+ 'L_ROUGH_ROOF','L0','', [ 
+  ], 
+ 'L_ROUGH_WALL','L0','', [ 
+  ], 
+ 'L_RSMIN','L1','', [ 
+      20,
+  ], 
+ 'L_SEED_D','L1','', [ 
+      20,
+  ], 
+ 'L_SEED_M','L1','', [ 
+      20,
+  ], 
+ 'L_SEFOLD','L1','', [ 
+      20,
+  ], 
+ 'L_STRESS','L1','', [ 
+      20,
+  ], 
+ 'L_TC_ROAD','L0','', [ 
+  ], 
+ 'L_TC_ROOF','L0','', [ 
+  ], 
+ 'L_TC_WALL','L0','', [ 
+  ], 
+ 'L_USETYPE','L0','', [ 
+  ], 
+ 'L_VEG','L1','', [ 
+     684,
+  ], 
+ 'L_VEGTYPE','L0','', [ 
+  ], 
+ 'L_WALL_O_HOR','L0','', [ 
+  ], 
+ 'L_WATSUP','L1','', [ 
+     684,
+  ], 
+ 'L_WFC','L0','', [ 
+  ], 
+ 'L_WRMAX_CF','L1','', [ 
+      20,
+  ], 
+ 'L_WSAT','L0','', [ 
+  ], 
+ 'L_WWILT','L0','', [ 
+  ], 
+ 'L_Z0','L1','', [ 
+     684,
+  ], 
+ 'L_Z0LITTER','L1','', [ 
+     684,
+  ], 
+ 'L_Z0_O_Z0H','L1','', [ 
+      20,
+  ], 
+ 'L_Z0_TOWN','L0','', [ 
+  ], 
+ 'MASDEV','N0','', [ 
+  ], 
+ 'MAX_ZS','X1','FULL', [ 
+   10000,
+  ], 
+ 'MEB_PATCH','L1','', [ 
+       1,
+  ], 
+ 'MIN_ZS','X1','FULL', [ 
+   10000,
+  ], 
+ 'MY_NAME','C0','', [ 
+  ], 
+ 'NATURE','C0','', [ 
+  ], 
+ 'NBIOMASS','N0','', [ 
+  ], 
+ 'NDATA_TIME','N0','', [ 
+  ], 
+ 'NLITTER','N0','', [ 
+  ], 
+ 'NLITTLEVS','N0','', [ 
+  ], 
+ 'NO','L0','', [ 
+  ], 
+ 'NSOILCARB','N0','', [ 
+  ], 
+ 'PAR_GARDEN','L0','', [ 
+  ], 
+ 'PATCHP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'PATCH_NUMBER','N0','', [ 
+  ], 
+ 'PEDOTF','C0','', [ 
+  ], 
+ 'PERMAFROST','L0','', [ 
+  ], 
+ 'PHOTO','C0','', [ 
+  ], 
+ 'PROGRAM','C0','', [ 
+  ], 
+ 'QCANYON','X1','TOWN', [ 
+   10000,
+  ], 
+ 'RESAP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'RESPSL','C0','', [ 
+  ], 
+ 'RGLP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'RM_PATCH','X0','', [ 
+  ], 
+ 'ROAD_DIR','C0','', [ 
+  ], 
+ 'ROAD_LAYER','N0','', [ 
+  ], 
+ 'ROOF_LAYER','N0','', [ 
+  ], 
+ 'RPK','X0','', [ 
+  ], 
+ 'RSMINP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'RSN_RD1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'RSN_RF1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'RSN_VEG1P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'RUNOFFB','X1','NATURE', [ 
+   10000,
+  ], 
+ 'SAND','X1','NATURE', [ 
+   10000,
+  ], 
+ 'SEA','C0','', [ 
+  ], 
+ 'SEAICE_SCHEM','C0','', [ 
+  ], 
+ 'SEA_OCEAN','L0','', [ 
+  ], 
+ 'SEA_SBL','L0','', [ 
+  ], 
+ 'SIL_ZS','X1','FULL', [ 
+   10000,
+  ], 
+ 'SLOPE','X1','FULL', [ 
+   10000,
+  ], 
+ 'SLOPE_DIR01','X1','FULL', [ 
+   10000,
+  ], 
+ 'SLOPE_DIR02','X1','FULL', [ 
+   10000,
+  ], 
+ 'SLOPE_DIR03','X1','FULL', [ 
+   10000,
+  ], 
+ 'SLOPE_DIR04','X1','FULL', [ 
+   10000,
+  ], 
+ 'SLOPE_DIR05','X1','FULL', [ 
+   10000,
+  ], 
+ 'SLOPE_DIR06','X1','FULL', [ 
+   10000,
+  ], 
+ 'SLOPE_DIR07','X1','FULL', [ 
+   10000,
+  ], 
+ 'SLOPE_DIR08','X1','FULL', [ 
+   10000,
+  ], 
+ 'SN_RD','L0','', [ 
+  ], 
+ 'SN_RD_N','N0','', [ 
+  ], 
+ 'SN_RD_TYP','C0','', [ 
+  ], 
+ 'SN_RF','L0','', [ 
+  ], 
+ 'SN_RF_N','N0','', [ 
+  ], 
+ 'SN_RF_TYP','C0','', [ 
+  ], 
+ 'SN_VEGP1','L0','', [ 
+  ], 
+ 'SN_VEG_N','N0','', [ 
+  ], 
+ 'SN_VEG_TYP','C0','', [ 
+  ], 
+ 'SOCP','L0','', [ 
+  ], 
+ 'SOLAR_PANEL','L0','', [ 
+  ], 
+ 'SPLIT_PATCH','L0','', [ 
+  ], 
+ 'SSO_ANIS','X1','FULL', [ 
+   10000,
+  ], 
+ 'SSO_DIR','X1','FULL', [ 
+   10000,
+  ], 
+ 'SSO_SLOPE','X1','FULL', [ 
+   10000,
+  ], 
+ 'SSO_STDEV','X1','FULL', [ 
+   10000,
+  ], 
+ 'SSS','X1','SEA', [ 
+   10000,
+  ], 
+ 'SST','X1','SEA', [ 
+   10000,
+  ], 
+ 'SST_DATA','L0','', [ 
+  ], 
+ 'STORAGETYPE','C0','', [ 
+  ], 
+ 'STORAGE_TYPE','C0','', [ 
+  ], 
+ 'SVF','X1','FULL', [ 
+   10000,
+  ], 
+ 'TCANYON','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TEB_CANOPY','L0','', [ 
+  ], 
+ 'TEB_PATCH','N0','', [ 
+  ], 
+ 'TEMPARP','L0','', [ 
+  ], 
+ 'TG1P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'TG2P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'THINSHELL','L0','', [ 
+  ], 
+ 'TI_BLD','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TI_ROAD','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TOWN','C0','', [ 
+  ], 
+ 'TOWN_TO_ROCK','L0','', [ 
+  ], 
+ 'TROAD1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TROAD2','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TROAD3','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TROAD4','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TROAD5','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TROOF1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TROOF2','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TROOF3','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TROOF4','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TROOF5','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TR_ML','L0','', [ 
+  ], 
+ 'TSN_RD1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TSN_RF1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TSRAD_NAT','X1','NATURE', [ 
+   10000,
+  ], 
+ 'TS_WATER','X1','WATER', [ 
+   10000,
+  ], 
+ 'TWALL1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TWALL2','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TWALL3','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TWALL4','X1','TOWN', [ 
+   10000,
+  ], 
+ 'TWALL5','X1','TOWN', [ 
+   10000,
+  ], 
+ 'T_WIN1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'VEGP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE10','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE11','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE12','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE13','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE14','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE15','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE16','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE17','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE18','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE19','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE2','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE3','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE4','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE5','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE6','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE7','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE8','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VEGTYPE9','X1','NATURE', [ 
+   10000,
+  ], 
+ 'VERSION','N0','', [ 
+  ], 
+ 'WALL_LAYER','N0','', [ 
+  ], 
+ 'WALL_OPT','C0','', [ 
+  ], 
+ 'WATER','C0','', [ 
+  ], 
+ 'WATER_TO_NAT','L0','', [ 
+  ], 
+ 'WAT_SBL','L0','', [ 
+  ], 
+ 'WDRAIN','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WFC1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WFC2','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WFC3','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WG1P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WG2P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WG3P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WGI1P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WGI2P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WRITE_EXT','L0','', [ 
+  ], 
+ 'WRMAX_CFP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WRP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WSAT1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WSAT2','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WSAT3','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WSN_RD1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'WSN_RF1','X1','TOWN', [ 
+   10000,
+  ], 
+ 'WSN_VEG1P1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WS_ROAD','X1','TOWN', [ 
+   10000,
+  ], 
+ 'WS_ROOF','X1','TOWN', [ 
+   10000,
+  ], 
+ 'WWILT1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WWILT2','X1','NATURE', [ 
+   10000,
+  ], 
+ 'WWILT3','X1','NATURE', [ 
+   10000,
+  ], 
+ 'XX','X1','FULL', [ 
+   10000,
+  ], 
+ 'YY','X1','FULL', [ 
+   10000,
+  ], 
+ 'Z0REL','X1','NATURE', [ 
+   10000,
+  ], 
+ 'Z0SEA','X1','SEA', [ 
+   10000,
+  ], 
+ 'Z0VEGP1','X1','NATURE', [ 
+   10000,
+  ], 
+ 'Z0WATER','X1','WATER', [ 
+   10000,
+  ], 
+ 'ZS','X1','FULL', [ 
+   10000,
+  ], 
+ ] --- END DUMP OF SURFEX CACHE ---
+ SURFEX FIELD CACHE:ICE_STOP1 WAS NOT FOUND
+ABOR1     [PROC=1,THRD=1] : SURFEX FIELD CACHE:ICE_STOP1 WAS NOT FOUND
+MPL_ABORT [PROC=1,THRD=1] : SURFEX FIELD CACHE:ICE_STOP1 WAS NOT FOUND
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] Backtrace(s) for program './getf' : sigcontextptr=0x7ffcbb6750b0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] Backtrace (size = 25) with addr2line-cmd
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] /usr/bin/addr2line -fs -e './getf' 0x2b65dc6fba66 0x2b65dc6fc3ef 0x2b65dc6e2068 0x2b65dc6e12b0 0x2b65dc6e0e36 0x41dbf6f 0x41dbcb6 0x41dd396 0x40494a0 0x52a6a6a 0x524daf8 0x5f10972 0x5c48954 0x577436e 0x5557cd6 0x5246548 0x4057325 0x4055b70 0x40464a4 0x6adc3b 0x438988 0x432a74 0x4323ed 0x2b65ef297555 0x43231b
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [00]: libphyex_dp.so(LinuxTraceBack+0x156) [0x2b65dc6fba66] : ??() at ??:0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [01]: libphyex_dp.so(LinuxTraceBack+0xadf) [0x2b65dc6fc3ef] : ??() at ??:0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [02]: libphyex_dp.so(mpl_abort_mod_mp_mpl_abort_+0x218) [0x2b65dc6e2068] : ??() at ??:0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [03]: libphyex_dp.so(abor1fl_+0x470) [0x2b65dc6e12b0] : ??() at ??:0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [04]: libphyex_dp.so(abor1_+0x26) [0x2b65dc6e0e36] : ??() at ??:0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [05]: getf() [0x41dbf6f] : modd_io_surf_aro_mp_abor1_mis_() at modd_io_surf_aro.F90:1663
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [06]: getf() [0x41dbcb6] : modd_io_surf_aro_mp_surfex_field_buf_search_() at modd_io_surf_aro.F90:2177
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [07]: getf() [0x41dd396] : modd_io_surf_aro_mp_surfex_field_buf_get_s_fx1_() at modd_io_surf_aro.F90:2331
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [08]: getf() [0x40494a0] : modd_surfex_host_ial_mp_read_surfx1_ial_() at modd_surfex_host_ial.F90:538
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [09]: getf() [0x52a6a6a] : read_surfx1_() at read_surf.F90:444
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [10]: getf() [0x524daf8] : make_choice_array_() at make_choice_array.F90:50
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [11]: getf() [0x5f10972] : read_isba_n_() at read_isban.F90:404
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [12]: getf() [0x5c48954] : compute_isba_parameters_() at compute_isba_parameters.F90:907
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [13]: getf() [0x577436e] : init_isba_n_() at init_isban.F90:477
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [14]: getf() [0x5557cd6] : init_nature_n_() at init_naturen.F90:147
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [15]: getf() [0x5246548] : init_surf_atm_n_() at init_surf_atmn.F90:613
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [16]: getf() [0x4057325] : aroini_surfc_IP_process_surfex_block_() at aroini_surfc.F90:299
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [17]: getf() [0x4055b70] : aroini_surfc_() at aroini_surfc.F90:252
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [18]: getf() [0x40464a4] : suphmse_surface_() at suphmse_surface.F90:310
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [19]: getf() [0x6adc3b] : su0yomb_() at su0yomb.F90:589
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [20]: getf() [0x438988] : cnt0_() at cnt0.F90:191
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [21]: getf() [0x432a74] : MAIN__() at master.F90:266
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [22]: getf() [0x4323ed] : main() at ??:?
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [23]: libc.so.6(__libc_start_main+0xf5) [0x2b65ef297555] : ??() at ??:0
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] [24]: getf() [0x43231b] : _start() at ??:?
+[EC_DRHOOK:belenos279:1:1:-1:106772] [20260706:140606:0.689] [LinuxTraceBack] End of backtrace(s)
+Abort(134) on node 0 (rank 0 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 134) - process 0
+Error in system call pthread_mutex_destroy: Device or resource busy
+    ../../src/mpi/init/mutex.c:112

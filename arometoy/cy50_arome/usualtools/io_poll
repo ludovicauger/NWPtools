@@ -1,0 +1,337 @@
+#!/usr/bin/perl -w
+
+use strict;
+use Getopt::Long;
+use File::stat;
+use FileHandle;
+use List::Util qw (min max minstr maxstr);
+use File::Basename;
+use Data::Dumper;
+use File::Spec;
+use threads;
+use Thread::Queue;
+use Cwd;
+
+my $lfitools;
+
+delete $ENV{DR_HOOK};
+$ENV{DR_HOOK_NOT_MPI} = 1;
+$ENV{DR_HOOK_SILENT} = 1;
+delete $ENV{OMP_NUM_THREADS};
+
+sub lfitools
+{
+  my @cmd = ($lfitools, @_);
+  
+  if (system (@cmd))
+    {
+
+# Check for errors
+
+       if ($? == -1) 
+         {
+           die ("`@cmd' failed to execute: $!\n");
+         }
+       elsif ($? & 127) 
+         {
+           die (sprintf ("`@cmd' was killed by signal %d\n", ($? & 127)));
+         }
+       else 
+         {
+           die (sprintf ("`@cmd' exited with value %d\n", $? >> 8));
+         }
+
+      return 0;
+    }
+
+  return 1;
+}
+
+sub slurp
+{
+
+# Get the contents of an ECHIS|ECHFP file
+# First two characters of ECHFP are removed
+
+  my $f = shift;
+  (my $fh = 'FileHandle'->new ("<$f")) or return '';
+  my $text = <$fh>;
+  return ''
+    unless (chomp ($text));
+
+  $text =~ s/^00//o
+    if (&basename ($f) eq 'ECHFP');
+
+  return $text;
+}
+
+sub usage
+{
+  die "
+Usage: $0
+  --nproc_io  : Number of IO tasks; if not passed as an option, it is looked for in fort.4
+  --prefix    : ICMSH or PF
+  --threads   : Number of threads to work with
+
+The environment variable LFITOOLS should be set to the path of the lfitools binary.
+
+";
+
+}
+
+my %opts;
+
+&GetOptions 
+  (
+    'nproc_io=s' => \$opts{nproc_io},
+    'prefix=s'   => \$opts{prefix},
+    'threads=s'  => \$opts{threads},
+  );
+
+my $state = do '.io_poll';
+
+$opts{nproc_io} ||= $state->{nproc_io};
+$opts{threads}  ||= 1;
+$opts{lfitools} = $ENV{LFITOOLS};
+
+if (! defined ($opts{nproc_io}))
+  {
+    my $text = do { local $/ = undef; my $fh = 'FileHandle'->new ('<fort.4'); $fh ? <$fh> : '' };
+    ($opts{nproc_io}) = ($text =~ m/NPROC_IO\s*=\s*(\d+)/goms);
+    $opts{nproc_io} = 0 if ($text and not defined ($opts{nproc_io}))  # No NPROC_IO in the namelist is equivalent to 0
+  }
+
+&usage () 
+  if (grep { ! defined ($_) } values (%opts));
+
+($lfitools, my $nproc_io, my $prefix) = @opts{qw (lfitools nproc_io prefix)};
+
+$state->{"ECH_A_v.$prefix"} ||= '';   # Value of our ECHIS files last time they were polled
+
+# Pick up ECHIS|ECHFP depending on prefix (ICMSH|PF)
+
+my $termfile;
+
+if ($prefix eq 'ICMSH')
+  {
+    $termfile = 'ECHIS';
+  }
+elsif ($prefix eq 'PF')
+  {
+    $termfile = 'ECHFP';
+  }
+elsif ($prefix eq 'GRIBPF')
+  {
+    $termfile = 'ECHFP';
+  }
+else
+  {
+    &usage ();
+  }
+
+
+# io_serv directories
+
+my @io_serv_d = $opts{nproc_io} ? (map { sprintf ('io_serv.%6.6d.d', $_) } (1 .. $opts{nproc_io})) : ('.');
+
+
+# Contents of ECHIS|ECHFP files
+
+my @ECH_B_v = map { &slurp ("$_/$termfile") } @io_serv_d;
+
+# One of ECHIS|ECHFP files is not yet written; skip
+
+goto DONE
+  if (grep { $_ eq '' } @ECH_B_v);
+
+# This step has already been processed; skip
+
+goto DONE
+  if (grep { $_ eq $state->{"ECH_A_v.$prefix"} } @ECH_B_v);
+
+my $ECHIS = &minstr (@ECH_B_v);
+
+my (%ECHIS, %EXTNS, %EXPID);
+
+my %F;
+
+# Build the list of terms, expids (PFGLOB15, FCST, etc...) and extensions (.sfx, .gridall, etc...)
+
+for my $F (map { <$_/$prefix*+*> } @io_serv_d)
+  {
+    my ($expid, $echis_extns) = ($F =~ m,/$prefix(\w+)\+(.*)$,); 
+    my ($echis, $extns);
+
+    if ($echis_extns =~ m/^(.*?)(\.\w+)/o)
+      {
+        ($echis, $extns) = ($1, $2);
+      }
+    else
+      {
+        ($echis, $extns) = ($echis_extns, '');
+      }
+
+    next unless ($state->{"ECH_A_v.$prefix"} lt $echis) && ($echis le $ECHIS);
+
+    $ECHIS{$echis}++;
+    $EXTNS{$extns}++;
+    $EXPID{$expid}++;
+
+    push @{ $F{$expid}{$echis}{$extns} }, $F;
+
+  }
+
+my @ECHIS = sort keys (%ECHIS);
+my @EXTNS = sort keys (%EXTNS);
+my @EXPID = sort keys (%EXPID);
+
+goto DONE
+  unless (@ECHIS && @EXTNS && @EXPID);
+
+my $work = sub
+{
+  my ($EXPID, $ECHIS, $done, $err) = @_;
+
+  my %G;
+
+# Gather files; speca + gridall, sfx, etc...
+
+  for my $EXTNS (@EXTNS)
+    {
+      next unless (my $X = $F{$EXPID}{$ECHIS}{$EXTNS});
+  
+      my $G = $EXTNS eq '.sfx' ? $EXTNS : '';
+  
+      push @{ $G{$G} }, @$X;
+  
+    }
+
+  for my $G (sort keys (%G))
+    {
+      my $F = "$prefix$EXPID+$ECHIS$G";
+
+      if ($opts{nproc_io} == 0)
+        {
+  
+          if (-f $F)
+            {
+              chmod (0444, $F);
+              push @$done, $F;
+            }
+
+        }
+      elsif ($prefix eq 'GRIBPF')
+        {
+          my $PWD = &cwd ();
+          'FileHandle'->new (">$F")->print (map { "file://$PWD/$_\n" } @{ $G{$G} || [] });
+          push @$done, $F;
+        }
+      else
+        {
+  
+          if (($G eq '.sfx') && (-f $F))
+            {
+              rename ($F, ".$F");
+              unshift (@{ $G{$G} }, ".$F");
+            }
+ 
+# Concatenate files
+
+          next unless (my @F = @{ $G{$G} || [] });
+          
+          for my $F (@F)
+            {
+              chmod (0444, $F);
+            }
+          
+          @F = map { 'File::Spec'->rel2abs ($_) } @F;
+          
+          unless (&lfitools ('lfi_alt_index', '--lfi-file-in', @F, '--lfi-file-out', $F))
+            {
+              $$err = 1;
+              return;
+            }
+          
+          chmod (0444, $F);
+
+# Update list of produced files
+
+          push @$done, $F;
+        }
+  
+    }
+  
+};
+
+my @done;
+
+if ($opts{threads} > 1)
+  {
+    my $q = 'Thread::Queue'->new ();
+    
+    for my $EXPID (@EXPID)
+      {
+        for my $ECHIS (@ECHIS)
+          {
+            $q->enqueue ([$EXPID, $ECHIS]);
+          }
+      }
+    for (1 .. $opts{threads})
+      {
+        $q->enqueue (undef);
+      }
+    
+    my @t;
+    
+    for (1 .. $opts{threads})
+      {   
+        my $t = 'threads'->create (sub 
+        {
+          my ($err, @done) = (0);
+          while (my $x = $q->dequeue ()) 
+            {   
+              $work->(@$x, \@done, \$err);
+              last if ($err);
+            }   
+          return [$err, @done];
+        }); 
+    
+        push @t, $t; 
+      }   
+    
+    my $err = 0;
+    for my $t (@t)
+      {
+        my $done = $t->join ();
+        $err ||= shift (@$done);
+        push @done, @$done;
+      }
+    exit (1) if ($err);
+
+  }
+else
+  {
+    for my $EXPID (@EXPID)
+      {
+        for my $ECHIS (@ECHIS)
+          {
+            my $err = 0;
+            $work->($EXPID, $ECHIS, \@done, \$err);
+            exit (1) if ($err);
+          }
+      }
+  }
+
+@done = sort @done;
+
+print join ("\n", @done, '');
+
+# Save state for re-use
+
+$state->{"ECH_A_v.$prefix"} = $ECHIS[-1];
+$state->{nproc_io} = $nproc_io;
+
+
+DONE:
+
+'FileHandle'->new ('>.io_poll')->print (&Dumper ($state));

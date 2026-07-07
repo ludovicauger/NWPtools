@@ -1,0 +1,17 @@
+{
+    "Status": {
+        "symbol": "X",
+        "short": "Crashed",
+        "text": "Crashed: the task ended abnormally, with associated exception"
+    },
+    "Context": {
+        "rundir": "/scratch/cv9/mtool/spool/spool_000472_standaloneforecasts/root/gmkpack/arpege.ompiifc2302dp.y/globaltst149c24.ompiifc2302dp.y/forecast-arpege_nosfx-globaltst149c24.ompiifc2302dp.y",
+        "MTOOL_STEP_ABORT": "/scratch/cv9/mtool/abort/dump_000472_standaloneforecasts",
+        "MTOOL_STEP_DEPOT": "/scratch/cv9/mtool/depot/mstep_000472_standaloneforecasts",
+        "MTOOL_STEP_SPOOL": "/scratch/cv9/mtool/spool/spool_000472_standaloneforecasts",
+        "(if aborted)": "/scratch/cv9/mtool/abort/dump_000472_standaloneforecasts/root/gmkpack/arpege.ompiifc2302dp.y/globaltst149c24.ompiifc2302dp.y/forecast-arpege_nosfx-globaltst149c24.ompiifc2302dp.y",
+        "jobname": "standalone_forecasts"
+    },
+    "Exception": "",
+    "Updated": "2025-02-01T10:33:09"
+}
