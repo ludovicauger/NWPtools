@@ -1,0 +1,1 @@
+/home/gmap/mrpa/auger/data/cy50/aerosol_cams_climatology_43r3_v2_3D.nc
